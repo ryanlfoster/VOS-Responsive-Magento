@@ -3,14 +3,15 @@
   
                   <li class="menu-item"><a href="#">CLOTHING</a>
 					<ul>
-						<li><a href="/homepage">CAPS</a></li>
-						<li><a href="/homepage">SHIRTS</a></li>
+						<li><a href="/shirts">SHIRTS</a></li>
+						<li><a href="/caps">CAPS</a></li>
+						
 					</ul>
 				  </li>
-                  <li class="menu-item"><a href="/homepage">PRINT</a>
+                  <li class="menu-item"><a href="#">PRINT</a>
 				  <ul>
-						<li><a href="/homepage">SCREEN PRINTS</a></li>
-						<li><a href="/homepage">STICKERS</a></li>
+						<li><a href="/prints">SCREEN PRINTS</a></li>
+						<li><a href="/accessories/stickers.html">STICKERS</a></li>
 					</ul>
 				  </li>
 				           <li class="menu-item"><a href="/about">ABOUT</a></li>
@@ -21,11 +22,11 @@
 							 <li class="vos-social-buttons"><a href="http://www.facebook.com/pages/Vikings-Of-Skate/160887060630674/" target="_blank">
 									<img onmouseover="this.src='img/icons/social/facebook-rollover.png'" height="20" width="20"  onmouseout="this.src='img/icons/social/facebook.png'" border="0" src="img/icons/social/facebook.png"  alt="Facebook" /></a></li>
 							<li class="vos-social-buttons"><a href="http://twitter.com/vikingsofskate/" target="_blank">
-									<img onmouseover="this.src='img//icons/social/twitter-rollover.png'" height="20" width="20" onmouseout="this.src='img/icons/social/twitter.png'" border="0" src="img/icons/social/twitter.png" alt="Twitter" /></a></li>
+									<img onmouseover="this.src='img/icons/social/twitter-rollover.png'" height="20" width="20" onmouseout="this.src='img/icons/social/twitter.png'" border="0" src="img/icons/social/twitter.png" alt="Twitter" /></a></li>
 							<li class="vos-social-buttons"> <a href="http://twitter.com/vikingsofskate/" target="_blank">
-									<img onmouseover="this.src='img//icons/social/twitter-rollover.png'" height="20" width="20" onmouseout="this.src='img/icons/social/twitter.png'" border="0" src="img/icons/social/twitter.png" alt="Twitter" /></a></li>
+									<img onmouseover="this.src='img/lcons/social/twitter-rollover.png'" height="20" width="20" onmouseout="this.src='img/icons/social/twitter.png'" border="0" src="img/icons/social/twitter.png" alt="Twitter" /></a></li>
 							<li class="vos-social-buttons"><a href="http://pinterest.com/vikingsofskate/skateboarding/" target="_blank">
-									<img onmouseover="this.src='img/icons/social/pinterest-rollover.png'"  height="20" width="20" onmouseout="this.src='img/icons/social/pinterest.png'" border="0" src="img//icons/social/pinterest.png" alt="Pinterest" /></a></li>
+									<img onmouseover="this.src='img/icons/social/pinterest-rollover.png'"  height="20" width="20" onmouseout="this.src='img/icons/social/pinterest.png'" border="0" src="img/icons/social/pinterest.png" alt="Pinterest" /></a></li>
 							<li class="vos-social-buttons"><a href="http://instagram.com/vikingsofskate/" target="_blank">
 									<img onmouseover="this.src='img/icons/social/instagram-rollover.png'"  height="20" width="20" onmouseout="this.src='img/icons/social/instagram.png'" border="0" src="img/icons/social/instagram.png" alt="Instagram" /></a></li>
 							<li class="vos-social-buttons"><a href="http://vikingsofskate.tumblr.com/" target="_blank">

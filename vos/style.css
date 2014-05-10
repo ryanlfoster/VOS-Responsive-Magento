@@ -101,7 +101,7 @@ nav{
 /* Main Page*/ /*Large Screens*/ /* no media query ***ROOT***/
 
 .outer {width:100%;}
-.inner {width:1000px;margin-left:auto;
+.inner { width:1000px; margin-left:auto;
 margin-right:auto;}
 
 .page-wrap {
@@ -142,7 +142,7 @@ display: -webkit-box;
 .happy {width: 70px;flex: 1;max-width:33%;}
 
 .grad {flex: 1;}
-.skull {flex:1;display;padding-top: 6%;padding-bottom: 6%;}
+.skull {flex:1;display;padding-top: 1em;padding-bottom: 1.1em;}
 .not {flex:1;}
 
 .spine {width: 70px;flex: 1;max-width:33%;}
