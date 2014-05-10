@@ -25,6 +25,10 @@
 		 $('.menu-btn').click(function(){
 		   $('nav').toggleClass('menu-open');
 		 });
+		 
+		 $('.menu-button').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
 		 });	
 	 </script>
 <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
@@ -69,7 +73,7 @@
 </div>
 	<div class="outer">
 			<div class="inner">
-			<?php include_once('vos/nav.php'); ?>
+			<?php include_once('vos/resp-nav.php'); ?>
 			<div class="page-wrap">
   			<section class="main-content">
 				<span class="primary-content">
