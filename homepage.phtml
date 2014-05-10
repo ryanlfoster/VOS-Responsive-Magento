@@ -3,31 +3,53 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php echo $this->getChildHtml('head') ?>
-<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/images/jquery.magnifier.js"></script>
+<link href="/vos/style.css" rel="stylesheet" type="text/css" />
+	 <script src="js/jquery-2.1.1.min.js"></script>
+	 <script src="js/prefixfree.min.js"></script>
+	 <script src="js/picturefill.js"></script>
+	 <script src="js/matchmedia.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<!-- 	 Responsive menu script -->	 
+	<script>
+		 $(document).ready(function(){
+		 $(".menu li a").each(function() {
+		  if ($(this).next().length > 0) {
+		   $(this).addClass("parent");
+		  };
+		 })
+		 var menux = $('.menu li a.parent');
+		 $( '<div class="more"><img src="img/btn-hamburger.png" alt=""></div>' ).insertBefore(menux);
+		 $('.more').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 $('.menu-btn').click(function(){
+		   $('nav').toggleClass('menu-open');
+		 });
+		 });	
+	 </script>
 <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-<link rel="stylesheet" type="text/css" href="http://assets.cookieconsent.silktide.com/current/style.min.css"/>
-<script type="text/javascript" src="http://assets.cookieconsent.silktide.com/current/plugin.min.js"></script>
-<script type="text/javascript">
+	<link rel="stylesheet" type="text/css" href="http://assets.cookieconsent.silktide.com/current/style.min.css"/>
+	<script type="text/javascript" src="http://assets.cookieconsent.silktide.com/current/plugin.min.js"></script>
+	<script type="text/javascript">
 // <![CDATA[
-cc.initialise({
-	cookies: {
-		social: {},
-		analytics: {},
-		necessary: {}
-	},
-	settings: {
-		consenttype: "implicit",
-		bannerPosition: "push",
-		style: "monochrome",
-		disableallsites: true,
-		hideprivacysettingstab: true
-	},
-	strings: {
-		analyticsDefaultTitle: 'Google Analytics',
-		necessaryDefaultTitle: 'Required for Shopping Cart'
-	}
-});
+		cc.initialise({
+			cookies: {
+				social: {},
+				analytics: {},
+				necessary: {}
+			},
+			settings: {
+				consenttype: "implicit",
+				bannerPosition: "push",
+				style: "monochrome",
+				disableallsites: true,
+				hideprivacysettingstab: true
+			},
+			strings: {
+				analyticsDefaultTitle: 'Google Analytics',
+				necessaryDefaultTitle: 'Required for Shopping Cart'
+			}
+		});
 // ]]>
 </script>
 <!-- End Cookie Consent plugin -->
@@ -35,60 +57,163 @@ cc.initialise({
 
 </head>
 <body>
+<div id="bg">
+			<span data-picture data-alt="Vikings of Skate">
+			<span data-src="img/bg/bg-low.jpg"></span> 
+			<span data-src="img/bg/bg-low.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/bg/bg-xxl.jpg" data-media="(min-width: 800px)"></span>
+			<span data-src="img/bg/bg-xxl.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/bg/bg-low.png" alt="Vikings of Skate"></noscript>
+			</span>
+</div>
 	<div id="outer">
-	
-		<div id="inner">
-			
-			
-			<div id="head">
-			
-			<div id="navigation_bar">
-			
+			<div id="inner">
 			<?php include_once('vos/nav.php'); ?>
-			
-			</div>
-		
-			</div>
-			
-			<div id="left">
-					<?php echo $this->getChildHtml('global_notices') ?> 
-					<?php echo $this->getChildHtml('global_messages') ?>
-					<?php echo $this->getChildHtml('content') ?> 
-				<span class="left-bottom">
-				
-				</span>
-			</div>
-			
-			<div id="right">
-			
-					<span class="logotitle">
-			<img src="/images/headers/winter2013.png" width="425" height="218" border="0" usemap="#Map2" />
-			<map name="Map2" id="Map2">
-			<area shape="rect" coords="280,2,430,210" href="/about" />
-					</map>
-					</span>
-		
-				<div id="right-text">
-					<span class="centre-offset">
-					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('vosfront')->toHtml(); ?>
-					</span>
+			<div class="page-wrap">
+  			<section class="main-content">
+				<span class="primary-content">
+			  
+		<div class="prints">
+			<div class="column1"><a href="http://www.vikingsofskate.com/prints/happy-print.html"><img src ="img/products/prints/happy188x600.jpg"></a></div>
+				<div class="column2">
+					<div class="grad"><a href="http://www.vikingsofskate.com/prints/horns-print.html"><img src ="img/products/prints/grad187.jpg"></a></div>
+					<div class="skull"><a href="http://www.vikingsofskate.com/prints/skull.html"><img src ="img/products/prints/skull187.jpg"></a></div>
+					<div class="not"><a href="http://www.vikingsofskate.com/prints/crime.html"><img src ="img/products/prints/not187.jpg"></a></div>
 				</div>
 				
-				
-			
+			<div class="column3"><a href="http://www.vikingsofskate.com/prints/spine-print.html"><img src ="img/products/prints/spine188x600.jpg"></a></div>
+		</div>
+		<div class="products">
+			<div class="column1">	<a href="http://www.vikingsofskate.com/shirts/broken-vos.html">
+			<span data-picture data-alt="Vikings of Skate - White Broken Tee">
+			<span data-src="img/products/clothing/tee/lrg/broken/broken-thumb-lrg.jpg"></span> 
+			<span data-src="img/products/clothing/tee/sml/whitebroken.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/clothing/tee/lrg/broken/broken-thumb-lrg.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/clothing/tee/lrg/broken/broken-thumb-lrg.jpg" alt="Vikings of Skate - White Broken Tee"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/shirts/happy-vos.html"><img src="img/products/clothing/tee/sml/whitehappy.jpg"alt="Vikings of Skate - Happy Tee"></a>
+									<a href="http://www.vikingsofskate.com/shirts/fade.html"><img src="img/products/clothing/tee/sml/hornsfade.jpg"alt="Vikings of Skate - Fade Tee"></a>
+									<a href="http://www.vikingsofskate.com/shirts/vert-vos.html"><img src="img/products/clothing/tee/sml/whitevert.jpg"alt="Vikings of Skate - Vert Tee"></a>
 			</div>
-
+			<div class="column2">	<a href="http://www.vikingsofskate.com/shirts/code-vos.html"><img src="img/products/clothing/tee/sml/whitecode.jpg"alt="Vikings of Skate - Code Tee"></a>
+									<a href="http://www.vikingsofskate.com/shirts/horns-vos.html"><img src="img/products/clothing/tee/sml/whitehorns.jpg"alt="Vikings of Skate - Horns Tee"></a>
+									<a href="http://www.vikingsofskate.com/shirts/rip-vos.html"><img src="img/products/clothing/tee/sml/whiterip_1.jpg"alt="Vikings of Skate - RIP Tee"></a>
+									<a href="http://www.vikingsofskate.com/shirts/raglan.html"><img src="img/products/clothing/tee/sml/raglan.jpg"alt="Vikings of Skate - Raglan Tee"></a>
+			</div>
+			<div class="column3">	<a href="http://www.vikingsofskate.com/shirts/notskateboarding.html"><img src="img/products/clothing/tee/sml/not_2.jpg"alt="Vikings of Skate - Not Skateboarding is a Crime Tee"></a>
+									<a href="http://www.vikingsofskate.com/shirts/ollie-vos.html"><img src="img/products/clothing/tee/sml/whiteolly.jpg"alt="Vikings of Skate - Ollie Tee"></a>
+									<a href="http://www.vikingsofskate.com/shirts/spine-vos.html"><img src="img/products/clothing/tee/sml/whitespine.jpg"alt="Vikings of Skate - Spine Tee"></a>
+									<a href="http://www.vikingsofskate.com/shirts/kids.html"><img src="img/products/clothing/tee/sml/kids.jpg"alt="Vikings of Skate - Kids Tee"></a>
+			</div>
 			
-		 <div class="vosfooter">
-				<?php include_once('images/footer.php'); ?>	
-
-	</div>
+		</div>
+		<div class="products">
+			<div class="column-a">	<a href="http://www.vikingsofskate.com/caps/black-horns-cap.html">
+			<span data-picture data-alt="Vikings of Skate - Black Logo Cap">
+			<span data-src="img/products/caps/blacklogo.jpg"></span> 
+			<span data-src="img/products/caps/lrg/blacklogo.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/blacklogo.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/blacklogo.jpg" alt="Vikings of Skate - Black VOS Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/black-vikings-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Black VOS Cap">
+			<span data-src="img/products/caps/blacktype.jpg"></span> 
+			<span data-src="img/products/caps/lrg/blacktype.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/blacktype.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/blacktype.jpg" alt="Vikings of Skate - Black Horns Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/purple-horns-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Purple Logo Cap">
+			<span data-src="img/products/caps/purplelogo.jpg"></span> 
+			<span data-src="img/products/caps/lrg/purplelogo.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/purplelogo.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/purplelogo.jpg" alt="Vikings of Skate - Purple Logo Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/purple-viking-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Purple VOS Cap">
+			<span data-src="img/products/caps/purpletype.jpg"></span> 
+			<span data-src="img/products/caps/lrg/purpletype.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/purpletype.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/purpletype.jpg" alt="Vikings of Skate - Purple VOS Cap"></noscript>
+			</span></a>
+			</div>
+			<div class="column-b">	<a href="http://www.vikingsofskate.com/caps/maroon-horns-cap.html">
+			<span data-picture data-alt="Vikings of Skate - Maroon Logo Cap">
+			<span data-src="img/products/caps/maroonlogo.jpg"></span> 
+			<span data-src="img/products/caps/lrg/maroonlogo.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/maroonlogo.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/maroonlogo.jpg" alt="Vikings of Skate - Maroon Logo Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/maroon-vikings-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Maroon VOS Cap">
+			<span data-src="img/products/caps/maroontype.jpg"></span> 
+			<span data-src="img/products/caps/lrg/maroontype.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/maroontype.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/maroontype.jpg" alt="Vikings of Skate - Maroon VOS Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/grey-horns-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Grey Logo Cap">
+			<span data-src="img/products/caps/greylogo.jpg"></span> 
+			<span data-src="img/products/caps/lrg/greylogo.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/greylogo.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/greylogo.jpg" alt="Vikings of Skate - Grey Logo Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/grey-viking-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Grey VOS Cap">
+			<span data-src="img/products/caps/greytype.jpg"></span> 
+			<span data-src="img/products/caps/lrg/greytype.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/greytype.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/greytype.jpg" alt="Vikings of Skate - Grey VOS Cap"></noscript>
+			</span></a>
+			</div>
 			
-			
+			 
+		</div>
+      </span>
+      </span>
+			</section>
+			<aside class="main-sidebar">
+				 <span class="secondary-logo"> 
+	  
+	 <span data-picture data-alt="Vikings of Skate">
+			<span data-src="img/headers/homepage.png"></span>
+			<span data-src="img/headers/summer2014_med.png" data-media="(min-width: 36.1em)"></span>
+			<span data-src="img/headers/summer2014_full.png" data-media="(min-width: 52.1em)"></span>
+			<span data-src="img/headers/summer2014_full.png" data-media="(min-width: 1000px)"></span>
+		
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/headers/summer2014.png" alt="Vikings of Skate"></noscript>
+		</span>
+	   
+              </span>
+      <span class="secondary-text">
+	  <p>Vikings of Skate is a new skater owned company.</p><p> Viking blood is in the family.</p>
+	  We exist to celebrate skateboarding, just as skateboarding 
+is creative so VOS is a creative company. Our designs are 
+different from what you might expect and some are owned 
+by US skate legends. Vikings of Skate fans include Jay Adams, Tony Alva, Dave Allen, Micke Alba and Scott Foss.
+	  <p>You may or may not be a skater but like our followers we think you'll appreciate fresh thought provoking designs.
+</p>
+Our current currently range consits of limited edition hand 
+pulled screen prints, conceptual t-shirts, and quality caps, 
+later skate hardware and more unexpected things. We have a team of six hot skaters and exciting plans for the future.
+</span>
+    </span>
+			</aside> 
+		</div><!-- close page wrap -->			
+		<div class="footer"><a href="t&c.html">Copyright VOS 2014 - All Rights Reserved</a></div>
 		</div>	
-		<div id="black-back" >
-	</div>
-<img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/>
+		</div>
 </body>
 
 </html>

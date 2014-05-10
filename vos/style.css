@@ -1,0 +1,285 @@
+body, ul, li,a {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+@font-face {
+ font-family: VOS;
+ src: url("font/accid___.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: VOS;
+ src: url("font/accid___.ttf") /* TTF file for CSS3 browsers */
+}
+ @font-face {
+ font-family: VOS;
+ src: url("font/accid___.otf") /* TTF file for CSS3 browsers */
+}
+/*background image fill - http://css-tricks.com/perfect-full-page-background-image/ */
+#bg {
+  z-index: -1;
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+/*menu all (small)*/
+
+
+.menu{
+ background: transparent;
+}
+.menu a{
+font-family: "VOS";font-size: 1.4em;
+ display: block;
+ text-decoration: none;
+ color: #fff;
+ background-color: black;
+}
+.menu li{
+ position: relative;
+}
+.menu li ul{
+ display: block;
+ background: rgba(0, 0,0, 1.0);
+ max-height: 0;
+ overflow: hidden;
+ transition: all 0.3s ease;
+}
+nav{
+ transition: max-height 0.3s;
+ overflow: hidden;
+}
+.menu-btn{
+ background: #232d3b;
+ text-align: right;
+ cursor: s-resize;
+}
+.menu-btn img{
+ vertical-align: middle;
+ height: 50px;
+}
+.menu-open,
+.menu .open > ul{
+ max-height: 2000px;
+}
+.menu .open > .more img{
+ transform: rotate(-90deg);
+}
+.more img{
+ height: 24px;
+ transition: transform 0.3s;
+}
+.more{
+ background: rgba(0, 0, 0, 0.38);
+ float: right;
+ min-width: 10%;
+ cursor: move;
+}
+/*...*/
+nav{
+ max-height: 50px;
+ transition: max-height 0.3s;
+ overflow: hidden;
+}
+/*...*/ 
+
+
+/* Main Page*/ /*Large Screens*/ /* no media query ***ROOT***/
+
+.outer {width:100%;}
+.inner {width:1000px;margin-left:auto;
+margin-right:auto;}
+
+.page-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+	
+}
+.main-content {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    width: 60%;
+}
+
+.main-sidebar {
+   
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    margin-top: -1.4em;
+}
+.primary-content {display:block;padding-left: 10px;}
+.primary-content img {width:100%;}
+.prints {width:99%;   
+display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;}
+.happy {width: 70px;flex: 1;max-width:33%;}
+
+.grad {flex: 1;}
+.skull {flex:1;display;padding-top: 6%;padding-bottom: 6%;}
+.not {flex:1;}
+
+.spine {width: 70px;flex: 1;max-width:33%;}
+
+.secondary-container{vertical-align: top;display: inline-block;width: 39%;top:0;}
+.secondary-logo  img{display: block;width:97%}
+
+.secondary-text {display: block; margin-left:10px; font-family: "VOS";color: white;font-size: 1.65em; line-height: 0.9em; margin-top: -5px;}
+.tertiary{display: block; background: blue;width: 100%}
+ 
+.products {width: 99%; 
+display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+ }
+ 
+.products img {padding-top:10%; }
+
+.column1 {width: 30%; padding-left:1px }
+.column2 {width: 30%; padding-left: 3%; }
+.column3 {width: 30%; padding-left: 3%; %}
+.column-a {width: 46%}
+.column-b {width: 46%;padding-left:4%}
+
+.footer a{font-size: 0.95em;font-family: "VOS";color: white; float:right; padding-right: 1em;opacity: 0.66;text-decoration:none }
+
+@media screen and (max-width: 58em) { /* point at which hamburger menu comes in*/
+.page-wrap {padding-top: 1em}
+ul.menu {background: black;}
+li.menu-item.open {background: black;}
+li.menu-item a {padding-left:0.75em}
+
+li.cart-button {padding-left:0.95em}
+li.vos-social-buttons {display:inline-block;padding-left:0.75em}
+}
+
+@media screen and (max-width: 63em) {
+.inner {width:100%; margin-left:auto;
+margin-right:auto;}
+}
+@media screen and (max-width: 36em) { /*Media Query CONTENT for Small Screens*/
+    .inner {width: 100%}
+	.secondary-logo {position: absolute;top: 0;padding-left: 10px;padding-top:10px; display: block;}
+	.secondary-text {font-size: 1.4em;width: 95%;}
+    .page-wrap {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .main-content {
+       margin-top: 10px;
+        width: 100%;
+    }
+    .main-sidebar {
+         
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;  
+        width: 100%;
+		margin-top: 0px;
+    }
+    .main-nav {
+        width: 100%;
+    }
+	
+	
+	
+}
+
+
+
+/* wide menu*/
+@media all and (min-width: 58em){
+
+nav{
+ max-height: 100%;
+ overflow: visible;
+}
+
+.menu-item {width: 5.9em; text-align:center;}
+
+.vos-social-buttons {max-width: 40px;padding-top:5px; opacity: 0.8;}
+.vos-social-buttons :hover {background-color: transparent!important;}
+.cart-button {float:right;padding-right: 35px;padding-top:5px;}
+.cart-button  a {text-align:right;}
+
+.more img {display:none}
+
+.menu-btn{
+ display: none;
+}
+.menu{
+  min-height:70px;
+}
+.menu a{
+font-size: 1.6em;
+line-height: 0.9em;
+ background:  transparent;
+}
+.menu ul li a {min-width:3.9em; text-align: center; margin-left: 10px; font-size:1.2em; }
+.menu ul li a:hover {background: black; color: white; min-width: 3.8em; margin-left: 10px; font-size:1.2em;}
+
+.menu a:hover{
+ color: black;
+}
+.menu > li{
+ display: inline-block;
+}
+.menu li ul{
+ left: -9999px;
+ position:absolute;
+ overflow: visible;
+ -webkit-transition: all 0.0s ease;
+}
+.menu > li > ul ul{
+ top: 0;
+}
+.menu li:hover > ul{
+ left:100%;
+}
+.menu > li:hover > ul{
+ left: 0;
+}
+.menu .open > ul{
+left:100%; 
+}
+.menu > li.open > ul{
+
+ left: 0;
+}
+}
