@@ -1,0 +1,763 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+
+.team-ben {
+
+display: inline-block;
+
+left: 0;
+
+}
+
+
+
+.team-kai {
+
+display: inline-block;	
+
+}
+
+
+
+.team-harry {
+
+display: inline-block;	
+
+}
+
+
+
+.team-amir {
+
+display: inline-block;	
+
+}
+
+
+
+.team-nathan {
+
+display: inline-block;	
+
+}
+
+
+
+.team-jesse {
+
+display: inline-block;
+
+right: 0;
+
+}
+
+
+
+
+
+
+
+
+
+/* DARKENS BG*/
+
+
+
+.overlay {
+
+    background-color: rgba(0, 0, 0, 0); /* was 0.3 reduced to 0 to disable*/
+
+    bottom: 0;
+
+    cursor: default;
+
+    left: 0;
+
+    opacity: 0;
+
+    position: fixed;
+
+    right: 0;
+
+    top: 0;
+
+    visibility: hidden;
+
+    z-index: 1;
+
+    
+
+/* transitions in the background dimming*/
+
+
+
+    -webkit-transition: opacity .5s;
+
+    -moz-transition: opacity .5s;
+
+    -ms-transition: opacity .5s;
+
+    -o-transition: opacity .5s;
+
+    transition: opacity .5s;
+
+}
+
+.overlay:target {
+
+    visibility: visible;
+
+    opacity: 1;
+
+}
+
+/*Ben POPUP CSS*/
+
+
+
+.ben-bg {
+position: absolute;
+margin-top: -325px;
+margin-left: 325px;
+background: #FFFFE3;
+color: black;
+font-family: VOS, Arial;
+font-size: 1.7em;
+line-height: 1.05;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+letter-spacing: 0.07em;
+text-align: justify!important;
+width: 319px;
+height: 315px;
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+}
+
+
+.ben {
+
+	
+
+    background:none;
+
+    display: inline-block;
+
+    opacity: 0;
+
+    position: absolute;
+
+    left: 0;
+
+	top: 5px;
+
+    visibility: hidden;
+
+    z-index: 10;
+
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+
+}
+
+
+
+.overlay:target+.ben {
+
+    top: 305px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.ben p, .ben div {
+
+    /* margin-bottom: 10px;*/
+
+}
+
+
+
+/*KAI POPUP */
+
+	
+
+.kai-bg{
+position: absolute;
+margin-top: -325px;
+margin-left: 325px;
+background: #FFFFE3;
+color: black;
+font-family: VOS, Arial;
+font-size: 1.7em;
+line-height: 1.05;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+letter-spacing: 0.07em;
+text-align: justify!important;
+width: 319px;
+height: 315px;
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+}
+
+
+
+
+.kai {
+
+	
+
+    background:none;
+
+    display: inline-block;
+
+    opacity: 0;
+
+    position: absolute;
+
+    text-align: justify;
+
+    left: 0;
+
+	top: 10px;
+
+    visibility: hidden;
+
+    z-index: 10;
+
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+
+}
+
+
+
+.overlay:target+.kai {
+
+    top: 305px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.kai p, .kai div {
+
+   /* margin-bottom: 10px;*/
+
+}
+
+
+
+/*FIRST POPUP*/
+
+.harryp-bg{
+position: absolute;
+margin-top: -325px;
+margin-left: 325px;
+background: #FFFFE3;
+color: black;
+font-family: VOS, Arial;
+font-size: 1.65em;
+line-height: 1.05;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+letter-spacing: 0.07em;
+text-align: justify!important;
+width: 319px;
+height: 315px;
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+}
+
+
+
+
+
+.harry {
+
+      background:none;
+
+    display: inline-block;
+
+    opacity: 0;
+
+    position: absolute;
+
+    text-align: justify;
+
+    left: 0;
+
+	top: 10px;
+
+    visibility: hidden;
+
+    z-index: 10;
+
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+
+    
+
+}
+
+
+
+
+
+.overlay:target+.harry {
+
+    top: 305px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.close-modal p {
+
+	color: black;
+
+}
+
+
+
+.close {
+
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+
+    /*height: 15px;*/
+
+    /*line-height: 15px;*/
+
+   /* position: absolute;*/
+
+    /*right: 0;*/
+
+    /*text-align: center;*/
+
+   /* text-decoration: none;*/
+
+    /*bottom: 10px;*/
+
+    /*width: 15px;*/
+
+
+
+    /*-webkit-border-radius: 15px;
+
+    -moz-border-radius: 15px;
+
+    -ms-border-radius: 15px;
+
+    -o-border-radius: 15px;
+
+    border-radius: 15px;*/
+
+}
+
+/*.close:before {
+
+    color: rgba(255, 255, 255, 0.9);
+
+    content: "x";
+
+    font-size: 16px;
+
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);*/
+
+}
+
+.close:hover {
+
+    /* background-color: rgba(64, 128, 128, 0.8); */
+
+}
+
+.harry p, .harry div {
+
+   /* margin-bottom: 10px;*/
+
+}
+
+
+
+
+
+/*Jessie POPUP CSS*/
+
+
+
+.jessie-bg{
+position: absolute;
+margin-top: -325px;
+margin-left: 325px;
+background: #FFFFE3;
+color: black;
+font-family: VOS, Arial;
+font-size: 1.7em;
+line-height: 1.05;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+letter-spacing: 0.07em;
+text-align: justify!important;
+width: 319px;
+height: 315px;
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+}
+
+
+
+.jessie {
+
+	
+
+    background:none;
+
+    display: inline-block;
+
+    opacity: 0;
+
+    position: absolute;
+
+    text-align: justify;
+
+   	left: 34%;
+
+	top: 10px;
+
+    visibility: hidden;
+
+    z-index: 10;
+
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+
+}
+
+
+
+.overlay:target+.jessie {
+
+    top: 305px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.jessie p, .jessie div {
+
+   /* margin-bottom: 10px; */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*AMIR POPUP CSS*/
+
+
+
+.amir-bg{
+position: absolute;
+margin-top: -325px;
+margin-left: 325px;
+background: #FFFFE3;
+color: black;
+font-family: VOS, Arial;
+font-size: 1.7em;
+line-height: 1.05;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+letter-spacing: 0.07em;
+text-align: justify!important;
+width: 319px;
+height: 315px;
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+}
+
+
+
+.amir {
+
+	
+
+    background:none;
+
+    display: inline-block;
+
+    opacity: 0;
+
+    position: absolute;
+
+    text-align: justify;
+
+    left: 34%;
+
+	top: 10px;
+
+    visibility: hidden;
+
+    z-index: 10;
+
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+
+}
+
+
+
+.overlay:target+.amir {
+
+    top: 305px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.amir p, .amir div {
+
+ /*   margin-bottom: 10px;*/
+
+    text-align: justify;
+
+}
+
+
+
+/*NATHAN POPUP */
+
+
+
+.nathan-bg{
+position: absolute;
+margin-top: -325px;
+margin-left: 325px;
+background: #FFFFE3;
+color: black;
+font-family: VOS, Arial;
+font-size: 1.7em;
+line-height: 1.05;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px;
+letter-spacing: 0.07em;
+text-align: justify!important;
+width: 319px;
+height: 315px;
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+}
+
+
+
+.nathan {
+
+	
+
+   	background:none;
+
+    display: inline-block;
+
+    opacity: 0;
+
+    position: absolute;
+
+    text-align: justify;
+
+    left: 34%;
+
+	top: 10px;
+
+    visibility: hidden;
+
+    z-index: 10;
+
+/*shadow*/
+
+padding-bottom: -10px;
+
+-moz-box-shadow: 3px 3px 4px #000;
+
+-webkit-box-shadow: 3px 3px 4px #000;
+
+ box-shadow: 3px 3px 4px #000;
+
+}
+
+
+
+.overlay:target+.nathan {
+
+    top: 305px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.nathan p, .nathan div {
+
+  /*  margin-bottom: 10px;*/
+
+}
+
+
+
+
+
+/*TEXT OVERLAYS FOR THE TEAM NAMES*/
+
+
+
+.thumb-image { 
+
+   position: relative; 
+
+   width: 100%; /* for IE 6 */
+
+}
+
+
+
+.thumb-image h3 { /*ben*/
+
+   position: absolute; 
+
+
+
+}
+
+.thumb-image h3 span { /*ben*/
+
+  background-color:rgba(0, 0, 0, 0.2);
+
+  color:white;
+
+  font-family:VOS, Helvetica, sans-serif;
+
+  font-size:18px;
+
+  font-style:normal;
+
+  font-weight:normal;
+
+  line-height:normal;
+
+  margin-left:3px;
+
+  margin-top:-25px;
+
+  padding:2px;
+
+  position:absolute;
+
+  width:146px;
+
+}

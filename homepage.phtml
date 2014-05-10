@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php echo $this->getChildHtml('head') ?>
+<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/images/jquery.magnifier.js"></script>
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<link rel="stylesheet" type="text/css" href="http://assets.cookieconsent.silktide.com/current/style.min.css"/>
+<script type="text/javascript" src="http://assets.cookieconsent.silktide.com/current/plugin.min.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+cc.initialise({
+	cookies: {
+		social: {},
+		analytics: {},
+		necessary: {}
+	},
+	settings: {
+		consenttype: "implicit",
+		bannerPosition: "push",
+		style: "monochrome",
+		disableallsites: true,
+		hideprivacysettingstab: true
+	},
+	strings: {
+		analyticsDefaultTitle: 'Google Analytics',
+		necessaryDefaultTitle: 'Required for Shopping Cart'
+	}
+});
+// ]]>
+</script>
+<!-- End Cookie Consent plugin -->
+
+
+</head>
+<body>
+	<div id="outer">
+	
+		<div id="inner">
+			
+			
+			<div id="head">
+			
+			<div id="navigation_bar">
+			
+			<?php include_once('vos/nav.php'); ?>
+			
+			</div>
+		
+			</div>
+			
+			<div id="left">
+					<?php echo $this->getChildHtml('global_notices') ?> 
+					<?php echo $this->getChildHtml('global_messages') ?>
+					<?php echo $this->getChildHtml('content') ?> 
+				<span class="left-bottom">
+				
+				</span>
+			</div>
+			
+			<div id="right">
+			
+					<span class="logotitle">
+			<img src="/images/headers/winter2013.png" width="425" height="218" border="0" usemap="#Map2" />
+			<map name="Map2" id="Map2">
+			<area shape="rect" coords="280,2,430,210" href="/about" />
+					</map>
+					</span>
+		
+				<div id="right-text">
+					<span class="centre-offset">
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('vosfront')->toHtml(); ?>
+					</span>
+				</div>
+				
+				
+			
+			</div>
+
+			
+		 <div class="vosfooter">
+				<?php include_once('images/footer.php'); ?>	
+
+	</div>
+			
+			
+		</div>	
+		<div id="black-back" >
+	</div>
+<img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/>
+</body>
+
+</html>
