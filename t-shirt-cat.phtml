@@ -1,59 +1,102 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<!-- REMOVE BEFORE PRODUCTION ******* NO CACHING -->	
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php echo $this->getChildHtml('head') ?>
-<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/images/jquery.magnifier.js"></script>
+
+<link href="vos/style.css" rel="stylesheet" type="text/css" />
+	 <script src="vos/js/jquery-2.1.1.min.js"></script>
+	 <script src="vos/js/prefixfree.min.js"></script>
+	 <script src="vos/js/picturefill.js"></script>
+	 <script src="vos/js/matchmedia.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<script> <!-- 	 Responsive menu script -->	 
+		 $(document).ready(function(){
+		 $(".menu li a").each(function() {
+		  if ($(this).next().length > 0) {
+		   $(this).addClass("parent");
+		  };
+		 })
+		 var menux = $('.menu li a.parent');
+		 $( '<div class="more"><img src="img/btn-hamburger.png" alt=""></div>' ).insertBefore(menux);
+		 $('.more').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 $('.menu-btn').click(function(){
+		   $('nav').toggleClass('menu-open');
+		 });
+		 
+		 $('.menu-button').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 });	
+	 </script>
+
+<!-- ADD COOKIE LAW SCRIPT BACK IN -->
+
 </head>
 <body>
-<div id="outer">
-	<div id="inner">
-		<div id="head">
+<?php include_once('vos/inc/background.php'); ?> <!-- BACKGROUND IMAGE  -->
+	<div class="outer">
+			<div class="inner">
+			<?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
+			<div class="page-wrap">
+				<section class="main-content">
+					<span class="primary-content">
+						<div class="shirts-cat">
+						<a href="http://www.vikingsofskate.com/shirts/broken-vos.html">
+											<span data-picture data-alt="Vikings of Skate - White Broken Tee">
+											<span data-src="img/products/clothing/tee/lrg/broken/broken-thumb-lrg.jpg"></span> 
+											<span data-src="img/products/clothing/tee/sml/whitebroken.jpg" data-media="(min-width: 400px)"></span>
+											<span data-src="img/products/clothing/tee/lrg/broken/broken-thumb-lrg.jpg" data-media="(min-width: 1000px)"></span>
+											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+											<noscript><img src="img/products/clothing/tee/lrg/broken/broken-thumb-lrg.jpg" alt="Vikings of Skate - White Broken Tee"></noscript>
+											</span></a>
+						<a href="http://www.vikingsofskate.com/shirts/kids.html"><img src="img/products/clothing/tee/sml/kids.jpg"alt="Vikings of Skate - Kids Tee"></a>						
+						<a href="http://www.vikingsofskate.com/shirts/spine-vos.html"><img src="img/products/clothing/tee/sml/whitespine.jpg"alt="Vikings of Skate - Spine Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/happy-vos.html"><img src="img/products/clothing/tee/sml/whitehappy.jpg"alt="Vikings of Skate - Happy Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/fade.html"><img src="img/products/clothing/tee/sml/hornsfade.jpg"alt="Vikings of Skate - Fade Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/vert-vos.html"><img src="img/products/clothing/tee/sml/whitevert.jpg"alt="Vikings of Skate - Vert Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/code-vos.html"><img src="img/products/clothing/tee/sml/whitecode.jpg"alt="Vikings of Skate - Code Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/horns-vos.html"><img src="img/products/clothing/tee/sml/whitehorns.jpg"alt="Vikings of Skate - Horns Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/rip-vos.html"><img src="img/products/clothing/tee/sml/whiterip_1.jpg"alt="Vikings of Skate - RIP Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/raglan.html"><img src="img/products/clothing/tee/sml/raglan.jpg"alt="Vikings of Skate - Raglan Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/notskateboarding.html"><img src="img/products/clothing/tee/sml/not_2.jpg"alt="Vikings of Skate - Not Skateboarding is a Crime Tee"></a>
+						<a href="http://www.vikingsofskate.com/shirts/ollie-vos.html"><img src="img/products/clothing/tee/sml/whiteolly.jpg"alt="Vikings of Skate - Ollie Tee"></a>
+				
+						</div>
+					</span>
+				</section>
 			
-			<div id="navigation_bar">
+				<aside class="main-sidebar">
+					<span class="logotitle">
+					<img src="/images/headers/shirts.png" width="425" height="218" border="0" usemap="#Map2" />
+					<map name="Map2" id="Map2">
+					<area shape="rect" coords="280,2,430,210" href="/homepage" />
+					</map>
+					</span>
+					
+					<div class="secondary-text">
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('shirtscategory')->toHtml(); ?>
+					</div>
+					
+					<div class="right-bottom-shirts">
+					<img src="/images/shirts/screenLogo.jpg" width =193px style="padding-right:3px;">
+					<img src="/images/shirts/yellowVirgin.jpg" width= 193px style="padding-left:3px;">
+					</div>
+				</aside> 
 			
-		<?php include_once('vos/nav.php'); ?>
-			
-			</div>
-		
-			</div>
-	
-	<div id="left">
-		<?php echo $this->getChildHtml('global_notices') ?> 
-		<?php echo $this->getChildHtml('global_messages') ?>
-		<?php echo $this->getChildHtml('content') ?> 
-	</div>
-	
-	<div id="right">
-	
-		<span class="logotitle">
-			<img src="/images/headers/shirts.png" width="425" height="218" border="0" usemap="#Map2" />
-			<map name="Map2" id="Map2">
-			<area shape="rect" coords="280,2,430,210" href="/homepage" />
-			</map>
-		</span>
-		
-		<div id="right-text-shirts">
-		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('shirtscategory')->toHtml(); ?>
+			</div><!-- close page wrap -->			
+		<div class="footer"><a href="t&c.html">Copyright VOS 2014 - All Rights Reserved</a></div>
+		</div>	
 		</div>
-		
-		<div id="right-bottom-shirts">
-		<img src="/images/shirts/screenLogo.jpg" width =193px style="padding-right:3px;">
-		<img src="/images/shirts/yellowVirgin.jpg" width= 193px style="padding-left:3px;">
-		</div>
-	
-	</div>
- <div class="vosfooter">
-				<?php include_once('images/footer.php'); ?>	
-
-	</div>
-	 
-
-
-</div>
-	
-</div>
-<img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/>
 </body>
+
 </html>

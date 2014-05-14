@@ -1,0 +1,13 @@
+<div class="prints-wrapper">
+			<div class="one"><img src ="http://dgt2.com/img/products/prints/happy188x600.jpg"></div>
+				<div class="spacer"></div>  
+			<div class="two">
+				<div class="alpha"><img src ="http://dgt2.com/img/products/prints/grad187.jpg"></div>
+					<div class="spacer"></div> 
+				<div class="beta"><img src ="http://dgt2.com/img/products/prints/skull187.jpg"></div>
+					<div class="spacer"></div> 
+				<div class="gamma"><img src ="http://dgt2.com/img/products/prints/not187.jpg"></div>
+			</div>
+				<div class="spacer"></div> 
+			<div class="three"><img src ="http://dgt2.com/img/products/prints/spine188x600.jpg"></div>
+		</div>

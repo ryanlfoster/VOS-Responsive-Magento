@@ -43,7 +43,7 @@
 
 </head>
 <body>
-<?php include_once('vos/inc/tntbackground.php'); ?> <!-- BACKGROUND IMAGE  -->
+<?php include_once('vos/inc/background.php'); ?> <!-- BACKGROUND IMAGE  -->
 	<div class="outer">
 			<div class="inner">
 			<?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
@@ -56,17 +56,7 @@
 				</section>
 			
 				<aside class="main-sidebar">
-					<div id="tnt-right-col">
-						<div id="logotitle"><img src="images/headers/tnt.png" width="425" height="215" border="0" usemap="#Map2" />
-						<map name="Map2" id="Map2"> <area shape="rect" coords="280,2,430,210" href="/homepage" /></map>
-						</div>
-					</div>
-					<div class="secondary-text">
-						<div class="tnt-text">
-						<?php echo $this->getChildHtml('global_messages') ?>
-						<?php echo $this->getChildHtml('content') ?> 
-						</div>
-					</div>	 
+					 
 				</aside> 
 			
 			</div><!-- close page wrap -->			
