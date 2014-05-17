@@ -1,7 +1,7 @@
 VOS-Responsive-Magento
 ======================
 
-Integration of responsive static site with magento elements
+Integration of responsive theme with magento elements
 
 
 Features - Responsive images, Flexbox Layout
