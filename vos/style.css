@@ -140,7 +140,7 @@ display: -webkit-box;
 .happy {width: 70px;flex: 1;max-width:33%;}
 
 .grad {-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;}
-.skull {-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-top: 8.5%;padding-bottom: 8.5%;}
+.skull {-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-top: 8.25%;padding-bottom: 8.25%;}
 .not {-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;}
 
 .spine {width: 70px;flex: 1;max-width:33%;}
@@ -169,7 +169,7 @@ display: -webkit-box;
 .secondary-container{vertical-align: top;display: inline-block;width: 39%;top:0;}
 .secondary-logo  img{display: block;width:97%}
 
-.secondary-text {display: block; margin-left:10px; font-family: "VOS";color: white;font-size: 1.65em; line-height: 0.9em; margin-top: -5px;}
+.secondary-text {display: block; margin-left:10px; font-family: "VOS";color: white;font-size: 1.65em; line-height: 0.9em; margin-top: -5px;width:90%;}
 
  
 .products {width: 99%; 
@@ -183,11 +183,15 @@ display: -webkit-box;
 .products img {padding-top:10%; }
 
 .column1 {width: 33.3%; padding-left:1px }
-.column2 {width: 24.6%; padding-left: 2%; position:relative; }
-.column3 {width: 33.3%; padding-left: 2%; %}
+.column2 {width: 24.6%; padding-left: 2.25%; position:relative; }
+.column3 {width: 33.3%; padding-left: 2.25%; %}
 
 .column-a {width: 46%}
 .column-b {width: 46%;padding-left:4%}
+
+.row-a {-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;padding-right: 0.8em;}
+.row-b {-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;padding-left: 0.8em;}
+.right-bottom-shirts img{padding-top: 2em;width: 91%;padding-left: 0.8em;}
 .shirts-cat {display: inline-block;}
 .shirts-cat img {width: 22%;}
 
@@ -196,6 +200,7 @@ display: -webkit-box;
 @media screen and (max-width: 58em) { /* point at which hamburger menu comes in*/
 	.inner {width: 100%}
 	.secondary-logo {position: absolute;top: 0;padding-left: 10px;padding-top:12px; display: block;}
+	.secondary-logo img {width: inherit;}
 	.secondary-text {font-size: 1.4em;width: 95%;font-size: 1.6em;margin-left: 0.5em;margin-top: 10px;}
     .page-wrap {
         display: -webkit-box;
@@ -207,7 +212,9 @@ display: -webkit-box;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-		padding-top: 1em
+		/*padding-top: 1em*/
+		width:96%;
+		padding-left: 0.7em;
     }
 	
     .main-content {
