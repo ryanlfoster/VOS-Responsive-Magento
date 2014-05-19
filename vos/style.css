@@ -140,8 +140,8 @@ display: -webkit-box;
 .happy {width: 70px;flex: 1;max-width:33%;}
 
 .grad {-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;}
-.skull {-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-top: 6%;padding-bottom: 6%;}
-.not {-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;position: absolute; bottom:0;}
+.skull {-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding-top: 8.5%;padding-bottom: 8.5%;}
+.not {-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;}
 
 .spine {width: 70px;flex: 1;max-width:33%;}
 
@@ -182,9 +182,9 @@ display: -webkit-box;
  
 .products img {padding-top:10%; }
 
-.column1 {width: 30%; padding-left:1px }
-.column2 {width: 30%; padding-left: 3%; position:relative; }
-.column3 {width: 30%; padding-left: 3%; %}
+.column1 {width: 33.3%; padding-left:1px }
+.column2 {width: 24.6%; padding-left: 2%; position:relative; }
+.column3 {width: 33.3%; padding-left: 2%; %}
 
 .column-a {width: 46%}
 .column-b {width: 46%;padding-left:4%}
