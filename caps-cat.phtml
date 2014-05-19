@@ -1,66 +1,160 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<!-- REMOVE BEFORE PRODUCTION ******* NO CACHING -->	
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php echo $this->getChildHtml('head') ?>
-<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/images/jquery.magnifier.js"></script>
- 
+
+<link href="vos/style.css" rel="stylesheet" type="text/css" />
+	 <script src="vos/js/jquery-2.1.1.min.js"></script>
+	 <script src="vos/js/prefixfree.min.js"></script>
+	 <script src="vos/js/picturefill.js"></script>
+	 <script src="vos/js/matchmedia.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<script> <!-- 	 Responsive menu script -->	 
+		 $(document).ready(function(){
+		 $(".menu li a").each(function() {
+		  if ($(this).next().length > 0) {
+		   $(this).addClass("parent");
+		  };
+		 })
+		 var menux = $('.menu li a.parent');
+		 $( '<div class="more"><img src="img/btn-hamburger.png" alt=""></div>' ).insertBefore(menux);
+		 $('.more').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 $('.menu-btn').click(function(){
+		   $('nav').toggleClass('menu-open');
+		 });
+		 
+		 $('.menu-button').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 });	
+	 </script>
+
+<!-- ADD COOKIE LAW SCRIPT BACK IN -->
+
 </head>
 <body>
-<div id="outer">
-	<div id="inner">
-		<div id="head">
-			
-			<div id="navigation_bar">
-			
-				<?php include_once('vos/nav.php'); ?>
-			
+<?php include_once('vos/inc/background.php'); ?> <!-- BACKGROUND IMAGE  -->
+	<div class="outer">
+			<div class="inner">
+			<?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
+			<div class="page-wrap">
+				<section class="main-content">
+					<span class="primary-content">
+						
+						<div class="products">
+			<div class="column-a">	<a href="http://www.vikingsofskate.com/caps/black-horns-cap.html">
+			<span data-picture data-alt="Vikings of Skate - Black Logo Cap">
+			<span data-src="img/products/caps/blacklogo.jpg"></span> 
+			<span data-src="img/products/caps/lrg/blacklogo.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/blacklogo.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/blacklogo.jpg" alt="Vikings of Skate - Black VOS Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/black-vikings-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Black VOS Cap">
+			<span data-src="img/products/caps/blacktype.jpg"></span> 
+			<span data-src="img/products/caps/lrg/blacktype.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/blacktype.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/blacktype.jpg" alt="Vikings of Skate - Black Horns Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/purple-horns-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Purple Logo Cap">
+			<span data-src="img/products/caps/purplelogo.jpg"></span> 
+			<span data-src="img/products/caps/lrg/purplelogo.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/purplelogo.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/purplelogo.jpg" alt="Vikings of Skate - Purple Logo Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/purple-viking-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Purple VOS Cap">
+			<span data-src="img/products/caps/purpletype.jpg"></span> 
+			<span data-src="img/products/caps/lrg/purpletype.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/purpletype.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/purpletype.jpg" alt="Vikings of Skate - Purple VOS Cap"></noscript>
+			</span></a>
 			</div>
-		
+			<div class="column-b">	<a href="http://www.vikingsofskate.com/caps/maroon-horns-cap.html">
+			<span data-picture data-alt="Vikings of Skate - Maroon Logo Cap">
+			<span data-src="img/products/caps/maroonlogo.jpg"></span> 
+			<span data-src="img/products/caps/lrg/maroonlogo.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/maroonlogo.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/maroonlogo.jpg" alt="Vikings of Skate - Maroon Logo Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/maroon-vikings-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Maroon VOS Cap">
+			<span data-src="img/products/caps/maroontype.jpg"></span> 
+			<span data-src="img/products/caps/lrg/maroontype.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/maroontype.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/maroontype.jpg" alt="Vikings of Skate - Maroon VOS Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/grey-horns-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Grey Logo Cap">
+			<span data-src="img/products/caps/greylogo.jpg"></span> 
+			<span data-src="img/products/caps/lrg/greylogo.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/greylogo.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/greylogo.jpg" alt="Vikings of Skate - Grey Logo Cap"></noscript>
+			</span></a>
+									<a href="http://www.vikingsofskate.com/caps/grey-viking-cap.html">
+									<span data-picture data-alt="Vikings of Skate - Grey VOS Cap">
+			<span data-src="img/products/caps/greytype.jpg"></span> 
+			<span data-src="img/products/caps/lrg/greytype.jpg" data-media="(min-width: 400px)"></span>
+			<span data-src="img/products/caps/lrg/greytype.jpg" data-media="(min-width: 1000px)"></span>
+			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+			<noscript><img src="img/products/caps/greytype.jpg" alt="Vikings of Skate - Grey VOS Cap"></noscript>
+			</span></a>
+			</div>
+			
+			 
 		</div>
-	
-	<div id="left">
-		<?php echo $this->getChildHtml('global_notices') ?> 
-		<?php echo $this->getChildHtml('global_messages') ?>
-		<?php echo $this->getChildHtml('content') ?> 
-	
-	<div id="bottom-left-caps">
-	<img src="/images/caps/lh-caps-left.jpg" width =293px >
-		<img src="/images/caps/lh-caps-right.jpg" width= 293px style="padding-left:6px;">
-	</div>
-	
-	</div>
-	
-	<div id="right">
-	
-		<span class="logotitle">
-			<img src="/images/headers/caps.png" width="425" height="218" border="0" usemap="#Map2" />
-			<map name="Map2" id="Map2">
-			<area shape="rect" coords="280,2,430,210" href="/homepage" />
-			</map>
-		</span>
-		
-		<div id="caps-right-text">
-		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('capscategory')->toHtml(); ?>
+			<div class="bottom-left-caps">
+				<img src="/images/caps/lh-caps-left.jpg">
+				<img src="/images/caps/lh-caps-right.jpg">
+			</div>
+					</span>
+				</section>
+			
+				<aside class="main-sidebar">
+					<span class="secondary-logo">
+					<a href="/homepage"> <span data-picture data-alt="Vikings of Skate">
+						<span data-src="img/headers/homepage.png"></span>
+						<span data-src="img/headers/homepage.png" data-media="(min-width: 36.1em)"></span>
+						<span data-src="img/headers/caps.png" data-media="(min-width: 58em)"></span>
+						<span data-src="img/headers/caps.png" data-media="(min-width: 1000px)"></span>
+					
+						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+						<noscript><img src="img/headers/caps.png" alt="Vikings of Skate"></noscript>
+					</span></span>
+					</a>					
+					<div class="secondary-text">
+					<p>In the seventies I went to visit my Norwegian lumberjack cousin. He learn’t English from American TV and drove a cool Oldsmobile with lots of wood trim. He in turn influenced me and I’ve been wearing baseball caps ever since. It’s why the first VOS cap is a classic US flat bill snap back sourced in LA. Both cap designs are available in these four colours Black, Maroon, Grey and Violet.All VOS shirts are 100% cotton and printed lovingly by experts. Your VOS shirt will last a long time as long as you take proper care of it. Wash at 30 degrees, iron inside out. Don’t dry in direct sun light. Wash dark colours separately.</p>
+					</div>
+					
+					<div class="right-bottom-shirts">
+					<img src="/images/caps/caps-right.jpg" >
+					<img src="/images/caps/caps-left.jpg">
+					</div>
+				</span>
+				</aside> 
+			
+			</div><!-- close page wrap -->			
+		<div class="footer"><a href="t&c.html">Copyright VOS 2014 - All Rights Reserved</a></div>
+		</div>	
 		</div>
-		
-		<div id="caps-right-bottom">
-		<img src="/images/caps/caps-right.jpg" width =193px style="padding-right:3px;">
-		<img src="/images/caps/caps-left.jpg" width= 193px style="padding-left:3px;">
-		</div>
-	
-	</div>
- <div class="vosfooter">
-				<?php include_once('images/footer.php'); ?>	
-
-	</div>
-	 
-
-
-</div>
-	
-</div>
-<img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/>
 </body>
+
 </html>

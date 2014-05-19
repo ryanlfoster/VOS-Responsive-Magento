@@ -192,8 +192,12 @@ display: -webkit-box;
 .row-a {-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;padding-right: 0.8em;}
 .row-b {-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;padding-left: 0.8em;}
 .right-bottom-shirts img{padding-top: 2em;width: 91%;padding-left: 0.8em;}
+.bottom-left-caps img{width: 95%; padding-top: 1em}
+
 .shirts-cat {display: inline-block;}
 .shirts-cat img {width: 22%;}
+
+
 
 .footer a{font-size: 0.95em;font-family: "VOS";color: white; float:right; padding-right: 1em;opacity: 0.66;text-decoration:none }
 
