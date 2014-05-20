@@ -1,71 +1,136 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<!-- REMOVE BEFORE PRODUCTION ******* NO CACHING -->	
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php echo $this->getChildHtml('head') ?>
-<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
-<link href="/vos/modal.css" rel="stylesheet" type="text/css" />
+
+<link href="vos/style.css" rel="stylesheet" type="text/css" />
+	 <script src="vos/js/jquery-2.1.1.min.js"></script>
+	 <script src="vos/js/prefixfree.min.js"></script>
+	 <script src="vos/js/picturefill.js"></script>
+	 <script src="vos/js/matchmedia.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<script> <!-- 	 Responsive menu script -->	 
+		 $(document).ready(function(){
+		 $(".menu li a").each(function() {
+		  if ($(this).next().length > 0) {
+		   $(this).addClass("parent");
+		  };
+		 })
+		 var menux = $('.menu li a.parent');
+		 $( '<div class="more"><img src="img/btn-hamburger.png" alt=""></div>' ).insertBefore(menux);
+		 $('.more').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 $('.menu-btn').click(function(){
+		   $('nav').toggleClass('menu-open');
+		 });
+		 
+		 $('.menu-button').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 });	
+	 </script>
+
+<!-- ADD COOKIE LAW SCRIPT BACK IN -->
+
 </head>
 <body>
-<div id="outer">
-	<div id="inner">
-		<div id="head">
-			
-			<div id="navigation_bar">
-			
-					<?php include_once('vos/nav.php'); ?>
-			
+<?php include_once('vos/inc/background.php'); ?> <!-- BACKGROUND IMAGE  -->
+	<div class="outer">
+			<div class="inner">
+			<?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
+			<div class="page-wrap">
+				<section class="main-content">
+					<span class="primary-content">
+						
+						<div class="prints">
+			<div class="column1">
+					<a href="http://www.vikingsofskate.com/prints/happy-print.html">
+											<span data-picture data-alt="Vikings of Skate - Happy Print">
+											<span data-src="img/products/prints/happy-300.jpg"></span> 
+											<span data-src="img/products/prints/happy-300.jpg" data-media="(min-width: 400px)"></span>
+											<span data-src="img/products/prints/happy-600.jpg" data-media="(min-width: 1000px)"></span>
+											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+											<noscript><img src="img/products/prints/happy-300.jpg" alt="Vikings of Skate - Happy Print"></noscript>
+											</span></a>
+				</div>
+				<div class="column2">
+					<div class="grad"><a href="http://www.vikingsofskate.com/prints/horns-print.html">
+											<span data-picture data-alt="Vikings of Skate - Horns Print">
+											<span data-src="img/products/prints/grad-300.jpg"></span> 
+											<span data-src="img/products/prints/grad-300.jpg" data-media="(min-width: 400px)"></span>
+											<span data-src="img/products/prints/grad-600.jpg" data-media="(min-width: 1000px)"></span>
+											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+											<noscript><img src="img/products/prints/grad-300.jpg" alt="Vikings of Skate - Horns Print"></noscript>
+											</span></a>
+					</div>
+					<div class="skull"><a href="http://www.vikingsofskate.com/prints/skull.html">
+											<span data-picture data-alt="Vikings of Skate - Skull Print">
+											<span data-src="img/products/prints/skull-300.jpg"></span> 
+											<span data-src="img/products/prints/skull-300.jpg" data-media="(min-width: 400px)"></span>
+											<span data-src="img/products/prints/skull-600.jpg" data-media="(min-width: 1000px)"></span>
+											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+											<noscript><img src="img/products/prints/skull-300.jpg" alt="Vikings of Skate - Skull Print"></noscript>
+											</span></a>
+					</div>
+					<div class="not"><a href="http://www.vikingsofskate.com/prints/crime.html">
+											<span data-picture data-alt="Vikings of Skate - Crime Print">
+											<span data-src="img/products/prints/not-300.jpg"></span> 
+											<span data-src="img/products/prints/not-300.jpg" data-media="(min-width: 400px)"></span>
+											<span data-src="img/products/prints/not-600.jpg" data-media="(min-width: 1000px)"></span>
+											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+											<noscript><img src="img/products/prints/not-300.jpg" alt="Vikings of Skate - Crime Print"></noscript>
+											</span></a>
+					</div>
+				</div>
+
+			<div class="column3"><a href="http://www.vikingsofskate.com/prints/spine.html">
+											<span data-picture data-alt="Vikings of Skate - Spine Print">
+											<span data-src="img/products/prints/spine-300.jpg"></span> 
+											<span data-src="img/products/prints/spine-300.jpg" data-media="(min-width: 400px)"></span>
+											<span data-src="img/products/prints/spine-600.jpg" data-media="(min-width: 1000px)"></span>
+											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+											<noscript><img src="img/products/prints/spine-300.jpg" alt="Vikings of Skate - Spine Print"></noscript>
+											</span></a>
 			</div>
-		
 		</div>
-	
-	<div id="left">
-		<div class="posters">
-		<span class="poster-left">	
-			<span class="print_mouseover"><a href="/prints/happy-print.html"><img src="/images/prints/happy.jpg" height= 480px; ></a></span>
-		</span>
-	
-		<span class="poster-middle">			
-			<span class="print_mouseover"><a href="/prints/horns-print.html"><img src="/images/prints/grad.jpg" ></a></span>
-			<span class="print_mouseover"><a href="/prints/crime.html"><img src="/images/prints/skull.jpg" ></a></span>
-			<span class="print_mouseover"><a href="/prints/crime.html"><img src="/images/prints/not.jpg" ></a></span>
-		</span>
-	
-		<span class="poster-right">
-			<span class="print_mouseover"><a href="/prints/spine-print.html"><img src="/images/prints/spine.jpg" height= 480px;></a></span>
-		</span>
-	
-	</div>
-	</div>
-	<div id="right">
-	
-		<span class="logotitle">
-			<img src="/images/headers/prints.png" width="425" height="218" border="0" usemap="#Map2" />
-			<map name="Map2" id="Map2">
-			<area shape="rect" coords="280,2,430,210" href="/homepage" />
-			</map>
-		</span>
-		
-		<div id="caps-right-text">
-		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('posterscategory')->toHtml(); ?>
+			
+					</span>
+				</section>
+			
+				<aside class="main-sidebar">
+					<span class="secondary-logo">
+					<a href="/homepage"> <span data-picture data-alt="Vikings of Skate">
+						<span data-src="img/headers/homepage.png"></span>
+						<span data-src="img/headers/homepage.png" data-media="(min-width: 36.1em)"></span>
+						<span data-src="img/headers/prints.png" data-media="(min-width: 65em)"></span>
+					
+						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+						<noscript><img src="img/headers/posters.png" alt="Vikings of Skate"></noscript>
+					</span></span>
+					</a>					
+					<div class="secondary-text">
+					<p>VOS now offers a range of printed material starting with these limited edition screen printed posters. They’re hand pulled, individually stamped and numbered. The square posters are a standard 50cm square so you can use a pre-made stock frame if you like. All posters are mailed in a super strong card tube.</p>
+					</div>
+					
+					<div class="posters-right-bottom">
+					<img src="/images/prints/poster.png" >
+					</div>
+				</span>
+				</aside> 
+			
+			</div><!-- close page wrap -->			
+		<div class="footer"><a href="t&c.html">Copyright VOS 2014 - All Rights Reserved</a></div>
+		</div>	
 		</div>
-		
-		<div id="posters-right-bottom">
-		<img src="/images/prints/poster.png" >
-		
-		</div>
-	
-	</div>
-  <div class="vosfooter">
-				<?php include_once('images/footer.php'); ?>	
-
-	</div>
-	
-
-
-</div>
-	
-</div>
-<img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/>
 </body>
+
 </html>
