@@ -56,10 +56,18 @@
 				</section>
 			
 				<aside class="main-sidebar">
-					<div id="tnt-right-col">
-						<div id="logotitle"><img src="img/headers/about.png" width="425" height="215" border="0" usemap="#Map2" />
-						<map name="Map2" id="Map2"> <area shape="rect" coords="280,2,430,210" href="/homepage" /></map>
-						</div>
+					<div class="secondary-logo">
+						<a href="/homepage"> <span data-picture data-alt="Vikings of Skate">
+							<span data-src="img/headers/homepage.png"></span>
+							<span data-src="img/headers/homepage.png" data-media="(min-width: 36.1em)"></span>
+							<span data-src="img/headers/about.png" data-media="(min-width: 65em)"></span>
+							<span data-src="img/headers/about.png" data-media="(min-width: 1000px)"></span>
+					
+						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+							<noscript><img src="img/headers/about.png" alt="Vikings of Skate"></noscript>
+							</span></span>
+						</a>
+						
 					</div>
 					<div class="secondary-text">
 						<div class="tnt-text">
@@ -70,7 +78,11 @@
 				</aside> 
 			
 			</div><!-- close page wrap -->			
+		<div class="inner">
+		<div class="page-wrap">
 		<div class="footer"><a href="t&c.html">Copyright VOS 2014 - All Rights Reserved</a></div>
+		</div>
+		</div>
 		</div>	
 		</div>
 </body>
