@@ -197,19 +197,23 @@ display: -webkit-box;
 .shirts-cat {display: inline-block;}
 .shirts-cat img {width: 22%;}
 
-.blog-menu li{display:inline-block;padding:0.2em;text-decoration:none;background:white }
+.blog-menu li{display:inline-block;padding:0.2em;text-decoration:none;background:white;font-size: 0.8em; }
 .blog-menu a:link{color:black; }
 .blog-menu a:visited{color:black; }
 .page-title {display:none}
 .post-list-item h2{display:none}
 .post-meta {display:none}
-.post-entry img{width:100%!important;height:100%!important}
+.post-entry img.resize{
+    width:200px; /* you can use % */
+    height: auto;
+}
 .post-entry p{font-family: "VOS";color: black;font-size: 1.40em; line-height: 0.9em}
 .post-entry p:nth-child(n+2){padding-left:0.5em;padding-bottom: 1em; width:96%}
 .post-entry {background:white}
 .limiter {display:none;}
+.pages ol{display:inline-block}
 .pages li {display:inline-block;padding-right:0.4em;}
-.pages {text-decoration:none;font-family: "VOS";color: black;font-size: 1.20em; line-height: 0.9em}
+.pages {text-decoration:none;font-family: "VOS";color: white;font-size: 1.20em; line-height: 0.9em}
 .pages a:link{color:white}
 .pages a:visited {color:white}
 .current {text-decoration:none;font-family: "VOS";color: white;font-size: 1.20em; line-height: 0.9em}
