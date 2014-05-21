@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<?php echo $this->getChildHtml('head') ?>
-<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
+<?php echo $this->getChildHtml('head') ?> 
+<!-- <link href="/vos/vos.css" rel="stylesheet" type="text/css" /> -->
 <link href="/vos/style.css" rel="stylesheet" type="text/css" />
 <!-- responsive images script-->
 	 <script type="text/javascript" src="/vos/js/jquery-2.1.1.min.js"></script>
@@ -37,12 +37,12 @@
 
 </head>
 <body>
-<div id="bg">
+<div id="bg"><img id="larget" src=""  />
 			<span data-picture data-alt="Vikings of Skate">
 			<span data-src="/img/bg/bg-400-p.jpg"></span> 
 			<span data-src="/img/bg/bg-600-p.jpg" data-media="(min-width: 400px)"></span>
 			<span data-src="/img/bg/bg-970-p.jpg" data-media="(min-width: 760px)"></span>
-			<span data-src="/img/bg/bg-xxl.jpg" data-media="(min-width: 1000px)"></span>
+			<span id="larget" src=""  class="source-image" data-media="(min-width: 1000px)"></span>
 			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
 			<noscript><img src="/img/bg/bg-low.jpg" alt="Vikings of Skate"></noscript>
 			</span>
@@ -53,7 +53,7 @@
 			 <?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
 			<div class="page-wrap">
   			<section class="main-content">
-			
+			<img id="larget" src=""  class="source-image" width="586"/>
 			</section>
 			<aside class="main-sidebar">
 				 <span class="secondary-logo"> 
@@ -69,7 +69,31 @@
 	   
 				</span>
 				<span class="secondary-text">
-					<?php echo $this->getChildHtml('content') ?>	
+				
+				
+						<div style="display:none; z-index:9999; position:absolute; top:345px; right:192px; height:140px; width:205px; background:url('/images/shad.png') no-repeat bottom right;" id="popmail">
+  <div style="height:111px; width:175px; padding:6px; background:#FFF;">
+			  				<table style="font-size:11px; clear:both;">
+			    				<tr>
+			      				<td>To&nbsp;</td>
+			      				                                                                                <td><input id="xemailadd" style="border:1px #000 solid; margin-bottom:2px; width:146px;" type="text" /></td>
+			    				</tr>
+			    				<tr>
+			      				<td>From&nbsp;</td>
+			      				<td><input id="email_from_id" style="border:1px #000 solid; width:146px; margin-bottom:2px;" type="text" /></td>
+			    				</tr>
+			    				<tr>
+			      				<td>Note&nbsp;</td>
+			      				<td><textarea id="email_note" style="border:1px #000 solid; width:141px; height:30px;" > </textarea></td>
+			    				</tr>
+			  				</table>
+			  							<div style="clear:both;"><a href="javascript:" class="esend" onclick="mfrd();">&nbsp;</a><img style="cursor:pointer; float:right; padding-top:6px;" onclick="popsend(0);" src="/images/close.gif" width="20" /></div>
+						</div>
+					</div>
+				
+					<?php echo $this->getChildHtml('content') ?>
+					 
+								
 				</span>
     
 			</aside> 
