@@ -1,26 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php echo $this->getChildHtml('head') ?>
 <link href="/vos/vos.css" rel="stylesheet" type="text/css" />
-<!--New Additions -->
+<link href="/vos/style.css" rel="stylesheet" type="text/css" />
+<!-- 	 Responsive menu script -->	 
 
-<!-- end new additions -->
+<!-- ADD COOKIE LAW SCRIPT BACK IN -->
+
 </head>
-
 <body>
-
-<div id="outer">
-	<img id="larget" src=""  class="source-image"/>
-		<div id="inner">
-			<div id="header">
-				<div id="navigation_bar">
-					
-				</div>
-			</div>
-			<div id="right">
-				<div id="productinfo">
+<?php include_once('vos/inc/background.php'); ?> <!-- BACKGROUND IMAGE  -->
+	<div class="outer">
+			<div class="inner">
+			 <!-- NAVIGATION -->
+			<div class="page-wrap">
+  			<section class="main-content">
+			
+			</section>
+			<aside class="main-sidebar">
+				 <span class="secondary-logo"> 
+	  
+					<span data-picture data-alt="Vikings of Skate">
+					<span data-src="img/headers/homepage.png"></span>
+					<span data-src="img/headers/homepage.png" data-media="(min-width: 36.1em)"></span>
+					<span data-src="img/headers/shirts.png" data-media="(min-width: 65em)"></span>
+							
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript><img src="img/headers/shirts.png" alt="Vikings of Skate"></noscript>
+					</span>
+	   
+				</span>
+				<span class="secondary-text">
+						<div id="productinfo">
 			  		<div style="display:none; z-index:9999; position:absolute; top:345px; right:192px; height:140px; width:205px; background:url('/images/shad.png') no-repeat bottom right;" id="popmail">
   <div style="height:111px; width:175px; padding:6px; background:#FFF;">
 			  				<table style="font-size:11px; clear:both;">
@@ -71,13 +83,18 @@
 			      	<p class="style1"></p>
 			   		</div>
     			</div>
-  			</div>
-  			</div>
-  			<div class="vosfooter">
-<?php include_once('images/footer.php'); ?>
-</div>
+				</span>
+    
+			</aside> 
 		
-	</div>
-
+		</div><!-- close page wrap -->
+		<div class="inner">
+		<div class="page-wrap">
+		<div class="footer"><a href="t&c.html">Copyright VOS 2014 - All Rights Reserved</a></div>
+		</div>
+		</div>
+		</div>	
+		</div>
 </body>
+
 </html>

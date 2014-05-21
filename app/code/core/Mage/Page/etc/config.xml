@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Page
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Mage_Page>
+            <version>0.7.0</version>
+        </Mage_Page>
+    </modules>
+    <global>
+        <models>
+            <page>
+                <class>Mage_Page_Model</class>
+            </page>
+        </models>
+        <blocks>
+            <page>
+                <class>Mage_Page_Block</class>
+            </page>
+        </blocks>
+        <page>
+            <layouts>
+                
+				<homepage_tpl module="page" translate="label">
+                    <label>Homepage Template</label>
+                    <template>page/homepage.phtml</template>
+                    <layout_handle>page_homepage_tpl</layout_handle>
+                </homepage_tpl>
+				
+				<t-shirt-cat_tpl module="page" translate="label">
+                    <label>T-Shirt Category Template</label>
+                    <template>page/t-shirt-cat.phtml</template>
+                    <layout_handle>page_t-shirt-cat_tpl</layout_handle>
+                </t-shirt-cat_tpl>
+				
+				<caps-cat_tpl module="page" translate="label">
+                    <label>Caps Category Template</label>
+                    <template>page/caps-cat.phtml</template>
+                    <layout_handle>page_caps-cat_tpl</layout_handle>
+                </caps-cat_tpl>
+				
+				<posters-cat_tpl module="page" translate="label">
+                    <label>Posters Category Template</label>
+                    <template>page/posters-cat.phtml</template>
+                    <layout_handle>page_posters-cat_tpl</layout_handle>
+                </posters-cat_tpl>
+				
+				<t-shirt-prod_tpl module="page" translate="label">
+                    <label>T-Shirt Product Template</label>
+                    <template>page/t-shirt-cat.phtml</template>
+                    <layout_handle>page_t-shirt-prod_tpl</layout_handle>
+                </t-shirt-prod_tpl>
+				
+				<team-page_tpl module="page" translate="label">
+                    <label>Team Page Template</label>
+                    <template>page/team-page.phtml</template>
+                    <layout_handle>page_team-page_tpl</layout_handle>
+                </team-page_tpl>
+			
+				<caps-prod_tpl module="page" translate="label">
+                    <label>Caps Product Template</label>
+                    <template>page/caps-product.phtml</template>
+                    <layout_handle>page_caps-prod_tpl</layout_handle>
+                </caps-prod_tpl>
+				
+				<posters-prod_tpl module="page" translate="label">
+                    <label>Posters Product Template</label>
+                    <template>page/posters-product.phtml</template>
+                    <layout_handle>page_posters-prod_tpl</layout_handle>
+                </posters-prod_tpl>
+				
+				<about_tpl module="page" translate="label">
+                    <label>About Template</label>
+                    <template>page/about.phtml</template>
+                    <layout_handle>page_about_tpl</layout_handle>
+                </about_tpl>
+				
+				<home_tpl module="page" translate="label">
+                    <label>Home Template</label>
+                    <template>page/home.phtml</template>
+                    <layout_handle>page_home_tpl</layout_handle>
+					<is_default>1</is_default>
+                </home_tpl>
+				
+				<ipad_tpl module="page" translate="label">
+                    <label>iPad Template</label>
+                    <template>page/ipad-app.phtml</template>
+                    <layout_handle>page_ipad_tpl</layout_handle>
+                </ipad_tpl>
+				
+				<contact_tpl module="page" translate="label">
+                    <label>Contact Template</label>
+                    <template>page/contact.phtml</template>
+                    <layout_handle>page_contact_tpl</layout_handle>
+                </contact_tpl>
+				
+				<tnt_tpl module="page" translate="label">
+                    <label>This And That Template</label>
+                    <template>page/tnt.phtml</template>
+                    <layout_handle>page_tnt_tpl</layout_handle>
+                </tnt_tpl>
+
+                <acc_cat_tpl module="page" translate="label">
+                    <label>Accessories Category Template</label>
+                    <template>page/accessories-cat.phtml</template>
+                    <layout_handle>cat_acc_tpl</layout_handle>
+                </acc_cat_tpl>
+
+                 <acc_prod_tpl module="page" translate="label">
+                    <label>Accessories Product Template</label>
+                    <template>page/accessories-prod.phtml</template>
+                    <layout_handle>prod_acc_tpl</layout_handle>
+                </acc_prod_tpl>
+				
+				<products_tpl module="page" translate="label">
+                    <label>products Template</label>
+                    <template>page/products.phtml</template>
+                    <layout_handle>page_products_tpl</layout_handle>
+                </products_tpl>
+				
+				<empty module="page" translate="label">
+                    <label>Empty</label>
+                    <template>page/one-column.phtml</template>
+                    <layout_handle>page_empty</layout_handle>
+                </empty>
+                <one_column module="page" translate="label">
+                    <label>1 column</label>
+                    <template>page/1column.phtml</template>
+                    <layout_handle>page_one_column</layout_handle>
+                </one_column>
+                <two_columns_left module="page" translate="label">
+                    <label>2 columns with left bar</label>
+                    <template>page/2columns-left.phtml</template>
+                    <layout_handle>page_two_columns_left</layout_handle>
+                </two_columns_left>
+                <two_columns_right module="page" translate="label">
+                    <label>2 columns with right bar</label>
+                    <template>page/2columns-right.phtml</template>
+                    <layout_handle>page_two_columns_right</layout_handle>
+                </two_columns_right>
+                <three_columns module="page" translate="label">
+                    <label>3 columns</label>
+                    <template>page/3columns.phtml</template>
+                    <layout_handle>page_three_columns</layout_handle>
+                </three_columns>
+				
+            </layouts>
+        </page>
+    </global>
+    <frontend>
+        <translate>
+            <modules>
+                <Mage_Page>
+                    <files>
+                        <default>Mage_Page.csv</default>
+                    </files>
+                </Mage_Page>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <page>
+                    <file>page.xml</file>
+                </page>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Mage_Page>
+                    <files>
+                        <default>Mage_Page.csv</default>
+                    </files>
+                </Mage_Page>
+            </modules>
+        </translate>
+    </adminhtml>
+    <install>
+        <translate>
+            <modules>
+                <Mage_Page>
+                    <files>
+                        <default>Mage_Page.csv</default>
+                    </files>
+                </Mage_Page>
+            </modules>
+        </translate>
+    </install>
+    <default>
+        <design>
+            <head translate="default_description" module="page">
+                <default_title>Magento Commerce</default_title>
+                <default_description>Default Description</default_description>
+                <default_keywords>Magento, Varien, E-commerce</default_keywords>
+                <default_robots>*</default_robots>
+                <default_media_type>text/html</default_media_type>
+                <default_charset>utf-8</default_charset>
+            </head>
+            <header translate="welcome" module="page">
+                <logo_src>images/logo.gif</logo_src>
+                <logo_alt>Magento Commerce</logo_alt>
+                <welcome>Default welcome msg!</welcome>
+            </header>
+            <footer translate="copyright" module="page">
+                <copyright>&amp;copy; 2008 Magento Demo Store. All Rights Reserved.</copyright>
+            </footer>
+        </design>
+    </default>
+</config>
