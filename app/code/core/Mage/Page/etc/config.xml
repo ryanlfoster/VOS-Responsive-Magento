@@ -147,7 +147,12 @@
                     <template>page/one-column.phtml</template>
                     <layout_handle>page_empty</layout_handle>
                 </empty>
-                <one_column module="page" translate="label">
+                <resp_shirts module="page" translate="label">
+                    <label>T Shirt Responsive</label>
+                    <template>page/t-shirt-productNEW.phtml</template>
+                    <layout_handle>page_resp_tee</layout_handle>
+                </resp_shirts>
+				<one_column module="page" translate="label">
                     <label>1 column</label>
                     <template>page/1column.phtml</template>
                     <layout_handle>page_one_column</layout_handle>

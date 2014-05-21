@@ -87,6 +87,55 @@ nav{
  min-width: 10%;
  cursor: move;
 }
+/*..for products page.*/
+.menu-mnu{
+ background: transparent;
+}
+.menu-mnu a{
+font-family: "VOS";font-size: 1.4em;
+ display: block;
+ text-decoration: none;
+ color: #fff;
+ background-color: black;
+}
+.menu-mnu li{
+ position: relative;
+}
+.menu-mnu li ul{
+ display: block;
+ background: rgba(0, 0,0, 1.0);
+ max-height: 0;
+ overflow: hidden;
+ transition: all 0.3s ease;
+}
+
+.menu-btn-mnu{
+ background: #000000;
+ text-align: right;
+ cursor: s-resize;
+}
+.menu-btn-mnu img{
+ vertical-align: middle;
+ height: 50px;
+}
+.menu-open-mnu,
+.menu-mnu .open-mnu > ul{
+ max-height: 2000px;
+}
+.menu-mnu .open-mnu > .more-mnu img{
+ transform: rotate(-90deg);
+}
+.more-mnu img{
+ height: 24px;
+ transition: transform 0.3s;
+}
+.more-mnu{
+ background: rgba(0, 0, 0, 0.38);
+ float: right;
+ min-width: 10%;
+ cursor: move;
+}
+
 /*...*/
 nav{
  max-height: 50px;
