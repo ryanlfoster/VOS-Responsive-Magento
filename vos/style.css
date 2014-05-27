@@ -2,15 +2,16 @@ body, ul, li,a {
  margin: 0;
  padding: 0;
  list-style: none;
+ font-size: 14px;
 }
 
 @font-face {
  font-family: VOS;
- src: url("font/accid___.eot") /* EOT file for IE */
+ src: url("/font/accid___.eot") /* EOT file for IE */
 }
 @font-face {
  font-family: VOS;
- src: url("font/accid___.ttf") /* TTF file for CSS3 browsers */
+ src: url("/font/accid___.ttf") /* TTF file for CSS3 browsers */
 }
  
 /*background image fill - http://css-tricks.com/perfect-full-page-background-image/ */
@@ -88,7 +89,7 @@ nav{
  cursor: move;
 }
 /*..for products page.*/
-.product-essential {background: transparent}
+.product-essential {background: transparent; padding-left:0;}
 .product-view {border:none}
 .product-name {display:none}
 
@@ -188,7 +189,7 @@ display: -webkit-box;
 .secondary-logo  img{display: block;width:97%}
 
 .secondary-text {display: block; margin-left:10px; font-family: "VOS";color: white;font-size: 1.65em; line-height: 0.9em; margin-top: -5px;width:90%;}
-
+.secondary-text a{text-decoration:none;}
  
 .products {width: 99%; 
 display: -webkit-box;
@@ -237,6 +238,104 @@ display: -webkit-box;
 .current {text-decoration:none;font-family: "VOS";color: white;font-size: 1.20em; line-height: 0.9em}
 .footer {width: 100%}
 .footer a{font-size: 0.95em;font-family: "VOS";color: white; float:right; padding-right: 0.5em;opacity: 0.66;text-decoration:none }
+
+.about-img img{width:100%}
+#btn_buynow  {height:47px ;width:175px ;top: 71px}
+.product-options-bottom {background: transparent; border:none;}
+.add-to-cart label {color:#fff; font-weight:normal;}
+.add-to-cart {float:left; }
+.regular-price .price { /*colour of text in price box*/
+  
+  color:black;
+  font-family: VOS, Verdana, Arial, Helvetica ;
+  font-size:16px;
+  letter-spacing:1.0px;
+  font-weight: normal !important;
+
+}
+
+.price { /* box behind price*/
+  background-color:#FFFFFF;
+  /*width: 2.9em;
+  height:2.9em;*/
+  
+}
+
+.price-box{
+	float: right !important; }
+	
+.lrbox {
+  height:auto;
+  overflow:hidden;
+  width:400px !important; 
+}
+
+.product-view .product-shop {
+  float:left;
+  width:330px;
+}
+.product-essential {
+background: none;		
+}
+
+
+
+.product-options-bottom {
+  background-color:transparent;
+  border-bottom-color:#E4E4E4;
+  border-bottom-style:none;
+  border-left-color:#E4E4E4;
+  border-left-style:none;
+  border-right-color:#E4E4E4;
+  border-right-style:none;
+  border-width:0 1px 1px;
+  padding:5px 0px;
+}
+
+.regular-price .price { /*colour of text in price box*/
+  
+  color:black;
+  font-family: VOS, Verdana, Arial, Helvetica ;
+  font-size:16px;
+  letter-spacing:1.0px;
+  font-weight: normal !important;
+
+}
+
+.price { /* box behind price*/
+  background-color:#FFFFFF;
+  /*width: 2.9em;
+  height:2.9em;*/
+  
+}
+
+.price-box{
+	float: right !important;
+	
+}
+
+.add-to-cart {
+	position: absolute;
+	top: 465px;
+}
+.add-to-cart label {
+  color:#FFFFFF;
+  
+}
+#productinfo{
+	top: 200px;
+	
+}
+.box-description{ /*HEIGHT OF DESCRIPTION BOX*/
+		height:100px;
+		width: 392px;
+	
+	
+}
+#img_nxt {top: 539px!important;}
+.data-table .odd  {background:white; } /*background of cart table*/
+.data-table thead th {  color:black;} /*background of table heading and text colour of header*/
+
 
 @media screen and (max-width: 65em) { /* point at which hamburger menu comes in*/
 	.inner {width: 100%}
@@ -291,6 +390,13 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 .right-bottom-shirts {display: none}
 .bottom-left-caps {display:none}
 .posters-right-bottom {display:none}
+.product-shop {height: 14em; float:none!important; width: 85%!important}
+#textleft {width: 100px;}
+.lrbox {margin-top: 1em;}
+.footer {width:100%; padding: 0;}
+#btn_buynow  {height:47px ;width:175px ;top: 71px}
+.add-to-cart {top: 270px;}
+#img_nxt {top: 343px!important;}
 }
 
 @media screen and (max-width: 65em) {

@@ -2,51 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<meta name="robots" content="INDEX,FOLLOW" />
-<link rel="icon" href="/images/fav.png" type="image/x-icon" />
-<link rel="shortcut icon" href="/images/fav.png" type="image/x-icon" />
-
 <?php echo $this->getChildHtml('head') ?>
 <link href="/vos/vos.css" rel="stylesheet" type="text/css" />
-<link href="/vos/style.css" rel="stylesheet" type="text/css" />
-<script> <!-- 	 Responsive menu script -->	 
-		 $(document).ready(function(){
-		 $(".menu li a").each(function() {
-		  if ($(this).next().length > 0) {
-		   $(this).addClass("parent");
-		  };
-		 })
-		 var menux = $('.menu li a.parent');
-		 $( '<div class="more"><img src="img/btn-hamburger.png" alt=""></div>' ).insertBefore(menux);
-		 $('.more').click(function(){
-		   $(this).parent('li').toggleClass('open');
-		 });
-		 $('.menu-btn').click(function(){
-		   $('nav').toggleClass('menu-open');
-		 });
-		 
-		 $('.menu-button').click(function(){
-		   $(this).parent('li').toggleClass('open');
-		 });
-		 });	
-	 </script>
+
 </head>
 
 <body>
 
-	<div class="outer">
+	<div id="outer">
 	
-		<div class="inner">
-			
-				
-					<?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
-				
-			
+		<div id="inner">
+			<div id="header">
+				<div id="navigation_bar">
+					<?php include_once('vos/nav.php'); ?>
+				</div>	
+			</div>
 	
 
 <div id="left">
-<!-- <img id="larget" src=""  class="caps-image" width="586"/> -->
+<img id="larget" src=""  class="caps-image" width="586"/>
 </div>
 
 
@@ -55,8 +29,8 @@
     
     <div id="shirts-right""> 
     
-    <div style="display:none; z-index:9999; position:absolute; top:345px; right:192px; height:140px; width:205px; background:url('/images/shad.png') no-repeat bottom right;" id="popmail">
-  <div style="height:111px; width:175px; padding:6px; background:#FFF;">
+    <div style="display:none; z-index:9999; position:absolute; top:345px; right:186px; height:140px; width:211px; background:url('/images/shad.png') no-repeat bottom right;" id="popmail">
+  <div style="height:113px; width:182px; padding:6px; background:#FFF;">
   <table style="font-size:11px; clear:both;">
     <tr>
       <td>To&nbsp;</td>
@@ -96,7 +70,7 @@
     <?php if($currentcatid == 3 /* T-SHIRTS */) {
 	    echo '<img src="/images/headers/shirts.png" width="425" height="218" border="0" usemap="#Map2" />';
     } else {
-	    echo '<img src="/images/headers/caps.png" width="425" height="218" border="0" usemap="#Map2" />';
+	    echo '<img src="/images/headers/prints.png" width="425" height="218" border="0" usemap="#Map2" />';
     } ?>
  
       <map name="Map2" id="Map2">
@@ -119,14 +93,14 @@
 
 
 	</div>
-<div class="vosfooter">
-<?php include_once('images/footer.php'); ?>	
-</div>
+
 </div>
 
 
     
-
-<!-- <img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/> -->
+<div class="vosfooter">
+<?php include_once('images/footer.php'); ?>
+</div>
+<img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/>
 
 </body></html>

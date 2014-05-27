@@ -32,7 +32,7 @@
 							<li class="vos-social-buttons">	<a href="https://www.youtube.com/user/vikingsofskate/" target="_blank">
 									<img onmouseover="this.src='/img/icons/social/youtube_button_over.png'"  height="19" width="19" onmouseout="this.src='/img/icons/social/youtube_button.png'" border="0" src="/img/icons/social/youtube_button.png" alt="YouTube" /></a></li>
 							
-							<li class="cart-button"><a href="/cart">CART/CHECKOUT</a></li>
+							<li class="cart-button"><a href="/checkout/cart/">CART/CHECKOUT</a></li>
 			
 			</ul>
 		</nav>
