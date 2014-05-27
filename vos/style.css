@@ -337,6 +337,9 @@ background: none;
 .data-table thead th {  color:black;} /*background of table heading and text colour of header*/
 	
 	/*media queries for team*/
+.image img {width: 100%;
+  height: auto; }	
+	
 	@media (min-width: 1024px) {
   .container {
     width: 960px;
@@ -352,6 +355,7 @@ background: none;
     width: 300px;
     float: left;
     margin: 0 10px;
+	margin-top: 10em;
   }
 
   .image {
@@ -367,7 +371,7 @@ background: none;
   .col4 {
     clear: both;
     padding: 20px 0;
-    border-bottom: 1px solid #CCC;
+    
   }
   .col4:after {
     content: "";
@@ -384,6 +388,8 @@ background: none;
     float: right;
     width: 56%;
   }
+  .copy h3 { margin-top: 0.2em; margin-bottom:0.2em;}
+  .copy  p{margin-top:0.2em; margin-bottom:0em;}
 }
 @media (max-width: 599px) {
   .container {
@@ -393,12 +399,14 @@ background: none;
 
   .col4 {
     padding: 10px 0;
-    border-bottom: 1px solid #CCC;
+   
   }
 
   .image, .copy {
     text-align: center;
   }
+  .copy h3 { margin-top: 0.2em; margin-bottom:0.2em;}
+  .copy  p{margin-top:0.2em; margin-bottom:0em;}
 }
 	
 
