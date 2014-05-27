@@ -344,6 +344,7 @@ background: none;
   .container {
     width: 960px;
     margin: 0 auto;
+	padding-top: 9em;
   }
   .container:after {
     content: "";
@@ -352,10 +353,10 @@ background: none;
   }
 
   .col4 {
-    width: 300px;
+    width: 299px;
     float: left;
     margin: 0 10px;
-	margin-top: 10em;
+
   }
 
   .image {
@@ -388,7 +389,7 @@ background: none;
     float: right;
     width: 56%;
   }
-  .copy h3 { margin-top: 0.2em; margin-bottom:0.2em;}
+  .copy h3 { margin-top: 0em; margin-bottom:0.2em;}
   .copy  p{margin-top:0.2em; margin-bottom:0em;}
 }
 @media (max-width: 599px) {
