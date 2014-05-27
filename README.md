@@ -12,3 +12,5 @@ Scott Jehl for the Responsive images - http://scottjehl.github.io/picturefill/ u
 Responsive Multi Level Responsive Menu - http://thecodeblock.com/multilevel-toggle-menu/
 
 Magento jQuery Fix - http://www.magentocommerce.com/boards/viewthread/504348/
+
+Image size fix on Safari - http://stackoverflow.com/questions/11276367/forcing-aspect-ratio-with-css-doesnt-work-on-safari
