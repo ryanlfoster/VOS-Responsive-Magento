@@ -12,11 +12,4 @@ gulp.src ('vos/js/*.js')
 	.pipe(gulp.dest('production/vos/js'))
 });
 
-gulp.task('default', function () {
-    return gulp.src('img/*')
-        .pipe(imagemin({
-            progressive: true
-            
-        }))
-        .pipe(gulp.dest('production/img'));
-
+gulp.task('default', function () {});

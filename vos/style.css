@@ -335,8 +335,74 @@ background: none;
 #img_nxt {top: 539px!important;}
 .data-table .odd  {background:white; } /*background of cart table*/
 .data-table thead th {  color:black;} /*background of table heading and text colour of header*/
+	
+	/*media queries for team*/
+	@media (min-width: 1024px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .container:after {
+    content: "";
+    clear: both;
+    width: 100%;
+  }
 
+  .col4 {
+    width: 300px;
+    float: left;
+    margin: 0 10px;
+  }
 
+  .image {
+    text-align: center;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .container {
+    width: 96%;
+    margin: 0 2%;
+  }
+
+  .col4 {
+    clear: both;
+    padding: 20px 0;
+    border-bottom: 1px solid #CCC;
+  }
+  .col4:after {
+    content: "";
+    clear: both;
+    width: 100%;
+  }
+
+  .image {
+    float: left;
+    width: 40%;
+  }
+
+  .copy {
+    float: right;
+    width: 56%;
+  }
+}
+@media (max-width: 599px) {
+  .container {
+    width: 96%;
+    margin: 0 2%;
+  }
+
+  .col4 {
+    padding: 10px 0;
+    border-bottom: 1px solid #CCC;
+  }
+
+  .image, .copy {
+    text-align: center;
+  }
+}
+	
+
+	/*end media queries for team*/
 @media screen and (max-width: 65em) { /* point at which hamburger menu comes in*/
 	.inner {width: 100%}
 	.secondary-logo {position: absolute;top: 0;padding-left: 10px;padding-top:12px; display: block;}
