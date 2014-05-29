@@ -216,8 +216,10 @@ display: -webkit-box;
 .shirts-cat {display: inline-block;}
 .shirts-cat img {width: 22%;}
 
-.blog-menu li{display:inline-block;padding:0.2em;text-decoration:none;background:white;font-size: 0.8em; }
-.blog-menu a:link{color:black; }
+.blog-menu {width:100%;height:100%; }
+.blog-menu ul {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+.blog-menu li{-webkit-box-flex:1;-webkit-flex:1 ;-ms-flex:1 ;flex:1 ;background: white; margin : 0.1em; list-style: none; text-align:center;}
+.blog-menu a:link{color:black; text-decoration:none;}
 .blog-menu a:visited{color:black; }
 .page-title {display:none}
 .post-list-item h2{display:none}
@@ -228,7 +230,8 @@ display: -webkit-box;
 }
 .post-entry p{font-family: "VOS";color: black;font-size: 1.40em; line-height: 0.9em}
 .post-entry p:nth-child(n+2){padding-left:0.5em;padding-bottom: 1em; width:96%}
-.post-entry {background:white}
+.post-entry {background:white;}
+.post-entry a{text-decoration:none;font-family: "VOS";color: grey;font-size: 1em;}
 .limiter {display:none;}
 .pages ol{display:inline-block}
 .pages li {display:inline-block;padding-right:0.4em;}
