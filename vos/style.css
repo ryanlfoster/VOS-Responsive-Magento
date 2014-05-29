@@ -418,7 +418,7 @@ background: none;
 	.inner {width: 100%}
 	.secondary-logo {position: absolute;top: 0;padding-left: 10px;padding-top:12px; display: block;}
 	.secondary-logo img {width: inherit;}
-	.secondary-text {font-size: 1.4em;width: 98%;font-size: 1.6em;margin: 0 auto;}
+	.secondary-text {font-size: 1.4em;width: 96%;font-size: 1.6em;margin: 0 auto; padding-bottom: 0.5em; padding-top:0em;}
     .page-wrap {
         display: -webkit-box;
         display: -webkit-flex;
