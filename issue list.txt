@@ -3,9 +3,10 @@ VOS To Do
 Menu
 	Desktop
 	Mobile
-		Use alternating shades on alternate menu items on mobile menu - not easy as nth-child won't properly work on li's in menu as they will change as it expands, use classes?
-		Size of text in mobile menu needs to be larger
-		spread out social logo's
+		* Use alternating shades on alternate menu items on mobile menu 
+		* Size of text in mobile menu needs to be larger
+		* spread out social logo's
+		* maybe make the tint change when its pressed so people know its been correctly selected.
 		
 Home Page
 	Desktop
