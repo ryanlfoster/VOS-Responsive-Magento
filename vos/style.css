@@ -467,7 +467,7 @@ li.menu-item a {padding-left:0.75em}
 
 /*.menu a {background: grey;}*/
 /*li.menu-item a:nth-child(even) {background: black;}*/
-.sub {margin-left: 1em}
+.sub {margin-left: 1em; background: grey; }
 li.cart-button {padding-left:1.0em}
 li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 .right-bottom-shirts {display: none}

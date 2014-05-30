@@ -1,4 +1,8 @@
 VOS To Do
+Menu
+	Desktop
+	Mobile
+		Use alternating shades on alternate menu items on mobile menu - not easy as nth-child won't properly work on li's in menu as they will change as it expands, use classes?
 
 Home Page
 	Desktop
@@ -20,7 +24,6 @@ Caps - Category
 	Caps - Products
 		Desktop
 		Mobile
-
 
 Prints - Category
 	Desktop
