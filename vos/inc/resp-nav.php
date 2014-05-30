@@ -18,7 +18,7 @@
 					         <li class="menu-item"><a href="/blog">BLOG</a></li>
 					         <li class="menu-item"><a href="/team">TEAM</a></li>
 					         <li class="menu-item"><a href="/this-and-that">THIS&amp;THAT</a></li>
-							 
+							
 							 <li class="vos-social-buttons"><a href="http://www.facebook.com/pages/Vikings-Of-Skate/160887060630674/" target="_blank">
 									<img onmouseover="this.src='/img/icons/social/facebook-rollover.png'" height="20" width="20"  onmouseout="this.src='/img/icons/social/facebook.png'" border="0" src="/img/icons/social/facebook.png"  alt="Facebook" /></a></li>
 							<li class="vos-social-buttons"><a href="http://twitter.com/vikingsofskate/" target="_blank">
