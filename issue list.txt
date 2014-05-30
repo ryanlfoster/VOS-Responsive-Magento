@@ -1,0 +1,53 @@
+VOS To Do
+
+Home Page
+	Desktop
+	Mobile
+
+Shirts - Category
+	Desktop
+	Mobile
+	
+	Shirts - Products
+		Desktop
+		Mobile
+
+
+Caps - Category
+	Desktop
+	Mobile
+
+	Caps - Products
+		Desktop
+		Mobile
+
+
+Prints - Category
+	Desktop
+	Mobile
+
+	Prints - Products
+		Desktop
+		Mobile
+
+
+About
+	Desktop
+	Mobile
+
+Blog
+	Desktop
+	Mobile
+
+This and That
+	Desktop
+	Mobile
+
+Checkout
+	Desktop
+	Mobile
+	
+404
+	Desktop
+	Mobile
+
