@@ -93,7 +93,8 @@ left: 25%;
 .product-essential {background: transparent; padding-left:0;}
 .product-view {border:none}
 .product-name {display:none}
-img#larget {width:99%}
+img#larget {width: 95%;
+padding-left: 0.8em;}
 .std-vos {margin-left : -5px; margin-top: 10px;line-height: 1.2em;font-size:0.94em}
 #more-views {margin-left:-5px; margin-top: 10px;}
 #textright {
@@ -138,9 +139,28 @@ margin-right:auto;}
     order: 2;
     width: 60%;
 }
+.main-content-products {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    width: 60%;
+}
 .main-content img {}
 
 .main-sidebar {
+   
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    margin-top: -1.4em;
+}
+.main-sidebar-products {
    
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -244,11 +264,11 @@ display: -webkit-box;
 .pages a:link{color:white}
 .pages a:visited {color:white}
 .current {text-decoration:none;font-family: "VOS";color: white;font-size: 1.20em; line-height: 0.9em}
-.footer {width: 100%}
+.footer {width: 100%; padding: 1.5em;}
 .footer a{font-size: 0.95em;font-family: "VOS";color: white; float:right; padding-right: 0.5em;opacity: 0.66;text-decoration:none }
 
 .about-img img{width:100%}
-#btn_buynow  {height:47px ;width:175px ;top: 71px}
+#btn_buynow  {height:47px ;width:175px ;top: 47px}
 .product-options-bottom {background: transparent; border:none;}
 .add-to-cart label {color:#fff; font-weight:normal;}
 .add-to-cart {float:left; }
@@ -341,15 +361,18 @@ background: none;
 	
 	
 }
+.highslide-container {
+margin-top: -4px!important; 
+}
 .style5 {font-size:0.8em}
-.sendtofriend {margin-top: -1.5em;}
+.sendtofriend {margin-top: -2.5em;}
 input#qty {
 width: 20px;
 margin-top: -18px;
 margin-left: 5px;
 height: 14px;
 }
-#img_nxt {top: 618px!important;}
+#img_nxt {top: 595px!important;width: 180px;}
 .data-table .odd  {background:white; } /*background of cart table*/
 .data-table thead th {  color:black;} /*background of table heading and text colour of header*/
 	
@@ -432,10 +455,10 @@ height: 14px;
 
 	/*end media queries for team*/
 @media screen and (max-width: 65em) { /* point at which hamburger menu comes in*/
-	.inner {width: 100%}
+	.inner {width: 100%; }
 	.secondary-logo {position: absolute;top: 0;padding-left: 10px;padding-top:12px; display: block;}
 	.secondary-logo img {width: inherit;}
-	.secondary-text {font-size: 1.4em;width: 96%;font-size: 1.6em;margin: 0 auto; padding-bottom: 0.5em; padding-top:0em;}
+	.secondary-text {font-size: 1.4em;width: 90%;font-size: 1.6em;margin: 0 auto; padding-bottom: 0.5em; padding-top:0em;}
     .page-wrap {
         display: -webkit-box;
         display: -webkit-flex;
@@ -465,6 +488,24 @@ height: 14px;
         width: 100%;
 		margin-top: 0px;
     }
+	 .main-content-products {
+       padding-top: 3em;
+        width: 89%;
+		margin: 0 auto;
+		-webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2; 
+    }
+    .main-sidebar-products {
+         
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;  
+        width: 100%;
+		margin-top: 0px;
+    }
     .main-nav {
         width: 100%;
     }
@@ -485,13 +526,19 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 .right-bottom-shirts {display: none}
 .bottom-left-caps {display:none}
 .posters-right-bottom {display:none}
-.product-shop {height: 14em; float:none!important; width: 85%!important}
-#textleft {width: 100px;}
-.lrbox {margin-top: 1em;}
+.product-shop {height: 14em; float:none!important; width: 100%!important}
+#textleft {width: 100%;}
+#textright {margin-right: -0.6em;}
+.lrbox {margin-top: 0.6em;width:100%!important;}
 .footer {width:100%; padding: 0;}
 #btn_buynow  {height:47px ;width:175px ;top: 71px}
-.add-to-cart {top: 270px;}
-#img_nxt {top: 343px!important;}
+.add-to-cart {top: 287px!important;}
+#img_nxt {top: 363px!important;width: 8em}
+.box-description {width: 100%;height: 72px;}
+img#larget {width: 100%;padding-left: 0;}
+.sendtofriend {margin-top: -3.5em;}
+.highslide {display: inline}
+.highslide img {}		
 }
 
 @media screen and (max-width: 65em) {
