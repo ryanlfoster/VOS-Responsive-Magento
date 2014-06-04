@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- REMOVE BEFORE PRODUCTION ******* NO CACHING -->	
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="robots" content="INDEX,FOLLOW" />
+<link rel="icon" href="/images/fav.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/images/fav.png" type="image/x-icon" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="vos/style.css" rel="stylesheet" type="text/css" />
+	 <script src="vos/js/jquery-2.1.1.min.js"></script>
+	 <script src="vos/js/prefixfree.min.js"></script>
+	 <script src="vos/js/picturefill.js"></script>
+	 <script src="vos/js/matchmedia.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<script> <!-- 	 Responsive menu script -->	 
+		 $(document).ready(function(){
+		 $(".menu li a").each(function() {
+		  if ($(this).next().length > 0) {
+		   $(this).addClass("parent");
+		  };
+		 })
+		 var menux = $('.menu li a.parent');
+		 $( '<div class="more"><img src="img/btn-hamburger-v.png" alt=""></div>' ).insertBefore(menux);
+		 $('.more').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 $('.menu-btn').click(function(){
+		   $('nav').toggleClass('menu-open');
+		 });
+		 
+		 $('.menu-button').click(function(){
+		   $(this).parent('li').toggleClass('open');
+		 });
+		 });	
+	 </script>
+
+<!-- ADD COOKIE LAW SCRIPT BACK IN -->
+
+</head>
+<body>
+<?php include_once('vos/inc/background.php'); ?> <!-- BACKGROUND IMAGE  -->
+	<div class="outer">
+			<div class="inner">
+			<?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
+			<div class="page-wrap">
+				<section class="main-content">
+					<span class="primary-content">
+						
+					<?php echo $this->getChildHtml('global_notices') ?> 
+					<?php echo $this->getChildHtml('global_messages') ?>
+					<?php echo $this->getChildHtml('content') ?> 
+				
+					</span>
+				</section>
+			
+				<aside class="main-sidebar">
+					<span class="secondary-logo">
+					<a href="/homepage"> <span data-picture data-alt="Vikings of Skate">
+						<span data-src="img/headers/homepage.png"></span>
+						<span data-src="img/headers/homepage.png" data-media="(min-width: 36.1em)"></span>
+						<span data-src="img/headers/blog.png" data-media="(min-width: 65em)"></span>
+					
+						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+						<noscript><img src="img/headers/blog.png" alt="Vikings of Skate"></noscript>
+					</span></span>
+					</a>					
+					<div class="secondary-text">
+					
+					<span class="centre-offset">
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('blog')->toHtml(); ?>
+					</span>
+					
+					<div class="blog-menu">
+					
+						<ul>
+							<li><a href="/blog/category/team">Team</a></li>
+							<li><a href="/blog/category/events">Events</a></li>
+							<li><a href="/blog/category/products">Products</a></li>
+							<li><a href="/blog/category/other">Other</a></li>
+							<li><a href="/blog/">All Posts</a></li>
+						</ul>
+					
+					</div>
+					</div>
+					
+					
+				
+				</aside> 
+			
+			</div><!-- close page wrap -->			
+		<div class="inner">
+		<div class="page-wrap">
+		<div class="footer"><a href="t&c.html">Copyright VOS 2014 - All Rights Reserved</a></div>
+		</div>
+		</div>
+		</div>	
+		</div>
+</body>
+
+</html>

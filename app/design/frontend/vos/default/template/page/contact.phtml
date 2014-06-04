@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php echo $this->getChildHtml('head') ?>
+<link href="/images/vostpl.css" rel="stylesheet" type="text/css" />
+<script> function pro(flg){ if(flg==1){document.getElementById("nav_pro").src="/images/menu/products-rollover.png";}else{document.getElementById("nav_pro").src="/images/menu/products.png";} }
+function abt(flg){ if(flg==1){document.getElementById("nav_about").src="/images/menu/about-rollover.png";}else{document.getElementById("nav_about").src="/images/menu/about.png";} }
+function tnt(flg){ if(flg==1){document.getElementById("nav_tnt").src="/images/menu/thisthat-rollover.png";}else{document.getElementById("nav_tnt").src="/images/menu/thisthat.png";} }
+function ctn(flg){ if(flg==1){document.getElementById("nav_ctn").src="/images/menu/contact-rollover.png";}else{document.getElementById("nav_ctn").src="/images/menu/contact.png";} }
+</script>
+</head>
+<body>
+
+<?php echo $this->getChildHtml('sociallinks');?>
+
+<div id="nav_vos" ><a href="/products"><img id="nav_pro" onmouseout="pro(0)" onmouseover="pro(1);" src="/images/menu/products.png" /></a> <a href="/about"><img id="nav_about" onmouseout="abt(0)" onmouseover="abt(1);" src="/images/menu/about.png" /></a> <a href="/this-and-that"><img id="nav_tnt" onmouseout="tnt(0)" onmouseover="tnt(1);" src="/images/menu/thisthat.png" /></a> <a href="/contact"><img id="nav_ctn" onmouseout="ctn(0)" onmouseover="ctn(1);" src="/images/menu/contact.png" /></a></div>
+<div id="navright" > 
+  <script> function bk(bkv){ if(bkv){document.getElementById("idbk").src="/images/bkb.png"; }else{document.getElementById("idbk").src="/images/bkw.png";}}
+function ck(ckv){ if(ckv){document.getElementById("idck").src="/images/ckb.png"; }else{document.getElementById("idck").src="/images/ckw.png";}}
+ </script> 
+  <a href="/checkout/cart/" /><img height="18" onmouseover="bk(1)" onmouseout="bk(0)" id="idbk" src="/images/bkw.png" /></a> <a href="/checkout" /><img height="18" onmouseover="ck(1)" onmouseout="ck(0)" id="idck" src="/images/ckw.png" /></a> </div>
+<div id="main" >
+  <div >
+    <div id="header"><img src="/images/contact.png" width="426" height="230" border="0" usemap="#Map2" />
+      <map name="Map2" id="Map2">
+        <area shape="rect" coords="280,2,430,210" href="/products" />
+      </map>
+    </div>
+    <div  style="padding-right:26px;">
+      <div> <?php echo $this->getChildHtml('global_messages') ?> <?php echo $this->getChildHtml('content') ?> </div>
+      <p align="justify" class="style1"><br />
+      </p>
+      <p class="style1"></p>
+    </div>
+  </div>
+</div>
+<img id="larget" src="/images/backgrounds/retouched-3.jpg"  class="source-image"/>
+<?php include_once('images/footer.php'); ?>
+
+
+</body>
+</html>

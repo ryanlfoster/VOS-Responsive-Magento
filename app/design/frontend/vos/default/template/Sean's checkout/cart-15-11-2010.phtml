@@ -1,0 +1,148 @@
+<?php
+/**
+CN
+ */
+?>
+<?php
+/**
+ * Shopping cart template
+ *
+ * @see Mage_Checkout_Block_Cart
+ */
+?>
+<div class="cart">
+    <div class="page-title title-buttons">
+        <h1><?php echo $this->__('Shopping Cart') ?></h1>
+        <?php if(!$this->hasError()): ?>
+        <ul class="checkout-types">
+        <?php foreach ($this->getMethods('top_methods') as $method): ?>
+            <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+            <li><?php echo $methodHtml; ?></li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+        </ul>
+        <?php endif; ?>
+    </div>
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+    <?php echo $this->getChildHtml('form_before') ?>
+    <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post">
+        <fieldset>
+        <style>
+		.cart_tbl{ font-family:Arial, Helvetica, sans-serif; }
+       	.cart_tbl th{ font-weight:bold; color:#FFF; font-size:11px; padding:10px 18px 10px 0;}
+        .cart_tbl td{ font-weight:bold; color:#FFF; font-size:11px; 
+						padding:5px 17px 0 0; vertical-align:middle; }
+		.cart_tbl dd{ height:19px; padding-top:6px; width:25px; text-align:center; 
+		vertical-align:middle !important;}
+        .cart_tbl h2 a{ color:#FFF; font-size:11px; font-weight:bold; }
+		.price{ background:#FFF; padding:6px 6px 6px 6px !important;}
+		input.input-text{ border:none; height:21.5px; text-align:center;}
+		.cart_tbl img { border:3px #FFF solid;}
+        </style>
+            <table id="shopping-cart-table" class="cart_tbl">
+                <col width="1" />
+                <col />
+            <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
+                <col width="1" />
+            <?php endif ?>
+            <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
+                <col width="1" />
+            <?php endif; ?>
+            <?php if ($this->helper('tax')->displayCartPriceInclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
+                <col width="1" />
+            <?php endif; ?>
+                <col width="1" />
+            <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
+                <col width="1" />
+            <?php endif; ?>
+            <?php if ($this->helper('tax')->displayCartPriceInclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
+                <col width="1" />
+            <?php endif; ?>
+
+            <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
+                <thead>
+                    <tr>
+                        
+                        <th rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('PRODUCT') ?></span></th>
+                        <th rowspan="<?php echo $mergedCells; ?>">DETAILS
+                        </th>
+                        <th rowspan="<?php echo $mergedCells; ?>">SIZE
+                        </th><th rowspan="<?php echo $mergedCells; ?>">COLOR
+                        </th>
+                        <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
+                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center"><span class="nobr"><?php echo $this->__('Move to Wishlist') ?></span></th>
+                        <?php endif ?>
+                        <th class="a-center" colspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Price') ?></span></th>
+                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center"><?php echo $this->__('Qty') ?></th>
+                        <th class="a-center" colspan="<?php echo $mergedCells; ?>"><?php echo $this->__('TOTAL') ?></th>
+                    </tr>
+                    <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                    <tr>
+                        <th class="a-right"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
+                        <th><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
+                        <th class="a-right"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
+                        <th><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
+                    </tr>
+                    <?php endif; ?>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="50" class="a-right">
+                            <hr />
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                <?php foreach($this->getItems() as $_item): ?>
+                    <?php echo $this->getItemHtml($_item) ?>
+                <?php endforeach ?>
+                </tbody>
+            </table>
+            
+            <script type="text/javascript">decorateTable('shopping-cart-table')</script>
+        </fieldset>
+   </form>
+   
+    <div class="cart-collaterals" align="right">
+    <div style=" clear:both; text-align:left; padding-left:223px;">
+    <span style="font-size:11px; font-family:Arial, Helvetica, sans-serif;">DELIVERY &nbsp;&nbsp;
+	</span>
+    <select id="custom_shipping_option" name="custom_shipping_option" style="width: 100px;" onchange="flat_rate_custom(this.value)">
+                <option <?php if($_GET['shipping']=="GBR")echo 'selected="selected"'; ?> value="GBR">England - £3</option>
+                <option <?php if($_GET['shipping']=="EU")echo 'selected="selected"'; ?> value="EU">Europe - £7</option>
+                <option <?php if($_GET['shipping']=="WL")echo 'selected="selected"'; ?> value="WL">World - £12</option>
+                </select> </div>
+                
+       <!-- <div class="col2-set">
+            <div class="col-1">
+                <?php// echo $this->getChildHtml('crosssell') ?>
+            </div>
+            <div class="col-2">
+                <?php// echo $this->getChildHtml('coupon') ?>-->
+            
+            
+         <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
+        <div class="totals">
+            <?php echo $this->getChildHtml('totals'); ?>
+            <?php if(!$this->hasError()): ?>
+            <ul class="checkout-types">
+            <?php foreach ($this->getMethods('methods') as $method): ?>
+                <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                <li><?php echo $methodHtml; ?></li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	function flat_rate_custom(val)
+	{
+		$j("#shipping-zip-form").submit();
+		var cloc = '<?php print $this->getUrl(); ?>checkout/cart/';
+		window.location = cloc + "?shipping="+ val;
+	}
+	
+</script>
+

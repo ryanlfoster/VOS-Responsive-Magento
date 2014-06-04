@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php echo $this->getChildHtml('head') ?>
+<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
+<link href="/vos/modal.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="outer">
+	<div id="inner">
+		<div id="head">
+			
+			<div id="navigation_bar">
+			
+			<?php include_once('vos/nav.php'); ?>
+			
+			</div>
+		
+			</div>
+	
+	<div id="left">
+		<div class="posters">	
+
+		<span class="poster-left">	
+			<span class="ipadleft"><img src="/images/ipad/ipadhome.png" height= 458px></a></span>
+		</span>
+	
+		<span class="poster-middle">			
+			
+		</span>
+	
+		<span class="poster-right">
+		</span>
+	
+	</div>
+	</div>
+	<div id="right">
+	
+		<span class="logotitle">
+			<img src="/images/headers/ipadapp.png" width="425" height="218" border="0" usemap="#Map2" />
+			<map name="Map2" id="Map2">
+			<area shape="rect" coords="280,2,430,210" href="/homepage" />
+			</map>
+		</span>
+		
+		<div id="caps-right-text">
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('ipadapp')->toHtml(); ?>
+		</div>
+		
+		<div id="ipad-right-bottom">
+			
+				<a href="#virgin_p"id="virgin"><img src="/images/ipad/ipadvirgin.gif" width = "120"></a>			
+			
+			<span class="centre-img">
+				<a href="#deck_p"id="deck"><img src="/images/ipad/ipaddeck.gif" width = "120"></a>			
+			</span>
+			
+				<a href="#halftone_p"id="halftone"><img src="/images/ipad/ipadhaltone.gif" width = "120"></a>			
+			
+		
+				<a href="#hornsw_p"id="hornsw"><img src="/images/ipad/ipadhornsw.gif" width = "120"></a>			
+		
+			<span class="centre-img">		
+				<a href="#happy_p"id="happy"><img src="/images/ipad/ipadhappy.gif" width = "120"></a>			
+			</span>
+			
+				<a href="#santacruz_p"id="santacruz"><img src="/images/ipad/ipadsantacruz.gif" width = "120"></a>			
+			
+						
+				
+		</div>
+	
+	</div>
+	
+	 <!-- virgin ipad popup  -->
+        <a href="#x" class="overlay" id="virgin_p"></a>
+        	 <div class="virgin">
+            		<a class="close" href="#close">	
+            			<img src="/images/ipad/ipadvirginshadow.png" width = "408">
+            			</a>
+        	</div>
+	<!-- end of virgin ipad pop up -->
+	
+	<!-- ipad deck popup  -->
+        <a href="#x" class="overlay" id="deck_p"></a>
+        	 <div class="deck">
+            		<a class="close" href="#close">	
+            			<img src="/images/ipad/ipaddeckshadow.png" width = "408">
+            			</a>
+        	</div>
+	<!-- end of deck ipad pop up -->
+
+	<!-- ipad halftone popup  -->
+        <a href="#x" class="overlay" id="halftone_p"></a>
+        	 <div class="halftone">
+            		<a class="close" href="#close">	
+            			<img src="/images/ipad/ipadhalftoneshadow.png" width = "408">
+            			</a>
+        	</div>
+	<!-- end of halftone ipad pop up -->	
+
+	<!-- ipad hornsw popup  -->
+        <a href="#x" class="overlay" id="hornsw_p"></a>
+        	 <div class="hornsw">
+            		<a class="close" href="#close">	
+            			<img src="/images/ipad/ipadhornswshadow.png" width = "408">
+            			</a>
+        	</div>
+	<!-- end of hornsw ipad pop up -->
+
+	<!-- ipad happy popup  -->
+        <a href="#x" class="overlay" id="happy_p"></a>
+        	 <div class="happy">
+            		<a class="close" href="#close">	
+            			<img src="/images/ipad/ipadhappyshadow.png" width = "408">
+            			</a>
+        	</div>
+	<!-- end of happy ipad pop up -->
+	
+	<!-- ipad santacruz popup  -->
+        <a href="#x" class="overlay" id="santacruz_p"></a>
+        	 <div class="santacruz">
+            		<a class="close" href="#close">	
+            			<img src="/images/ipad/ipadsantacruzshadow.png" width = "408">
+            			</a>
+        	</div>
+	<!-- end of santacruz ipad pop up -->	
+	
+	
+  <div class="vosfooter">
+				<?php include_once('images/footer.php'); ?>	
+
+	</div>
+	
+
+
+</div>
+	
+</div>
+<img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/>
+</body>
+</html>

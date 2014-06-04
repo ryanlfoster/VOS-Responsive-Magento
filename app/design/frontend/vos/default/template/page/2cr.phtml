@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php echo $this->getChildHtml('head') ?>
+<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
+<link href="/vos/modal.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+#main {
+	width:426px;
+	position: absolute;
+	z-index:999;
+	top: 0px;
+	right: 0px;
+	padding: 100px 20px 0px 0px;
+}
+#header {
+	padding-bottom:12px;
+}
+img{ border:none;} 
+.cart_tbl img { border:none !important; cursor:url("/images/magnify.cur"), -moz-zoom-in; background:url("/images/cartbg.jpg") #404040;}
+#vos_zoom_div{z-index:9999; position:absolute; right:27px; top:312px; padding-right:18px; padding-bottom:18px; width:401px; height:360px, opacity:1; display:none; background:url(/images/shad.png) no-repeat bottom right;}
+#vos_zoom_img{ 
+/*-moz-box-shadow:6px 6px 10px #000000;
+-webkit-box-shadow:6px 6px 10px #000000;
+box-shadow:6px 6px 10px #000000; */
+cursor:url("/images/zu.cur"), -moz-zoom-out;
+height:400px; width:401px;
+background:url("/images/cartbg.jpg") #404040; }
+.legend{ font-size:12px; font-weight:bold; text-transform:uppercase;}
+.info-set{ color:#fff; padding-bottom:11px; line-height:14px; font-size:11px; height:auto; overflow:hidden; font-family:Arial,Helvetica,sans-serif;} 
+.info-set h3{ font-size:11px; line-height:14px; font-weight:bold;}
+.info-set table{ clear:both; font-size:11px; line-height:15px;}
+.box-content{ font-size:11px; line-height:14px; font-family:Arial,Helvetica,sans-serif; text-transform:uppercase;}
+.box-content #shipping_method{ width:190px !important;}
+.info-set .price{ background:none !important; color:#000 !important;}
+.price {background: none;} /* background: of price  */
+-->
+</style>
+</head>
+
+<body>
+
+<div id="outer">
+	
+		<div id="inner">
+			
+			
+			<div id="head">
+
+
+<div id="navigation_bar">
+<?php include_once('vos/nav.php'); ?>
+</div>
+
+<div id="right">
+  <div>
+    <div id="header" align="right">
+    	<img src="/images/headers/cart.png" width="425" height="230" border="0" usemap="#Map2" />
+      		<map name="Map2" id="Map2">
+        		<area shape="rect" coords="280,2,430,210" href="/homepage" />
+      		</map>
+    </div>
+    
+    <div class="cart-block">  <?php echo $this->getChildHtml('global_notices') ?> <?php echo $this->getChildHtml('global_messages') ?> <?php echo $this->getChildHtml('content') ?>
+
+    
+      
+    	<p class="style1"></p>
+    
+    </div>
+  </div>
+</div>
+<img id="mainbg" src="/skin/frontend/default/default/images/images/backgrounds/voschk.jpg"  class="source-image"/>
+
+<div id="vos_zoom_div"><img onclick="close_me_now()" src="" id="vos_zoom_img" /></div>
+<!--<script>
+/*$j('.source-image').css({
+	height:$j(document).height()
+});*/
+</script>-->
+</div>
+</div>
+</div><?php include_once('images/footer.php'); ?>
+</body>
+</html>

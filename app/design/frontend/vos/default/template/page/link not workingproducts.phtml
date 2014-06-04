@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php echo $this->getChildHtml('head') ?>
+<link href="/images/vostpl.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+#pro_cat {
+	width:800px;
+	position: absolute;
+	z-index:1001;
+	left:0;
+	top:58px;
+	padding:0 10px 10px 20px;
+}
+.std {float:left;}
+img {border:none;}
+-->
+</style>
+<script type="text/javascript" src="/images/jquery.magnifier.js"></script>
+</head>
+<body>
+
+<?php echo $this->getChildHtml('sociallinks');?>
+
+<div id="nav_vos" ><a href="/homepage"><img onmouseout="this.src='/images/menu/products.png'" onmouseover="this.src='/images/menu/products-rollover.png'" src="/images/menu/products.png" /></a> <a href="/about"><img onmouseout="this.src='/images/menu/about.png'" onmouseover="this.src='/images/menu/about-rollover.png'" src="/images/menu/about.png" /></a> <a href="/this-and-that"><img onmouseout="this.src='/images/menu/thisthat.png'" onmouseover="this.src='/images/menu/thisthat-rollover.png'" src="/images/menu/thisthat.png" /></a> <a href="/contact"><img onmouseout="this.src='/images/menu/contact.png'" onmouseover="this.src='/images/menu/contact-rollover.png'" src="/images/menu/contact.png" /></a></div>
+<div id="navright" > 
+  <script> function bk(bkv){ if(bkv){document.getElementById("idbk").src="/images/bkb.png"; }else{document.getElementById("idbk").src="/images/bkw.png";}}
+function ck(ckv){ if(ckv){document.getElementById("idck").src="/images/ckb.png"; }else{document.getElementById("idck").src="/images/ckw.png";}}
+ </script> 
+  <a href="/checkout/cart/" /><img height="18" onmouseover="bk(1)" onmouseout="bk(0)" id="idbk" src="/images/bkw.png" /></a> <a href="/checkout" /><img height="18" onmouseover="ck(1)" onmouseout="ck(0)" id="idck" src="/images/ckw.png" /></a> </div>
+<div id="pro_cat" style="margin-top:120px;"> <?php echo $this->getChildHtml('global_notices') ?> <?php echo $this->getChildHtml('global_messages') ?> <?php echo $this->getChildHtml('content') ?> </div>
+<div id="main" >
+  <div >
+    <div id="header">
+    	
+    	<img src="/images/spring2013.png" width="425" height="190" border="0" usemap="#Map2" />
+    	
+    	
+    	
+      <map name="Map2" id="Map2">
+        <area shape="rect" coords="280,2,430,210" href="/about" />
+      </map>
+    </div>
+    <div  style="padding-right:26px;"> <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('vosfront')->toHtml(); ?>
+      <p align="justify" class="style1"><br />
+      </p>
+      <p class="style1"></p>
+    </div>
+  </div>
+</div>
+<img id="larget" src="/images/backgrounds/retouched-5.jpg"  class="source-image"/>
+<img style=" display:none;cursor:help;z-index:-1;" class="magnify" src="/images/sg.jpg" id="sg" height="0" width="0">
+<?php include_once('images/footer.php'); ?>
+</body>
+</html>

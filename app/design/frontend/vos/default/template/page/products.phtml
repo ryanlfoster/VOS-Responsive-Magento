@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php echo $this->getChildHtml('head') ?>
+<link href="/images/vostpl.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/images/jquery.magnifier.js"></script>
+ 
+</head>
+
+<div id="outer">
+
+<img id="larget" src="/images/backgrounds/crete-bg.jpg"  class="source-image"/> 
+
+	<div id="inner">
+		<div id="header">
+			<div id="navigation_bar">
+			<span class="nav_vos" > 
+				<nav>
+					<ul>
+							
+						<li><a href="#">PRODUCTS</a>	
+								<ul><span class="products_nav">
+									<li><a href="#">T-shirts</a></li>
+									<li><a href="#">Caps</a></li>
+									<li><a href="#">Posters</a></li>
+								</span></ul>
+						</li>
+						
+						<li><a href="#">ABOUT</a></li>
+						<li><a href="#">TEAM</a></li>
+						<li><a href="#">THISTHAT</a></li>
+						<li><a href="#">IPAD APP</a></li>
+					
+					</ul>
+				</nav>
+			</span>
+			
+			<span class="vos-social-buttons">
+				<a href="http://www.facebook.com/pages/Vikings-Of-Skate/160887060630674/">
+				<img onmouseover="this.src='/images/icons/facebook-rollover.png'" onmouseout="this.src='images/icons/facebook.png'" border="0" src="/images/icons/facebook.png" alt="Facebook" ></a>
+				<a href="http://twitter.com/vikingsofskate/">
+				<img onmouseover="this.src='/images/icons/twitter-rollover.png'" onmouseout="this.src='images/icons/twitter.png'" border="0" src="/images/icons/twitter.png" alt="Twitter" ></a>
+				<a href="http://pinterest.com/vikingsofskate/">
+				<img onmouseover="this.src='/images/icons/pinterest-rollover.png'" onmouseout="this.src='images/icons/pinterest.png'" border="0" src="/images/icons/pinterest.png" alt="Pinterest" ></a>
+				<a href="http://instagram.com/vikingsofskate/">
+				<img onmouseover="this.src='/images/icons/instagram-rollover.png'" onmouseout="this.src='images/icons/instagram.png'" border="0" src="/images/icons/instagram.png" alt="Instagram" ></a>
+				<a href="http://vikingsofskate.tumblr.com/">
+				<img onmouseover="this.src='/images/icons/tumblr-rollover.png'" onmouseout="this.src='images/icons/tumblr.png'" border="0" src="/images/icons/tumblr.png" alt="Tumblr" ></a>
+			</span>
+		
+			<span class="nav-right" >
+				<script> function bk(bkv){ if(bkv){document.getElementById("idbk").src="/images/bkb.png"; }else{document.getElementById("idbk").src="/images/bkw.png";}}
+						function ck(ckv){ if(ckv){document.getElementById("idck").src="/images/ckb.png"; }else{document.getElementById("idck").src="/images/ckw.png";}}
+				</script> 
+				<a href="/checkout/cart/" /><img height="18" onmouseover="bk(1)" onmouseout="bk(0)" id="idbk" src="/images/bkw.png" /></a> 
+				<a href="/checkout" /><img height="18" onmouseover="ck(1)" onmouseout="ck(0)" id="idck" src="/images/ckw.png" /></a>
+			</span>
+			</div>
+		</div>
+		
+	<span class="content-left">
+		<?php echo $this->getChildHtml('global_notices') ?> 
+		<?php echo $this->getChildHtml('global_messages') ?>
+		<?php echo $this->getChildHtml('content') ?> 
+	</span>
+	
+	<span class="content-right">
+	
+		<span class="logotitle">
+			<img src="/images/spring2013.png" width="425" height="190" border="0" usemap="#Map2" />
+			<map name="Map2" id="Map2">
+			<area shape="rect" coords="280,2,430,210" href="/about" />
+			</map>
+		</span>
+		<span class="content-right-content">
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('vosfront')->toHtml(); ?>
+		</span>
+		
+	</span>
+		
+	</div>
+	 
+
+<?php include_once('images/footer.php'); ?>	
+
+</div>

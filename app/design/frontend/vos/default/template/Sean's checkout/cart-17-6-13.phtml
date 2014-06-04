@@ -1,0 +1,130 @@
+<?php
+/**
+CN
+ */
+?>
+<?php
+/**
+ * Shopping cart template
+ *
+ * @see Mage_Checkout_Block_Cart
+ */
+?>
+<div class="cart">
+    <div class="page-title title-buttons">
+        <h1><?php echo $this->__('Shopping Cart') ?></h1>
+        <?php if(!$this->hasError()): ?>
+        <ul class="checkout-types">
+        <?php foreach ($this->getMethods('top_methods') as $method): ?>
+            <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+            <li><?php echo $methodHtml; ?></li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+        </ul>
+        <?php endif; ?>
+    </div>
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+    <?php echo $this->getChildHtml('form_before') ?>
+    <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post">
+        <fieldset>
+
+            <table id="shopping-cart-table" class="cart_tbl">
+                <col width="1" />
+                <col />
+            <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
+                <col width="1" />
+            <?php endif ?>
+            <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
+                <col width="1" />
+            <?php endif; ?>
+            <?php if ($this->helper('tax')->displayCartPriceInclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
+                <col width="1" />
+            <?php endif; ?>
+                <col width="1" />
+            <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
+                <col width="1" />
+            <?php endif; ?>
+            <?php if ($this->helper('tax')->displayCartPriceInclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
+                <col width="1" />
+            <?php endif; ?>
+
+            <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
+                <thead>
+                    <tr>
+                        
+                        <th colspan="2" rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('PRODUCT') ?></span> DETAILS
+                        </th>
+                        <th rowspan="<?php echo $mergedCells; ?>">COLOR
+                        </th>
+                        <th rowspan="<?php echo $mergedCells; ?>">SIZE
+                        </th>
+                        <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
+                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center"><span class="nobr"><?php echo $this->__('Move to Wishlist') ?></span></th>
+                        <?php endif ?>
+                        
+                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center"><?php echo $this->__('QTY') ?></th>
+                        <th class="a-center" colspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('PRICE') ?></span></th>
+                        <th align="right" style="padding-right:0px;" class="a-center" colspan="<?php echo $mergedCells; ?>"><?php echo $this->__('TOTAL') ?></th>
+                    </tr>
+                    <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                    <tr>
+                        <th class="a-right"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
+                        <th><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
+                        <th class="a-right"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
+                        <th><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
+                    </tr>
+                    <?php endif; ?>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="50" class="a-right" style="padding-right:0px;">
+                            <hr />
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                <?php unset($_SESSION['vos_id']); unset($_SESSION['vos_cart']); 
+				 foreach($this->getItems() as $_item): ?>
+                    <?php echo $this->getItemHtml($_item) ?>
+                <?php endforeach ?>
+                </tbody>
+            </table>
+            <button id="ubkt_id" style="display:none;" type="submit" title="<?php echo $this->__('Update Shopping Cart') ?>" class="button btn-update"><span><span><?php echo $this->__('UPDATE BASKET') ?></span></span></button>
+            <script type="text/javascript">decorateTable('shopping-cart-table')</script>
+        </fieldset>
+   </form>
+   
+    <div class="cart-collaterals" align="right">
+    <div style=" clear:both; margin:8px 0 8px 0; text-align:right; ">
+    <span style="color:#FFF; float:left; display:none;" id="vos-please-wait"> <img src="/images/ajax-loader.gif" alt="Processing..." title="Processing..." class="v-middle" />&nbsp;Please wait... </span>
+    <span style="font-size:11px; color:#FFF; font-family:Arial, Helvetica, sans-serif;">DELIVERY &nbsp;&nbsp;
+	</span>
+   
+       <!-- <div class="col2-set">
+            <div class="col-1">
+                <?php// echo $this->getChildHtml('crosssell') ?>
+            </div>
+            <div class="col-2">
+                <?php// echo $this->getChildHtml('coupon') ?>-->
+            
+            
+         <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
+        <div class="totals">
+            <?php echo $this->getChildHtml('totals'); ?>
+            <?php if(!$this->hasError()): ?>
+            <ul class="checkout-types" style="padding-right:0px;">
+            <?php foreach ($this->getMethods('methods') as $method): ?>
+                <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                <li><?php echo $methodHtml; ?></li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+<table><tr><td style="vertical-align:bottom; padding-left:11px;"><span style=" width:20px; text-align:left; text-transform:uppercase;" class="style1"><strong>You can checkout securely with PayPal, there's no need to open an account</strong></span></td><td><p align="right" class="style1"><br /><img src="/images/solution_PP.png" />
+      </p></td></tr></table>
+                            
+ 
+

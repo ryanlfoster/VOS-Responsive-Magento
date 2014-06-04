@@ -1,0 +1,64 @@
+<?php
+/**
+CN
+ */
+?>
+<div class="product-options" id="product-options-wrapper">
+    <?php echo $this->getChildHtml('', true, true);?>
+    <?php if ($this->hasRequiredOptions()):?>
+        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+    <?php endif;?>
+    
+</div>
+<table width="213">
+<tr><td width="70" class="style5">COLOR:</td><td>
+<div id="select_replace" style="clear:both; padding:2px 0;"></div></td>
+</tr>
+<tr><td width="70" class="style5">SIZE:</td><td>
+<div id="radio_replace" style="clear:both; padding:2px 0;"></div></td>
+</tr>
+</table>
+<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+<script type="text/javascript">
+	var size_options = new Array();
+	var html = "";
+	$j('.options-list label').each(function(){
+		labelfor = "#"+$j(this).attr("for");
+		html += '<div align="center" class="opbox" ><a onclick="clickOptionCustom(\''+labelfor+'\',this)" class="size_select_custom" href="javascript:void(0);">'+this.innerHTML+'</a></div>';
+	});
+	function clickOptionCustom(id,src)
+	{
+		$j("#radio_replace a").attr("class","size_select_custom");
+		$j(id).click();
+		$j(src).attr("class","size_select_custom_select");
+	}
+	$j("#radio_replace").html(html);
+	
+	var checkhtml = "";
+	$j(".product-options select> option").each(function(index){
+		//alert(this.innerHTML);
+		if(this.value!="")
+		{	
+		checkhtml += '<div align="center" class="opbox" style="background:'+this.innerHTML+'" ><a onclick="clickSelectCustom(\''+index+'\',\''+this.value+'\',this)" class="color_ses" href="javascript:void(0);">&nbsp;</a></div>';
+		}
+	});
+	function clickSelectCustom(index,src,parent)
+	{
+		var p;
+		p = $j(".product-options select");
+		p.val(src);
+		$j("a.color_ses").html("&nbsp;");
+		parent.innerHTML="*";	
+	}
+	$j("#select_replace").html(checkhtml);
+</script>
+
+
+
+
+
+
+<script type="text/javascript">decorateGeneric($$('#product-options-wrapper dl'), ['last']);</script>
+
+
+

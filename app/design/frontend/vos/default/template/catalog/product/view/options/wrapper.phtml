@@ -1,0 +1,197 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="product-options" id="product-options-wrapper">
+    <?php echo $this->getChildHtml('', true, true);?>
+    <?php if ($this->hasRequiredOptions()):?>
+        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+    <?php endif;?>
+</div>
+<script type="text/javascript">decorateGeneric($$('#product-options-wrapper dl'), ['last']);</script>
+
+
+
+<?php 
+	$product = Mage::registry('current_product');
+	$categories = $product->getCategoryCollection();
+	?>
+	
+	<?php 
+	foreach($categories as $category) {
+		if($category->getId() != 2) {
+			$currentcatid = $category->getId();
+			break;
+		} 
+	}
+	?>
+    
+    <?php if($product >= 1800 /* Kids T-SHIRTS */) {
+    	
+    	echo '<p> KIDS </p>
+<table width="188" style="clear:both;">
+<tr><td width="70" class="style5">COLOUR</td><td>
+<div id="select_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
+</tr>
+<tr><td width="70" class="style5">SEX</td><td>
+<div id="radio_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
+</tr>
+</table>
+<style> .sizegi:hover{ color:#000;} .sizegi { font-size:11px;}</style>
+ <div class="style5" style="text-align:left; margin-bottom:7px; clear:both; height:15px; width:100%; overflow:hidden;">
+ 
+ 	<a href="#" class="sizegi" rel="magnify[sg]">SIZE GUIDE</a>
+ 		<img style=" display:none;cursor:help;z-index:-1;" class="magnify" src="/images/sg.jpg" id="sg" height="0" width="0">
+ 		<img style="cursor:help;z-index:-1; display:none;" class="magnify" src="/images/careinstructions.jpg" id="carei" height="0" width="0">
+ 	<a href="#" class="sizegi" rel="magnify[carei]" style="float:right; padding:0;">CARE INSTRUCTIONS</a>
+
+</div>';
+	    
+	    
+	    
+	    
+    } 
+    
+    else if($currentcatid == 3 /* T-SHIRTS */) {
+    	
+ 
+    	
+    	
+    	echo '
+<table width="188" style="clear:both;">
+<tr><td width="70" class="style5">COLOUR</td><td>
+<div id="select_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
+</tr>
+<tr><td width="70" class="style5">SIZE</td><td>
+<div id="radio_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
+</tr>
+</table>
+<style> .sizegi:hover{ color:#000;} .sizegi { font-size:11px;}</style>
+ <div class="style5" style="text-align:left; margin-bottom:7px; clear:both; height:15px; width:100%; overflow:hidden;">
+ 
+ 	<a href="#" class="sizegi" rel="magnify[sg]">SIZE GUIDE</a>
+ 		<img style=" display:none;cursor:help;z-index:-1;" class="magnify" src="/images/sg.jpg" id="sg" height="0" width="0">
+ 		<img style="cursor:help;z-index:-1; display:none;" class="magnify" src="/images/careinstructions.jpg" id="carei" height="0" width="0">
+ 	<a href="#" class="sizegi" rel="magnify[carei]" style="float:right; padding:0;">CARE INSTRUCTIONS</a>
+
+</div>';
+	    
+	    
+	    
+	    
+    } 
+    
+    
+    
+         else if($currentcatid == 6 /* CAPS */) {
+    	
+    	echo '
+<table width="188" style="clear:both;">
+<tr><td width="70" class="style5">COLOUR</td><td>
+<div id="select_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
+</tr>
+</table>
+<!--<tr><td width="70" class="style5">SIZE</td><td>
+-->
+<!--<div id="radio_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
+</tr>
+
+<style> .sizegi:hover{ color:#000;} .sizegi { font-size:11px;}</style>
+ <div class="style5" style="text-align:left; margin-bottom:7px; clear:both; height:15px; width:100%; overflow:hidden;">
+ 
+ 	<a href="#" class="sizegi" rel="magnify[sg]">SIZE GUIDE</a>
+ 		<img style=" display:none;cursor:help;z-index:-1;" class="magnify" src="/images/sg.jpg" id="sg" height="0" width="0">
+ 		<img style="cursor:help;z-index:-1; display:none;" class="magnify" src="/images/careinstructions.jpg" id="carei" height="0" width="0">
+ 	<a href="#" class="sizegi" rel="magnify[carei]" style="float:right; padding:0;">CARE INSTRUCTIONS</a>-->
+
+<!--</div>-->
+';
+   
+    }
+    
+    else if($currentcatid == 7 /* PRINTS */) {
+    	
+    	echo '
+<style> 
+.product-img-box {
+	width: 410px !important;
+	}
+
+</style>
+
+';
+	    
+	    
+	    
+	    
+    }
+    
+    else {
+	    echo '<p> UNKOWN CATEGORY </p>';
+    } ?>
+ 
+      <script type="text/javascript">
+	var size_options = new Array();
+	var html = "";
+	var checkhtml = "";
+	var fistSizeId = null;
+	var fistColorId = null;
+
+	$j('.options-list label').each(function(index){
+		nid = "cn_size_option_"+index;
+		if(!fistSizeId)fistSizeId= "#"+nid;
+		labelfor = "#"+$j(this).attr("for");
+		html += '<div align="center" class="opbox-size" ><a id="'+nid+'" onclick="clickOptionCustom(\''+labelfor+'\',this)" class="size_select_custom" href="javascript:void(0);">'+this.innerHTML+'</a></div>';
+	});
+	function clickOptionCustom(id,src)
+	{
+		$j("#radio_replace a").attr("class","size_select_custom");
+		$j(id).click();
+		$j(src).attr("class","size_select_custom_select");
+	}
+	$j("#radio_replace").html(html);
+	$j(fistSizeId).click();
+	$j(".product-options select> option").each(function(index){
+		//alert(this.innerHTML);
+		
+		if(this.value!="")
+		{	
+		nid = "cn_color_option_"+index;
+		if(!fistColorId)fistColorId= "#"+nid;
+		checkhtml += '<div align="center" class="opbox" style="background:'+this.innerHTML+'" ><a id="'+nid+'" onclick="clickSelectCustom(\''+index+'\',\''+this.value+'\',this)" class="color_ses" href="javascript:void(0);">&nbsp;</a></div>';
+		}
+	});
+	function clickSelectCustom(index,src,parent)
+	{
+		var p;
+		p = $j(".product-options select");
+		p.val(src);
+		$j("a.color_ses").html("&nbsp;");
+		parent.innerHTML="<img src='/images/tick.png'>";	
+	}
+	$j("#select_replace").html(checkhtml);
+	$j(fistColorId).click();
+</script>
+<script type="text/javascript">decorateGeneric($$('#product-options-wrapper dl'), ['last']);</script>

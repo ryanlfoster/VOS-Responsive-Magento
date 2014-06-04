@@ -1,0 +1,28 @@
+<?php
+/**
+CN
+ */
+?>
+
+<?php $_product = $this->getProduct() ?>
+
+<?php if($_product->isSaleable()): ?>
+    <div class="add-to-cart">
+        <?php if(!$_product->isGrouped()): ?>
+       <div style="clear:both; padding:10px 0 0 0; margin:0; width:100%;">
+        <div style="float:left; margin:0; padding:0;">
+        <label for="qty" class="style5" style="padding-top:6px;"><?php echo $this->__('QUANTITY') ?></label>
+        <input type="text" name="qty" style="text-align:center; float:right;" id="qty" maxlength="12" value="<?php echo $this->getMinimalQty($_product) ?>" title="<?php echo $this->__('QUANTITY') ?>" class="input-text qty" />
+        </div>
+        <div style="margin:0; padding:0; width:85px; float:right;">
+        <?php echo $this->getPriceHtml($_product, false, '_clone') ?></div>
+        </div>
+		<?php endif; ?>
+<!--[if IE]> <div style="clear:both;  height:6px;"></div><![endif]-->
+<!--[if IE]><![if !IE]><![endif]--> <div style="clear:both;  height:5px;"></div> <!--[if IE]><![endif]><![endif]-->
+
+
+        <button id="btn_buynow" style="position:absolute;" type="button" title="<?php echo $this->__('Add to Cart') ?>" class="cbutton btn-cart" onclick="productAddToCartForm.submit()"><span><span> &nbsp;</span></span></button>
+        <?php echo $this->getChildHtml('', true, true) ?>
+    </div>
+<?php endif; ?>

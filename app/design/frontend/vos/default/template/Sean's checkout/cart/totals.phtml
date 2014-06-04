@@ -1,0 +1,25 @@
+<?php
+/**
+CN
+ */
+?>
+<?php
+/**
+ * Shopping cart totals template
+ *
+ * @see Mage_Checkout_Block_Cart
+ */
+?>
+<div style="clear:both;"></div>
+ 
+<table class="gtota" cellspacing="5" id="shopping-cart-totals-table">
+    <col />
+    <col width="1" />
+    <tfoot align="right">
+        <?php echo $this->renderTotals('footer'); ?>
+    </tfoot>
+    <tbody align="right">
+    
+        <?php echo $this->renderTotals(); ?>
+    </tbody>
+</table>

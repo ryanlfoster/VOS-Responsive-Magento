@@ -1,0 +1,212 @@
+<?php
+/**
+ CN
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<style type="text/css">
+.opbox {
+	background:#FFF;
+	text-align:center;
+	vertical-align:middle;
+	margin-right:4px;
+	margin-bottom:4px;
+	height:18px;
+	width:18px;
+	float:left;
+	padding:4px 4px 0 0;
+}
+a.size_select_custom {
+	color:#000;
+	font-weight:bold;
+	font-size:14px;
+	height:100%;
+	width:100%;
+	padding-top:2px;
+	padding-left:5px;
+}
+a.size_select_custom_select {
+	color:#F00;
+	font-weight:bold;
+	font-size:14px;
+	height:100%;
+	width:100%;
+	padding-top:2px;
+	padding-left:5px;
+}
+
+a.color_ses{ padding-left:4px; font-size:16px; color:#FFF;}
+.product-options {
+	display:none;
+}
+.next-product{ margin:0; padding:0;}
+</style>
+<?php
+  // echo $this->getLayout()->createBlock('cms/block')->setBlockId('vosphl')->toHtml();
+  
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-view">
+  <div class="product-essential">
+    <form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+      <div class="no-display">
+        <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+        <input type="hidden" name="related_product" id="related-products-field" value="" />
+      </div>
+      <div class="product-shop">
+      <div class="product-name">
+        <h1 class="style3a"> <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+      </div>
+      <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+      <div class="box-collateral <?php echo "box-{$alias}"?>">
+        <?php if ($title = $this->getChildData($alias, 'title')):?>
+        <?php endif;?>
+        <?php echo $html; ?> </div>
+      <?php endforeach;?>
+      <div style="clear:both;">
+      </div>
+      <div id="textleft">
+      <div class="product-img-box"> <?php echo $this->getChildHtml('media') ?> </div>
+      <?php if ($this->canEmailToFriend()): ?>
+       
+      <script type="text/javascript"> 				
+function hiten(e){
+
+	if(e.keyCode==13)
+	{
+		mfrd();		
+	}
+}
+
+function mfrd()
+{ 
+	str = document.getElementById("emailadd").value;
+	
+if (str.length==0)
+  {
+  document.getElementById("txtHint").innerHTML="email add nai";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/send.php?m="+str+"&u=<?php echo $_product->getProductUrl(); ?>",true);
+xmlhttp.send();
+}          
+</script>
+<p><br /><br /></p>
+      <p class="style5" style="padding:57px 0 10px 0; margin:0; height:auto;">EMAIL FRIEND &nbsp;&nbsp;
+        <input id="emailadd" onkeypress="hiten(event);" size="10" type="text" />
+    
+    <p id="txtHint"> </p>
+    </p>
+    <?php endif; ?>
+    <p style="float:left;"> 
+    <a target="_blank" href="http://www.facebook.com/sharer.php?u=<?php echo $_product->getProductUrl(); ?>"> 
+    <img style="border:none;" src="/images/facebook.png"></a></p>
+    <p style="float:left;"> 
+    <a target="_blank" href="http://twitter.com/share?url=<?php echo $_product->getProductUrl(); ?>" title="Tweet This">
+    <img style="border:none;" src="/images/twitter.png" /></a> </p>
+    <div style="clear:both; height:20px;" ><br />
+    </div>
+    <?php
+ 		 // prev- / next-link...
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+    $prev_url = $next_url = $url = $_product->getProductUrl();
+
+    if ($this->helper('catalog/data')->getCategory()) {
+        $category = $this->helper('catalog/data')->getCategory();
+    } else {
+        $_ccats = $this->helper('catalog/data')->getProduct()->getCategoryIds();
+        $category = Mage::getModel('catalog/category')->load($_ccats[0]);
+    }
+
+    $children = $category->getProductCollection();
+    $_count = is_array($children) ? count($children) : $children->count();
+    if ($_count) {
+        foreach ($children as $product) {
+            $plist[] = $product->getId();
+        }
+
+        /**
+         * Determine the previous/next link and link to current category
+         */
+        $current_pid  = $this->helper('catalog/data')->getProduct()->getId();
+        $curpos   = array_search($current_pid, $plist);
+        // get link for prev product
+        $previd   = isset($plist[$curpos+1])? $plist[$curpos+1] : $current_pid;
+        $product  = Mage::getModel('catalog/product')->load($previd);
+        $prevpos  = $curpos;
+        while (!$product->isVisibleInCatalog()) {
+            $prevpos += 1;
+            $nextid   = isset($plist[$prevpos])? $plist[$prevpos] : $current_pid;
+            $product  = Mage::getModel('catalog/product')->load($nextid);
+        }
+        $prev_url = $product->getProductUrl();
+        // get link for next product
+        $nextid   = isset($plist[$curpos-1])? $plist[$curpos-1] : $current_pid;
+        $product  = Mage::getModel('catalog/product')->load($nextid);
+        $nextpos  = $curpos;
+        while (!$product->isVisibleInCatalog()) {
+            $nextpos -= 1;
+            $nextid   = isset($plist[$nextpos])? $plist[$nextpos] : $current_pid;
+            $product  = Mage::getModel('catalog/product')->load($nextid);
+        }
+        $next_url = $product->getProductUrl();
+    }
+    ?>
+    <?php if ($url <> $prev_url):?>
+    <a class="next-product" href="<?php echo $prev_url; ?>"><img src="<?php echo $this->getUrl(); ?>skin/frontend/default/default/images/images/next.png" /></a>
+    <?php endif; ?>
+  </div>
+  <div id="textright"> <?php echo $this->getChildHtml('other');?>
+    <?php //if ($_product->getShortDescription()):?>
+    <?php //echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?>
+    <?php //endif;?>
+    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+    <?php endif;?>
+  </div>
+</div>
+<div class="clearer"></div>
+<?php if ($_product->isSaleable() && $this->hasOptions()):?>
+<?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+<?php endif;?>
+</form>
+<script type="text/javascript">
+    //<![CDATA[
+            var productAddToCartForm = new VarienForm('product_addtocart_form');
+            productAddToCartForm.submit = function(){
+                    if (this.validator.validate()) {
+                            this.form.submit();
+                    }
+            }.bind(productAddToCartForm);
+    //]]>
+    </script>
+</div>
+</div>
+

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="vos/vos.css">
+        <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+        
+        
+        
+        <div class="dim"></div>
+        
+        <div id="outer">
+		
+			<div id="inner">
+				<div id="head"> 
+					<div id="navigation_bar">
+						<span class="nav_vos" >
+							<ul>
+							
+						<li><a href="/homepage">PRODUCTS</a>	
+								<ul>
+									<div class="link1"><li><a href="/shirts">SHIRTS</a></li></div>
+									<li><a href="/caps">CAPS</a></li>
+									<li><a href="/prints">SCREEN PRINTS</a></li>
+								</ul>
+						</li>
+						
+						<li><a href="/about">ABOUT</a>
+						<ul>
+									<li><a href="#">BLOG</a></li>
+								</ul>
+						</li>
+						<li><a href="/team">TEAM</a></li>
+						<li><a href="/this-and-that">THIS&amp;THAT</a></li>
+						<li><a href="/ipad-app">IPAD APP</a></li>
+					
+					</ul>
+				
+			</span>
+			
+			<span class="vos-social-buttons">
+				<a href="http://www.facebook.com/pages/Vikings-Of-Skate/160887060630674/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/facebook-rollover.png'"  height="20" width="20" onmouseout="this.src='images/icons/social/facebook.png'" border="0" src="/images/icons/social/facebook.png" alt="Facebook" /></a>
+				<a href="http://twitter.com/vikingsofskate/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/twitter-rollover.png'" height="20" width="20" onmouseout="this.src='images/icons/social/twitter.png'" border="0" src="/images/icons/social/twitter.png" alt="Twitter" /></a>
+				<a href="http://pinterest.com/vikingsofskate/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/pinterest-rollover.png'"  height="20" width="20" onmouseout="this.src='images/icons/social/pinterest.png'" border="0" src="/images/icons/social/pinterest.png" alt="Pinterest" /></a>
+				<a href="http://instagram.com/vikingsofskate/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/instagram-rollover.png'"  height="20" width="20" onmouseout="this.src='images/icons/social/instagram.png'" border="0" src="/images/icons/social/instagram.png" alt="Instagram" /></a>
+				<a href="http://vikingsofskate.tumblr.com/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/tumblr-rollover.png'"  height="20" width="20" onmouseout="this.src='images/icons/social/tumblr.png'" border="0" src="/images/icons/social/tumblr.png" alt="Tumblr" /></a>
+				
+			</span>
+		
+			<span class="nav-right" >
+			
+						<ul>
+							<li><a href="/checkout/cart/">CART</a></li>
+							<li><a href="/checkout">CHECKOUT</a></li>
+						</ul>
+							<div class="link2"> <img src="http://www.dgt2.com/images/about.png"></div>
+						
+						</span>
+        			</div>
+        		</div>
+        		<div id="left">
+		<span class="poster-left">	
+			<div class="link2">
+				<a href="/vos/happy.html"><img src="/images/prints/happy.jpg" height= 480px;></a>
+			</div>
+		</span>
+	
+	<span class="poster-middle">
+		<a href="javascript:lightbox(null,'/vos/grad.html');"><img src="/images/prints/grad.jpg" height= 235px;></a>
+		<a href="javascript:lightbox(null,'/vos/not.html');"><img src="/images/prints/not.jpg" height= 235px;></a>
+	</span>
+	
+	<span class="poster-right">
+	<a href="javascript:lightbox(null,'/vos/spine.html');"><img src="/images/prints/spine.jpg" height= 480px;></a>
+	</span>
+	
+	</div>
+	
+	<div id="right">
+	
+		<span class="logotitle">
+			<img src="/images/headers/prints.png" width="425" height="218" border="0" usemap="#Map2" />
+			<map name="Map2" id="Map2">
+			<area shape="rect" coords="280,2,430,210" href="/about" />
+			</map>
+		</span>
+		
+		<div id="caps-right-text">
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('posterscategory')->toHtml(); ?>
+		</div>
+		
+		<div id="posters-right-bottom">
+		<img src="/images/prints/poster.png" >
+		
+		</div>
+	
+	</div>
+	
+	
+  <div id="footer">
+				<?php include_once('images/footer.php'); ?>	
+<script type="text/javascript">
+    $.fx.speeds._default = 100;
+    $(document).ready(function() {
+
+        $( "#dialog" ).dialog({
+            autoOpen: false,
+            show: "blind",
+        });
+
+        $( ".hold_btn" ).click(function() {
+            $( "#dialog" ).dialog( "open" );
+            return false;
+        });
+
+    });
+</script>
+
+<button class="btn btn-primary hold_btn" type="button">Button</button>
+
+<div id="dialog" title="Basic dialog">
+    <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
+	</div>
+	
+        	</div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <!-- <script src="js/plugins.js"></script> -->
+        <script src="vos/dim-bg.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,263 @@
+<?php
+/**
+ CN
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<style type="text/css">
+.opbox {
+	background:#FFF;
+	text-align:center;
+	vertical-align:middle;
+	margin-left:4px;
+	margin-bottom:4px;
+	height:22px;
+	width:22px;
+	float:left;
+	/*padding:4px 4px 0 0;*/
+}
+.opbox a{ text-align:center; padding:0px 10px 0px 8px; }
+.opbox a:focus { outline:none; }
+.opbox-size{
+	background:#FFF;
+	text-align:center;
+	vertical-align:middle;
+	margin-left:4px;
+	margin-bottom:4px;
+	height:18px;
+	width:18px;
+	float:left;
+	padding:4px 4px 0 0 !important;
+	}
+.opbox-size a{ text-align:center; margin:0 auto; }	
+a.size_select_custom {
+	color:#000;
+	font-weight:bold;
+	font-size:14px;
+	height:100%;
+	width:100%;
+	padding-top:2px;
+	padding-left:3px;
+	padding-right:0px;
+}
+a.size_select_custom_select {
+	color:#F00;
+	font-weight:bold;
+	font-size:14px;
+	height:100%;
+	width:100%;
+	padding-left:3px;
+	padding-right:0px;
+}
+a.color_ses {
+	padding-top:4px;
+	padding-left:4px;
+	font-size:16px;
+	color:#FFF;
+}
+a.color_ses img{ padding-top:3px;}
+.product-options { display:none; }
+.next-product {
+	margin:0;
+	padding:0;
+}
+.lrbox {
+	height:auto;
+	overflow:hidden;
+	width:auto;
+}	
+#preload{ display:none;width:1px; height:1px; background:url('/skin/frontend/default/default/images/images/buynow_over.png');}
+#btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:0px -56px; }
+#btn_buynow{background:url('/images/buynowx.png') no-repeat; }	
+</style>
+<div id="preload"></div>
+<script type="text/javascript" src="/images/jquery.magnifier.js"></script>
+<?php
+  // echo $this->getLayout()->createBlock('cms/block')->setBlockId('vosphl')->toHtml();
+  
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-view">
+  <div class="product-essential">
+    <form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+      <div class="no-display">
+        <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+        <input type="hidden" name="related_product" id="related-products-field" value="" />
+      </div>
+      <div class="product-shop">
+        <div class="product-name">
+          <h1 class="style3a"> <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+        </div>
+        <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+        <div class="box-collateral <?php echo "box-{$alias}"?>">
+          <?php if ($title = $this->getChildData($alias, 'title')):?>
+          <?php endif;?>
+          <?php echo $html; ?> </div>
+        <?php endforeach;?>
+        <div style="clear:both;"> </div>
+        <div class="lrbox">
+          <div id="textleft">
+            <div class="product-img-box"> <?php echo $this->getChildHtml('media') ?> </div>
+            <?php if ($this->canEmailToFriend()): ?>
+            <script type="text/javascript"> 
+	  function popsend(valvos){ 
+	  if(valvos==1){document.getElementById("popmail").style.display="block";}
+		else{document.getElementById("popmail").style.display="none";}
+								}				
+function hiten(e){
+
+	if(e.keyCode==13)
+	{
+		mfrd();		
+	}
+}
+
+function mfrd()
+{ 
+	str = document.getElementById("xemailadd").value;
+	frm = document.getElementById("email_from_id").value;
+	note = document.getElementById("email_note").value;
+	popsend(0);
+	
+if (str.length==0)
+  {
+  document.getElementById("txtHint").innerHTML="Email address error";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/send.php?m="+str+"&note="+note+"&frm="+frm+"&u=<?php $mlinkz=$_product->getProductUrl(); echo substr($mlinkz, -(strlen($mlinkz)-7) ); ?>",true);
+xmlhttp.send();
+}
+          
+</script>
+            <p><br />
+              <br />
+            </p>
+            <p id="txtHint" class="sizegi" onclick="popsend(1)" style="cursor:pointer; padding:57px 0 10px 0; margin:0; height:auto; font-size:11px; font-weight:bold;">EMAIL PAGE TO FRIEND&nbsp;&nbsp; </p>
+            <?php endif; ?>
+            <div style="clear:both; height:4px;" ><br />
+            </div>
+            <?php
+ 		 // prev- / next-link...
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+    $prev_url = $next_url = $url = $_product->getProductUrl();
+
+    if ($this->helper('catalog/data')->getCategory()) {
+        $category = $this->helper('catalog/data')->getCategory();
+    } else {
+        $_ccats = $this->helper('catalog/data')->getProduct()->getCategoryIds();
+        $category = Mage::getModel('catalog/category')->load($_ccats[0]);
+    }
+
+    $children = $category->getProductCollection();
+    $_count = is_array($children) ? count($children) : $children->count();
+    if ($_count) {
+        foreach ($children as $product) {
+            $plist[] = $product->getId();
+        }
+
+        /**
+         * Determine the previous/next link and link to current category
+         */
+        $current_pid  = $this->helper('catalog/data')->getProduct()->getId();
+        $curpos   = array_search($current_pid, $plist);
+        // get link for prev product
+        $previd   = isset($plist[$curpos+1])? $plist[$curpos+1] : $current_pid;
+        $product  = Mage::getModel('catalog/product')->load($previd);
+        $prevpos  = $curpos;
+        while (!$product->isVisibleInCatalog()) {
+            $prevpos += 1;
+            $nextid   = isset($plist[$prevpos])? $plist[$prevpos] : $current_pid;
+            $product  = Mage::getModel('catalog/product')->load($nextid);
+        }
+        $prev_url = $product->getProductUrl();
+        // get link for next product
+        $nextid   = isset($plist[$curpos-1])? $plist[$curpos-1] : $current_pid;
+        $product  = Mage::getModel('catalog/product')->load($nextid);
+        $nextpos  = $curpos;
+        while (!$product->isVisibleInCatalog()) {
+            $nextpos -= 1;
+            $nextid   = isset($plist[$nextpos])? $plist[$nextpos] : $current_pid;
+            $product  = Mage::getModel('catalog/product')->load($nextid);
+        }
+        $next_url = $product->getProductUrl();
+		
+		
+		
+    }
+    ?>
+            <?php if ($url <> $prev_url):?>
+            <a class="next-product" href="<?php echo $prev_url; ?>"><img style="position:absolute; top:540px;" onmouseout="this.src='/skin/frontend/default/default/images/images/next.png'" onmouseover="this.src='/skin/frontend/default/default/images/images/nxt_over.png'" id="img_nxt" src="<?php echo $this->getUrl(); ?>skin/frontend/default/default/images/images/next.png" /></a>
+            <?php else: 
+		$first_pro_data = Mage::getModel('catalog/product')->load($plist[0]);
+		$first_product_link=$first_pro_data->getProductUrl();
+			?>
+            
+            		 <a class="next-product" href="<?php echo $first_product_link; ?>"><img style="position:absolute; top:540px;" onmouseout="this.src='/skin/frontend/default/default/images/images/next.png'" onmouseover="this.src='/skin/frontend/default/default/images/images/nxt_over.png'" id="img_nxt" src="<?php echo $this->getUrl(); ?>skin/frontend/default/default/images/images/next.png" /></a>
+			<?php endif; ?>
+          </div>
+          <div id="textright"> <?php echo $this->getChildHtml('other');?>
+            <?php //if ($_product->getShortDescription()):?>
+            <?php //echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?>
+            <?php //endif;?>
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+            <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+            <?php endif;?>
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+            <?php endif;?>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+            var productAddToCartForm = new VarienForm('product_addtocart_form');
+            productAddToCartForm.submit = function(){
+                    if (this.validator.validate()) {
+                            this.form.submit();
+                    }
+            }.bind(productAddToCartForm);
+    //]]>
+	
+    </script> 
+  </div>
+</div>
+<?php
+  $browser = strpos($_SERVER['HTTP_USER_AGENT'],"iP");
+  $mob=strpos($_SERVER['HTTP_USER_AGENT'],"Mobile");
+    if (($browser>0)||($mob>0)){
+    ?>
+<div id="fixedDiv" style="position:absolute; right:43px; top:610px;"> <a target="_blank" href="http://twitter.com/vikingsofskate"> <img onmouseover="this.src='/images/ttc.png'" onmouseout="this.src='/images/tt.png'" style="border:none;" width="80" height="19" src="/images/tt.png" /> </a> &nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" href="http://www.facebook.com/pages/Vikings-Of-Skate/160887060630674"><img onmouseover="this.src='/images/fbc.png'" onmouseout="this.src='/images/fb.png'" width="80" height="19" style="border:none;" src="/images/fb.png" /></a> </div>
+<?php 
+  }else{
+?>
+<div style="position:fixed; right:43px; bottom:9px;"> <a target="_blank" href="http://twitter.com/vikingsofskate"> <img onmouseover="this.src='/images/ttc.png'" onmouseout="this.src='/images/tt.png'" id="id_tt" style="border:none;" width="80" height="19" src="/images/tt.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" href="http://www.facebook.com/pages/Vikings-Of-Skate/160887060630674"><img onmouseover="this.src='/images/fbc.png'" onmouseout="this.src='/images/fb.png'" width="80" height="19" id="id_fb" style="border:none;" src="/images/fb.png" /></a> </div>
+<?php } ?>

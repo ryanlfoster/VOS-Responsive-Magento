@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php echo $this->getChildHtml('head') ?>
+<link href="/images/vostpl.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	line-height:14px;
+}
+#main {
+	width:426px;
+	position: absolute;
+	z-index:999;
+	top: 0px;
+	right: 0px;
+	padding: 100px 20px 0px 0px;
+}
+#header {padding-bottom:12px;}
+img {border:none;}
+-->
+</style>
+
+</head>
+<body>
+	<div id="outer">
+<div id="inner">
+		<div id="header">
+			<div id="navigation_bar">
+			<span class="nav_vos" > 
+				
+					<ul>
+							
+						<li><a href="#">PRODUCTS</a>	
+								<ul>
+									<li><a href="/shirts">SHIRTS</a></li>
+									<li><a href="/caps">CAPS</a></li>
+									<li><a href="/prints">SCREEN PRINTS</a></li>
+								</ul>
+						</li>
+						
+						<li><a href="/app">ABOUT</a></li>
+						<li><a href="/team">TEAM</a></li>
+						<li><a href="/this-and-that">THIS&amp;THAT</a></li>
+						<li><a href="/ipod-app">IPAD APP</a></li>
+					
+					</ul>
+				
+			</span>
+			
+			<span class="vos-social-buttons">
+				<a href="http://www.facebook.com/pages/Vikings-Of-Skate/160887060630674/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/facebook-rollover.png'"  height="20" width="20" onmouseout="this.src='images/icons/social/facebook.png'" border="0" src="/images/icons/social/facebook.png" alt="Facebook" /></a>
+				<a href="http://twitter.com/vikingsofskate/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/twitter-rollover.png'" height="20" width="20" onmouseout="this.src='images/icons/social/twitter.png'" border="0" src="/images/icons/social/twitter.png" alt="Twitter" /></a>
+				<a href="http://pinterest.com/vikingsofskate/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/pinterest-rollover.png'"  height="20" width="20" onmouseout="this.src='images/icons/social/pinterest.png'" border="0" src="/images/icons/social/pinterest.png" alt="Pinterest" /></a>
+				<a href="http://instagram.com/vikingsofskate/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/instagram-rollover.png'"  height="20" width="20" onmouseout="this.src='images/icons/social/instagram.png'" border="0" src="/images/icons/social/instagram.png" alt="Instagram" /></a>
+				<a href="http://vikingsofskate.tumblr.com/" target="_blank">
+				<img onmouseover="this.src='/images/icons/social/tumblr-rollover.png'"  height="20" width="20" onmouseout="this.src='images/icons/social/tumblr.png'" border="0" src="/images/icons/social/tumblr.png" alt="Tumblr" /></a>
+				
+			</span>
+		
+			<span class="nav-right" >
+			
+						<ul>
+							<li><a href="/checkout/cart/">CART</a></li>
+							<li><a href="/checkout">CHECKOUT</a></li>
+						</ul>
+			
+			</span>
+	</div>
+	</div>
+	</div>
+
+
+
+<div id="main" >
+  <div>
+    <div id="header" align="right"><img src="/images/logoaddress.png" width="425" height="230" border="0" usemap="#Map2" />
+      <map name="Map2" id="Map2">
+        <area shape="rect" coords="280,2,430,210" href="/products" />
+      </map>
+    </div>
+    <div id="address-right"> <br />
+      <br />
+      <script>
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate()+expiredays);
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toUTCString());
+}
+function save_adx()
+{ //alert("Saved");
+	s_fn=document.getElementById("vos_fname").value;
+	s_ln=document.getElementById("vos_lname").value;
+	s_add=document.getElementById("vos_add").value;
+	s_city=document.getElementById("vos_city").value;
+	s_sta=document.getElementById("vos_state").value;
+	s_code=document.getElementById("vos_code").value;
+	s_country=document.getElementById("vos_country").value;
+	s_email=document.getElementById("vos_email").value;
+ 
+ 
+setCookie("fname",s_fn,1);
+setCookie("lname",s_ln,1);
+setCookie("add",s_add,1);
+setCookie("city",s_city,1);
+setCookie("sta",s_sta,1);
+setCookie("code",s_code,1);
+setCookie("cun",s_country,1);
+setCookie("email",s_email,1);
+
+//alert(document.cookie);
+}// save end
+ 
+function get_cookie(cookie_name)
+{
+  var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+	 
+  if ( results )
+    return ( unescape ( results[2] ) );
+  else
+    return null;
+}
+ 	  
+function vos_out(){
+	document.getElementById("vos-please-wait").style.display="block";
+	document.getElementById("billing:firstname").value=document.getElementById("vos_fname").value;
+	document.getElementById("billing:lastname").value=document.getElementById("vos_lname").value;
+	document.getElementById("billing:street1").value=document.getElementById("vos_add").value;
+	document.getElementById("billing:city").value=document.getElementById("vos_city").value;
+	document.getElementById("billing:region").value=document.getElementById("vos_state").value;
+	document.getElementById("billing:postcode").value=document.getElementById("vos_code").value;
+	document.getElementById("billing:country_id").value=document.getElementById("vos_country").value;
+	document.getElementById("billing:email").value=document.getElementById("vos_email").value;
+	document.getElementById("billing:telephone").value=440000;
+	
+	save_adx();
+	document.getElementById("vos_tmp_bill_btn").click();
+	chk_ship();
+	}
+	function chk_ship(){
+		
+		if(document.getElementById("opc-shipping_method").className=="section allow active"){	  
+		document.getElementById("vos_tmp_ship_btn").click(); 
+		clearTimeout(t);
+		document.getElementById("address_tbl").style.display="none";
+		document.getElementById("info_view_vos").style.display="block";
+	document.getElementById("cv_fname").innerHTML=document.getElementById("vos_fname").value;
+	document.getElementById("cv_lname").innerHTML=document.getElementById("vos_lname").value;
+	document.getElementById("cv_add").innerHTML=document.getElementById("vos_add").value;
+	document.getElementById("cv_city").innerHTML=document.getElementById("vos_city").value;
+	document.getElementById("cv_sta").innerHTML=document.getElementById("vos_state").value;
+	document.getElementById("cv_code").innerHTML=document.getElementById("vos_code").value;
+	document.getElementById("cv_country").innerHTML=document.getElementById("vos_country").value;
+	document.getElementById("cv_email").innerHTML=document.getElementById("vos_email").value;
+	document.getElementById("vos-please-wait").style.display="none";
+		}else{ t=setTimeout("chk_ship()",600); }
+	}
+	
+	function click_paypal_chk()
+	{
+		if(document.getElementById("opc-payment").className=="section allow active"){	
+		document.getElementById("p_method_paypal_express").checked="checked";  
+		document.getElementById("vos_tmp_pay_btn").click(); 
+		document.getElementById("vos-please-wait").style.display="block";
+		clearTimeout(vos_p);
+		}else{ vos_p=setTimeout("click_paypal_chk()",600); }
+	
+		}
+
+</script>
+      <p id="txtHint"></p>
+      <style>
+#info_view_vos tr{ width:100%; } 
+</style>
+      <table id="info_view_vos" style="display:none;" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <td width="197" height="24" class="style2">FIRST NAME</td>
+            <td width="197" class="style1" id="cv_fname" style=" text-transform:uppercase;"></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">LAST NAME</td>
+            <td width="197" class="style1" id="cv_lname" style=" text-transform:uppercase;"></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">DELIVERY ADDRESS</td>
+            <td width="197" class="style1" id="cv_add" style=" text-transform:uppercase;"></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">CITY</td>
+            <td width="197" class="style1" id="cv_city" style=" text-transform:uppercase;"></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">COUNTY/STATE/PROVINCE</td>
+            <td width="197" class="style1" id="cv_sta" style=" text-transform:uppercase;"></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">POSTCODE/ZIP</td>
+            <td width="197" class="style1" id="cv_code" style=" text-transform:uppercase;"></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">COUNTRY</td>
+            <td width="197" class="style1" id="cv_country" style=" text-transform:uppercase;"></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">E-MAIL</td>
+            <td width="197" class="style1" id="cv_email" style=" text-transform:uppercase;"></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">QUANTITY</td>
+            <td width="197" class="style1" id="cv_fname" style=" text-transform:uppercase;"><?php
+Mage::getSingleton('core/session', array('name'=>'frontend'));
+$cart = Mage::helper('checkout/cart')->getCart()->getItemsCount();
+if ($cart>0): ?>
+              <?php if ($cart==1): ?>
+              1 item in your basket
+              <?php else: ?>
+              <?php echo $cart; ?> items in your basket
+              <?php endif ?>
+              <?php else: ?>
+              You have no items in your basket
+              <?php endif ?></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">PRODUCTS</td>
+            <td width="197" class="style1"><?php foreach($_SESSION['vos_cart'] as $kkey){ echo $kkey.","; } ?></td>
+          </tr>
+          <tr>
+            <td width="197" height="24" class="style2">TOTAL:</td>
+            <td width="197" class="style1"><style> 
+.price{ background:none !important; color:#FFF !important; padding:0 !important;}
+</style>
+              <?php echo $this->helper('checkout')->formatPrice(Mage::getSingleton('checkout/cart')->getQuote()->getGrandTotal()); ?></td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><br />
+             <!-- <a href="/products"> <img style="right:185px; z-index:6; position:absolute;" src="/images/bfm2.png" onmouseover="this.src='/images/bfm2o.png'" onmouseout="this.src='/images/bfm2.png'" /></a>--> <a href="javascript:" onclick="click_paypal_chk()"><img src="/images/gopaypal.png" style="right:45px; position:absolute;  z-index:5;" onmouseover="this.src='/images/gtpaypal.png'" onmouseout="this.src='/images/gopaypal.png'" /></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="address_tbl" cellspacing="0" cellpadding="0" bordercolor="#ffffff" border="0" width="100%">
+        <tbody>
+          <tr>
+            <td height="24" width="35%" class="style1"><strong>FIRST NAME</strong></td>
+            <td width="65%" class="style1"><input type="text" id="vos_fname" name="fname" style="width:285px;"></td>
+          </tr>
+          <tr>
+            <td height="24" width="35%" class="style1"><strong>LAST NAME</strong></td>
+            <td width="65%" class="style1"><input type="text" id="vos_lname" name="lname" style="width: 285px"></td>
+          </tr>
+          <tr>
+            <td height="24" class="style2">DELIVERY ADDRESS&nbsp;&nbsp;</td>
+            <td class="style1"><input type="text" id="vos_add" name="textfield2" style="width:285px"></td>
+          </tr>
+          <tr>
+            <td height="24" class="style2">CITY</td>
+            <td class="style1"><input type="text" id="vos_city" name="textfield2" style="width:285px;" ></td>
+          </tr>
+          <tr>
+            <td height="24" class="style2">STATE/PROVINCE </td>
+            <td class="style1"><input type="text" id="vos_state" name="textfield2" style="width:285px"></td>
+          </tr>
+          <tr>
+            <td height="24" class="style2">POSTCODE/ZIP</td>
+            <td class="style1"><input type="text" id="vos_code" name="textfield4" style="width:100px"></td>
+          </tr>
+          <tr>
+            <td height="24" class="style2">COUNTRY</td>
+            <td class="style1"><select title="Country" id="vos_country">
+                <option value=""> </option>
+                <option value="AF">Afghanistan</option>
+                <option value="AL">Albania</option>
+                <option value="DZ">Algeria</option>
+                <option value="AS">American Samoa</option>
+                <option value="AD">Andorra</option>
+                <option value="AO">Angola</option>
+                <option value="AI">Anguilla</option>
+                <option value="AQ">Antarctica</option>
+                <option value="AG">Antigua and Barbuda</option>
+                <option value="AR">Argentina</option>
+                <option value="AM">Armenia</option>
+                <option value="AW">Aruba</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>
+                <option value="BD">Bangladesh</option>
+                <option value="BB">Barbados</option>
+                <option value="BY">Belarus</option>
+                <option value="BE">Belgium</option>
+                <option value="BZ">Belize</option>
+                <option value="BJ">Benin</option>
+                <option value="BM">Bermuda</option>
+                <option value="BT">Bhutan</option>
+                <option value="BO">Bolivia</option>
+                <option value="BA">Bosnia and Herzegovina</option>
+                <option value="BW">Botswana</option>
+                <option value="BV">Bouvet Island</option>
+                <option value="BR">Brazil</option>
+                <option value="IO">British Indian Ocean Territory</option>
+                <option value="VG">British Virgin Islands</option>
+                <option value="BN">Brunei</option>
+                <option value="BG">Bulgaria</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="BI">Burundi</option>
+                <option value="KH">Cambodia</option>
+                <option value="CM">Cameroon</option>
+                <option value="CA">Canada</option>
+                <option value="CV">Cape Verde</option>
+                <option value="KY">Cayman Islands</option>
+                <option value="CF">Central African Republic</option>
+                <option value="TD">Chad</option>
+                <option value="CL">Chile</option>
+                <option value="CN">China</option>
+                <option value="CX">Christmas Island</option>
+                <option value="CC">Cocos [Keeling] Islands</option>
+                <option value="CO">Colombia</option>
+                <option value="KM">Comoros</option>
+                <option value="CG">Congo - Brazzaville</option>
+                <option value="CD">Congo - Kinshasa</option>
+                <option value="CK">Cook Islands</option>
+                <option value="CR">Costa Rica</option>
+                <option value="HR">Croatia</option>
+                <option value="CU">Cuba</option>
+                <option value="CY">Cyprus</option>
+                <option value="CZ">Czech Republic</option>
+                <option value="CI">Côte d'Ivoire</option>
+                <option value="DK">Denmark</option>
+                <option value="DJ">Djibouti</option>
+                <option value="DM">Dominica</option>
+                <option value="DO">Dominican Republic</option>
+                <option value="EC">Ecuador</option>
+                <option value="EG">Egypt</option>
+                <option value="SV">El Salvador</option>
+                <option value="GQ">Equatorial Guinea</option>
+                <option value="ER">Eritrea</option>
+                <option value="EE">Estonia</option>
+                <option value="ET">Ethiopia</option>
+                <option value="FK">Falkland Islands</option>
+                <option value="FO">Faroe Islands</option>
+                <option value="FJ">Fiji</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="GF">French Guiana</option>
+                <option value="PF">French Polynesia</option>
+                <option value="TF">French Southern Territories</option>
+                <option value="GA">Gabon</option>
+                <option value="GM">Gambia</option>
+                <option value="GE">Georgia</option>
+                <option value="DE">Germany</option>
+                <option value="GH">Ghana</option>
+                <option value="GI">Gibraltar</option>
+                <option value="GR">Greece</option>
+                <option value="GL">Greenland</option>
+                <option value="GD">Grenada</option>
+                <option value="GP">Guadeloupe</option>
+                <option value="GU">Guam</option>
+                <option value="GT">Guatemala</option>
+                <option value="GG">Guernsey</option>
+                <option value="GN">Guinea</option>
+                <option value="GW">Guinea-Bissau</option>
+                <option value="GY">Guyana</option>
+                <option value="HT">Haiti</option>
+                <option value="HM">Heard Island and McDonald Islands</option>
+                <option value="HN">Honduras</option>
+                <option value="HK">Hong Kong SAR China</option>
+                <option value="HU">Hungary</option>
+                <option value="IS">Iceland</option>
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>
+                <option value="IR">Iran</option>
+                <option value="IQ">Iraq</option>
+                <option value="IE">Ireland</option>
+                <option value="IM">Isle of Man</option>
+                <option value="IL">Israel</option>
+                <option value="IT">Italy</option>
+                <option value="JM">Jamaica</option>
+                <option value="JP">Japan</option>
+                <option value="JE">Jersey</option>
+                <option value="JO">Jordan</option>
+                <option value="KZ">Kazakhstan</option>
+                <option value="KE">Kenya</option>
+                <option value="KI">Kiribati</option>
+                <option value="KW">Kuwait</option>
+                <option value="KG">Kyrgyzstan</option>
+                <option value="LA">Laos</option>
+                <option value="LV">Latvia</option>
+                <option value="LB">Lebanon</option>
+                <option value="LS">Lesotho</option>
+                <option value="LR">Liberia</option>
+                <option value="LY">Libya</option>
+                <option value="LI">Liechtenstein</option>
+                <option value="LT">Lithuania</option>
+                <option value="LU">Luxembourg</option>
+                <option value="MO">Macau SAR China</option>
+                <option value="MK">Macedonia</option>
+                <option value="MG">Madagascar</option>
+                <option value="MW">Malawi</option>
+                <option value="MY">Malaysia</option>
+                <option value="MV">Maldives</option>
+                <option value="ML">Mali</option>
+                <option value="MT">Malta</option>
+                <option value="MH">Marshall Islands</option>
+                <option value="MQ">Martinique</option>
+                <option value="MR">Mauritania</option>
+                <option value="MU">Mauritius</option>
+                <option value="YT">Mayotte</option>
+                <option value="MX">Mexico</option>
+                <option value="FM">Micronesia</option>
+                <option value="MD">Moldova</option>
+                <option value="MC">Monaco</option>
+                <option value="MN">Mongolia</option>
+                <option value="ME">Montenegro</option>
+                <option value="MS">Montserrat</option>
+                <option value="MA">Morocco</option>
+                <option value="MZ">Mozambique</option>
+                <option value="MM">Myanmar [Burma]</option>
+                <option value="NA">Namibia</option>
+                <option value="NR">Nauru</option>
+                <option value="NP">Nepal</option>
+                <option value="NL">Netherlands</option>
+                <option value="AN">Netherlands Antilles</option>
+                <option value="NC">New Caledonia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NI">Nicaragua</option>
+                <option value="NE">Niger</option>
+                <option value="NG">Nigeria</option>
+                <option value="NU">Niue</option>
+                <option value="NF">Norfolk Island</option>
+                <option value="KP">North Korea</option>
+                <option value="MP">Northern Mariana Islands</option>
+                <option value="NO">Norway</option>
+                <option value="OM">Oman</option>
+                <option value="PK">Pakistan</option>
+                <option value="PW">Palau</option>
+                <option value="PS">Palestinian Territories</option>
+                <option value="PA">Panama</option>
+                <option value="PG">Papua New Guinea</option>
+                <option value="PY">Paraguay</option>
+                <option value="PE">Peru</option>
+                <option value="PH">Philippines</option>
+                <option value="PN">Pitcairn Islands</option>
+                <option value="PL">Poland</option>
+                <option value="PT">Portugal</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QA">Qatar</option>
+                <option value="RO">Romania</option>
+                <option value="RU">Russia</option>
+                <option value="RW">Rwanda</option>
+                <option value="RE">Réunion</option>
+                <option value="BL">Saint Barthélemy</option>
+                <option value="SH">Saint Helena</option>
+                <option value="KN">Saint Kitts and Nevis</option>
+                <option value="LC">Saint Lucia</option>
+                <option value="MF">Saint Martin</option>
+                <option value="PM">Saint Pierre and Miquelon</option>
+                <option value="VC">Saint Vincent and the Grenadines</option>
+                <option value="WS">Samoa</option>
+                <option value="SM">San Marino</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="SN">Senegal</option>
+                <option value="RS">Serbia</option>
+                <option value="SC">Seychelles</option>
+                <option value="SL">Sierra Leone</option>
+                <option value="SG">Singapore</option>
+                <option value="SK">Slovakia</option>
+                <option value="SI">Slovenia</option>
+                <option value="SB">Solomon Islands</option>
+                <option value="SO">Somalia</option>
+                <option value="ZA">South Africa</option>
+                <option value="GS">South Georgia and the South Sandwich Islands</option>
+                <option value="KR">South Korea</option>
+                <option value="ES">Spain</option>
+                <option value="LK">Sri Lanka</option>
+                <option value="SD">Sudan</option>
+                <option value="SR">Suriname</option>
+                <option value="SJ">Svalbard and Jan Mayen</option>
+                <option value="SZ">Swaziland</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="SY">Syria</option>
+                <option value="ST">São Tomé and Príncipe</option>
+                <option value="TW">Taiwan</option>
+                <option value="TJ">Tajikistan</option>
+                <option value="TZ">Tanzania</option>
+                <option value="TH">Thailand</option>
+                <option value="TL">Timor-Leste</option>
+                <option value="TG">Togo</option>
+                <option value="TK">Tokelau</option>
+                <option value="TO">Tonga</option>
+                <option value="TT">Trinidad and Tobago</option>
+                <option value="TN">Tunisia</option>
+                <option value="TR">Turkey</option>
+                <option value="TM">Turkmenistan</option>
+                <option value="TC">Turks and Caicos Islands</option>
+                <option value="TV">Tuvalu</option>
+                <option value="UM">U.S. Minor Outlying Islands</option>
+                <option value="VI">U.S. Virgin Islands</option>
+                <option value="UG">Uganda</option>
+                <option value="UA">Ukraine</option>
+                <option value="AE">United Arab Emirates</option>
+                <option selected="selected" value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="UY">Uruguay</option>
+                <option value="UZ">Uzbekistan</option>
+                <option value="VU">Vanuatu</option>
+                <option value="VA">Vatican City</option>
+                <option value="VE">Venezuela</option>
+                <option value="VN">Vietnam</option>
+                <option value="WF">Wallis and Futuna</option>
+                <option value="EH">Western Sahara</option>
+                <option value="YE">Yemen</option>
+                <option value="ZM">Zambia</option>
+                <option value="ZW">Zimbabwe</option>
+                <option value="AX">Åland Islands</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td height="24" class="style2">E-MAIL</td>
+            <td class="style1"><input type="text" id="vos_email" name="textfield4" style="width:285px"></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="style2"> For a separate delivery address email <a href="mailto:delivery@vikingsofskate.com">delivery@vikingsofskate.com</a></td>
+          </tr>
+            </tr>
+          
+          <tr>
+            <td height="24" class="style2"><span class="please-wait" id="vos-please-wait" style="display:none;"> <img src="/images/ajax-loader.gif" alt="Processing..." title="Processing..." class="v-middle" /> Processing... </span>&nbsp;</td>
+            <td class="style1"><br />
+            <!--<a href="/products"> <img style="right:173px; z-index:6; position:absolute;" src="/images/bfm2.png" onmouseover="this.src='/images/bfm2o.png'" onmouseout="this.src='/images/bfm2.png'" /></a>--> <a href="javascript:" onclick="vos_out()"><img src="/images/checkout.png" style="right:45px; position:absolute;  z-index:5;" onmouseover="this.src='/images/chko.png'" onmouseout="this.src='/images/checkout.png'" /></a>
+            
+              <a href="javascript:" > <img style="float:right;" src="/images/checkout.png" onmouseover="this.src='/images/chko.png'" onmouseout="this.src='/images/checkout.png'" /></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <?php echo $this->getChildHtml('global_notices') ?> <?php echo $this->getChildHtml('global_messages') ?>
+      <div style="display:none;"><?php echo $this->getChildHtml('content') ?></div>
+      <p align="justify" class="style1"><br />
+      </p>
+      <p class="style1"></p>
+    </div>
+  </div>
+</div>
+<img src="/skin/frontend/default/default/images/images/backgrounds/voschk.jpg"  class="source-image"/>
+<?php include_once('images/footer.php'); ?>
+</body>
+</html>
+<script>
+
+     document.getElementById("vos_fname").value=get_cookie("fname"); 
+	 document.getElementById("vos_lname").value= get_cookie("lname");
+	 document.getElementById("vos_add").value= get_cookie("add");
+	 document.getElementById("vos_city").value= get_cookie("city");
+	 document.getElementById("vos_state").value= get_cookie("sta");
+	 document.getElementById("vos_code").value=get_cookie("code");
+	 document.getElementById("vos_country").value= get_cookie("cun");
+	 document.getElementById("vos_email").value= get_cookie("email");
+</script>
