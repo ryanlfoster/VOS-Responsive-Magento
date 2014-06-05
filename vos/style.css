@@ -42,7 +42,7 @@ body, ul, li,a {
  background: transparent;
 }
 .menu a{
-font-family: "VOS";font-size: 1.4em;
+font-family: "VOS";font-size: 1.8em;
  display: block;
  text-decoration: none;
  color: #fff;
@@ -85,7 +85,7 @@ nav{
 .more{
  background: rgba(0, 0, 0, 0.38);
 position: absolute;
-left: 25%;
+left: 28%;
  min-width: 10%;
  cursor: move;
 }
