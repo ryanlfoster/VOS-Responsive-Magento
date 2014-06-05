@@ -4,28 +4,30 @@ Menu
 	Desktop
 	Mobile
 		* Use alternating shades on alternate menu items on mobile menu 
-		* Size of text in mobile menu needs to be larger
-		* spread out social logo's
+		* Size of text in mobile menu needs to be larger was 1.4em - done 1.8em
+		* spread out social logo's (now only spacing at top)
 		* maybe make the tint change when its pressed so people know its been correctly selected.
 		
 Home Page
-	Desktop
+	Desktop 
+		* alignment of crime/skull
 	Mobile
-
-Shirts - Category
-	Desktop
-	Mobile
+		* as desktop
+		
+Shirt	- Category
+		Desktop
+		Mobile
 	
-	Shirts - Products
+	- Products
 		Desktop
 		Mobile
 
 
 Caps - Category
-	Desktop
-	Mobile
+		Desktop
+		Mobile
 
-	Caps - Products
+	Products
 		Desktop
 		Mobile
 
