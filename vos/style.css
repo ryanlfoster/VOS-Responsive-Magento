@@ -538,7 +538,9 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 img#larget {width: 100%;padding-left: 0;}
 .sendtofriend {margin-top: -3.5em;}
 .highslide {display: inline}
-.highslide img {}		
+.highslide img {margin-left: auto;
+margin-right: auto;
+width: 24%;}		
 }
 
 @media screen and (max-width: 65em) {
