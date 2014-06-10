@@ -97,6 +97,8 @@ img#larget {width: 95%;
 padding-left: 0.8em;}
 .std-vos {margin-left : -3px; margin-top: 10px;line-height: 1.2em;font-size:0.94em}
 #more-views {margin-left:-5px; margin-top: 10px;}
+.last {display:none;}
+.required {display:none;}
 #textright {
 width:188px;
 float:right;
@@ -534,7 +536,7 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 .lrbox {margin-top: 0.6em;width:100%!important;}
 .footer {width:100%; padding: 0;}
 #btn_buynow  {height:47px ;width:175px ;top: 71px}
-.add-to-cart {top: 287px!important;}
+.add-to-cart {top: 320px!important;}
 #img_nxt {top: 363px!important;width: 8em}
 .box-description {width: 100%;height: 72px;}
 img#larget {width: 100%;padding-left: 0;}
