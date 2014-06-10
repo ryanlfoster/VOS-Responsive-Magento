@@ -266,7 +266,9 @@ display: -webkit-box;
 .current {text-decoration:none;font-family: "VOS";color: white;font-size: 1.20em; line-height: 0.9em}
 .footer {width: 100%; padding: 1.5em;}
 .footer a{font-size: 0.95em;font-family: "VOS";color: white; float:right; padding-right: 0.5em;opacity: 0.66;text-decoration:none }
-
+.product-img-box {
+width: 410px;
+}
 .about-img img{width:100%}
 #btn_buynow  {height:47px ;width:175px ;top: 47px}
 .product-options-bottom {background: transparent; border:none;}
