@@ -27,7 +27,7 @@ onload=bgimg;
      
     <?php foreach ($this->getGalleryImages() as $_image): ?>
          <?php //echo $this->getGalleryUrl($_image); ?>
-         <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(402); ?>" class="highslide" onclick="return hs.expand(this,{ targetX: 'more-views -3px', targetY: 'more-views -142px' })">
+         <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(365); ?>" class="highslide" onclick="return hs.expand(this,{ targetX: 'more-views -2px', targetY: 'more-views -142px' })">
         				<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(88); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>"  alt="" /> 
 </a>
     <?php endforeach; ?>
