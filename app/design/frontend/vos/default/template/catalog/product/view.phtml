@@ -77,9 +77,12 @@
 
         <div class="lrbox">
 
-          <div id="text-left">
+          <div class="text-left">
 
             <div class="product-img-box"> <?php echo $this->getChildHtml('media') ?> </div>
+            </div>
+            <div class="product-btn-wrapper">
+            <div class="text-next">
 
             <?php if ($this->canEmailToFriend()): ?>
 
@@ -173,9 +176,7 @@ xmlhttp.send();
 
 </script>
 
-            <p><br />
-
-              <br />
+            <p>
 
             </p>
 
@@ -311,7 +312,7 @@ xmlhttp.send();
 
           </div>
 
-          <div id="text-right"> <?php echo $this->getChildHtml('other');?>
+          <div class="text-right"> <?php echo $this->getChildHtml('other');?>
 
             <?php //if ($_product->getShortDescription()):?>
 
@@ -356,7 +357,7 @@ xmlhttp.send();
           </div>-->
 
         </div>
-
+</div>
       </div>
 
       <div class="clearer"></div>
