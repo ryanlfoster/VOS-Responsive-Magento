@@ -10,11 +10,11 @@ CN
     <div class="add-to-cart">
         <?php if(!$_product->isGrouped()): ?>
        <div style="clear:both; padding:10px 0 0 0; margin:0; width:100%;">
-        <div style="float:left; margin:0; padding:0;">
+        <div class="product-qty-cart"> 
         <label for="qty" class="style5"><?php echo $this->__('QUANTITY') ?></label>
-        <input type="text" name="qty" style="text-align:center; float:right;" id="qty" maxlength="12" value="<?php echo $this->getMinimalQty($_product) ?>" title="<?php echo $this->__('QUANTITY') ?>" class="input-text qty" />
+        <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getMinimalQty($_product) ?>" title="<?php echo $this->__('QUANTITY') ?>" class="input-text qty" />
         </div>
-        <div style="margin:0; padding:0; width:85px; float:right;">
+        <div class="product-price-cart"> 
         <?php echo $this->getPriceHtml($_product, false, '_clone') ?></div>
         </div>
 		<?php endif; ?>
