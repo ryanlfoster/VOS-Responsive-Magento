@@ -273,13 +273,13 @@ display: -webkit-box;
 #btn_buynow  {height:47px ;width:175px ;top: 47px}
 .product-options-bottom {background: transparent; border:none;}
 .add-to-cart label {color:#fff; font-weight:normal;}
-.add-to-cart {float:left; }
+
 
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
 
-#btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:0px -56px; }
+#btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:0px -56px;  }
 
-#btn_buynow{background:url('/images/buynowx.png') no-repeat; }	
+#btn_buynow{background:url('/images/buynowx.png') no-repeat; background-size: 100%;}	
 
 #text-left {float:left; width:100%;}
 
@@ -356,7 +356,8 @@ background: none;
 
 .add-to-cart {
 	position: absolute;
-	top: 545px;
+	top: 475px;
+    margin-left: 10.6em;
 }
 .add-to-cart label {
   color:#FFFFFF;
@@ -530,9 +531,6 @@ input#qty {text-align:center; float:right;}
 ul.menu {background: black;}
 li.menu-item.open {background: black; }
 li.menu-item a {padding-left:0.75em}
-
-/*.menu a {background: grey;}*/
-/*li.menu-item a:nth-child(even) {background: black;}*/
 .sub {margin-left: 1em; } 
 li.cart-button {padding-left:1.0em}
 li.vos-social-buttons {display:inline-block;padding-left:0.75em}
@@ -545,7 +543,7 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 .lrbox {margin-top: 0.6em;width:100%!important;}
 .footer {width:100%; padding: 0;}
 
-.add-to-cart {position: static}
+.add-to-cart {position: static; margin-left: 0;}
 #img_nxt {top: 363px!important;width: 8em}
 .product-btn-wrapper {width: 98%}    
 .text-next {display: inline-block}    /* next product*/
@@ -564,8 +562,7 @@ width: 24%;}
 input#qty {text-align:center; float:none;}
 #btn_buynow {height: 30px;width: 112px;}
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
-#btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:0px -56px; }
-#btn_buynow img{background:url('/images/buynowx.png') no-repeat;background-size:50% }	
+#btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:-17px -52px;background-size:144% }
 
 @media screen and (max-width: 65em) {
 .inner {width:100%; margin-left:auto;
