@@ -270,15 +270,13 @@ display: -webkit-box;
 .footer a{font-size: 0.95em;font-family: "VOS";color: white; float:right; padding-right: 0.5em;opacity: 0.66;text-decoration:none }
 .product-img-box {width: 410px;}
 .about-img img{width:100%}
-#btn_buynow  {height:47px ;width:175px ;top: 47px}
 .product-options-bottom {background: transparent; border:none;}
 .add-to-cart label {color:#fff; font-weight:normal;}
 
 
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
-
+#btn_buynow  {height:43px ;width:175px ;}
 #btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:0px -56px;  }
-
 #btn_buynow{background:url('/images/buynowx.png') no-repeat; background-size: 100%;}	
 
 #text-left {float:left; width:100%;}
@@ -356,8 +354,8 @@ background: none;
 
 .add-to-cart {
 	position: absolute;
-	top: 475px;
-    margin-left: 10.6em;
+	top: 490px;
+    margin-left: 8em;
 }
 .add-to-cart label {
   color:#FFFFFF;
@@ -556,14 +554,13 @@ img#larget {width: 98%;padding-left: 0;}
 margin-right: auto;
 width: 24%;}
 .product-img-box {width: 100%}		
-}
 .product-price-cart {margin:0; padding:0; width:85px;float: right}
 .product-qty-cart {margin:0; padding:0;float: none; text-align: right;}
 input#qty {text-align:center; float:none;}
 #btn_buynow {height: 30px;width: 112px;}
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
 #btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:-17px -52px;background-size:144% }
-
+}
 @media screen and (max-width: 65em) {
 .inner {width:100%; margin-left:auto;
 margin-right:auto;}
