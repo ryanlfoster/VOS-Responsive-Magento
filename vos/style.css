@@ -5,7 +5,7 @@ body, ul, li,a {
  font-size: 14px;
 }
 
-@font-face {
+@font-face  {
  font-family: VOS;
  src: url("/font/accid___.eot") /* EOT file for IE */
 }
@@ -275,7 +275,7 @@ display: -webkit-box;
 
 
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
-#btn_buynow  {height:43px ;width:175px ;}
+#btn_buynow  {height:43px ;width:175px ;float:right}
 #btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:0px -56px;  }
 #btn_buynow{background:url('/images/buynowx.png') no-repeat; background-size: 100%;}	
 
@@ -318,7 +318,22 @@ display: -webkit-box;
 background: none;		
 }
 
-
+.opbox {
+background: #FFF;
+text-align: center;
+vertical-align: middle;
+margin-left: 4px;
+margin-bottom: 4px;
+height: 15px;
+width: 13px;
+float: right;
+padding: 4px 4px 0 0; 
+}
+.caps-colour {
+margin-top: -4.5em;
+margin-right: 1em;
+float: right;
+}
 
 .product-options-bottom {
   background-color:transparent;
@@ -372,6 +387,7 @@ background: none;
 margin-top: -4px!important; 
 }
 .style5 {font-size:0.8em}
+
 .sendtofriend {margin-top: -2.5em;}
 input#qty {
 width: 20px;

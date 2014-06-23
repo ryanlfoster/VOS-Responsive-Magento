@@ -1,127 +1,102 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php echo $this->getChildHtml('head') ?>
-<link href="/vos/vos.css" rel="stylesheet" type="text/css" />
+<?php echo $this->getChildHtml('head') ?> 
+<!-- <link href="/vos/vos.css" rel="stylesheet" type="text/css" /> -->
 <link href="/vos/style.css" rel="stylesheet" type="text/css" />
-<script> <!-- 	 Responsive menu script -->	 
-		 $(document).ready(function(){
-		 $(".menu li a").each(function() {
-		  if ($(this).next().length > 0) {
-		   $(this).addClass("parent");
+   
+<!-- responsive images script-->
+	 <script type="text/javascript" src="/vos/js/jquery-2.1.1.min.js"></script>
+	 <script>var $j = jQuery.noConflict();</script>
+	 <script src="/vos/js/prefixfree.min.js"></script>
+	 <script src="/vos/js/picturefill.js"></script>
+	 <script src="/vos/js/matchmedia.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<!-- 	 Responsive menu script -->	 
+	<script>
+		 $j(document).ready(function(){
+		 $j(".menu li a").each(function() {
+		  if ($j(this).next().length > 0) {
+		   $j(this).addClass("parent");
 		  };
 		 })
-		 var menux = $('.menu li a.parent');
-		 $( '<div class="more"><img src="img/btn-hamburger.png" alt=""></div>' ).insertBefore(menux);
-		 $('.more').click(function(){
+		 var menux = $j('.menu li a.parent');
+		 $j( '<div class="more"><img src="/img/btn-hamburger-v.png" alt=""></div>' ).insertBefore(menux);
+		 $j('.more').click(function(){
 		   $(this).parent('li').toggleClass('open');
 		 });
-		 $('.menu-btn').click(function(){
-		   $('nav').toggleClass('menu-open');
+		 $j('.menu-btn').click(function(){
+		   $j('nav').toggleClass('menu-open');
 		 });
 		 
-		 $('.menu-button').click(function(){
-		   $(this).parent('li').toggleClass('open');
+		 $j('.menu-button').click(function(){
+		   $j(this).parent('li').toggleClass('open');
 		 });
 		 });	
 	 </script>
+<!-- ADD COOKIE LAW SCRIPT BACK IN -->
+
 </head>
-
 <body>
-
+<?php include_once('vos/inc/background.php'); ?> <!-- BACKGROUND IMAGE  -->
 	<div class="outer">
-	
-		<div class="inner">
-			
+			<div class="inner">
+				 <?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
+			<div class="page-wrap">
+  			<section class="main-content-products">
+			<img id="larget" src=""  class="source-image" width="85%"/>
+			</section>
+			<aside class="main-sidebar-products">
+				 <span class="secondary-logo"> 
+	  
+					<span data-picture data-alt="Vikings of Skate">
+					<span data-src="/img/headers/homepage.png"></span>
+					<span data-src="/img/headers/homepage.png" data-media="(min-width: 36.1em)"></span>
+					<span data-src="/img/headers/caps.png" data-media="(min-width: 65em)"></span>
+							
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript><img src="/img/headers/prints.png" alt="Vikings of Skate"></noscript>
+					</span>
+	   
+				</span>
+				<span class="secondary-text">
 				
-					<?php include_once('vos/inc/resp-nav.php'); ?> <!-- NAVIGATION -->
 				
-			
-	
-
-<div id="left">
-<!-- <img id="larget" src=""  class="caps-image" width="586"/> -->
-</div>
-
-
-<div id="right">
-  <div id="shirts-right-col">
-    
-    <div id="shirts-right""> 
-    
-    <div style="display:none; z-index:9999; position:absolute; top:345px; right:192px; height:140px; width:205px; background:url('/images/shad.png') no-repeat bottom right;" id="popmail">
+						<div style="display:none; z-index:9999; position:absolute; top:345px; right:192px; height:140px; width:205px; background:url('/images/shad.png') no-repeat bottom right;" id="popmail">
   <div style="height:111px; width:175px; padding:6px; background:#FFF;">
-  <table style="font-size:11px; clear:both;">
-    <tr>
-      <td>To&nbsp;</td>
-      <td><input id="xemailadd" style="border:1px #000 solid; margin-bottom:2px; width:146px;" type="text" /></td>
-    </tr>
-    <tr>
-      <td>From&nbsp;</td>
-      <td><input id="email_from_id" style="border:1px #000 solid; width:146px; margin-bottom:2px;" type="text" /></td>
-    </tr>
-    <tr>
-      <td>Note&nbsp;</td>
-      <td><textarea id="email_note" style="border:1px #000 solid; width:141px; height:30px;" > </textarea></td>
-    </tr>
-  </table>
-  <div style="clear:both;"><a href="javascript:" class="esend" onclick="mfrd();">&nbsp;</a><img style="cursor:pointer; float:right; padding-top:6px;" onclick="popsend(0);" src="/images/close.gif" width="20" /></div>
-</div>
-</div>
-
-<div id="main-shirts" >
-
-    <div id="caps-header">
+			  				<table style="font-size:11px; clear:both;">
+			    				<tr>
+			      				<td>To&nbsp;</td>
+			      				                                                                                <td><input id="xemailadd" style="border:1px #000 solid; margin-bottom:2px; width:146px;" type="text" /></td>
+			    				</tr>
+			    				<tr>
+			      				<td>From&nbsp;</td>
+			      				<td><input id="email_from_id" style="border:1px #000 solid; width:146px; margin-bottom:2px;" type="text" /></td>
+			    				</tr>
+			    				<tr>
+			      				<td>Note&nbsp;</td>
+			      				<td><textarea id="email_note" style="border:1px #000 solid; width:141px; height:30px;" > </textarea></td>
+			    				</tr>
+			  				</table>
+			  							<div style="clear:both;"><a href="javascript:" class="esend" onclick="mfrd();">&nbsp;</a><img style="cursor:pointer; float:right; padding-top:6px;" onclick="popsend(0);" src="/images/close.gif" width="20" /></div>
+						</div>
+					</div>
+				
+					<?php echo $this->getChildHtml('content') ?>
+					 
+								
+				</span>
     
-    <?php 
-	$product = Mage::registry('current_product');
-	$categories = $product->getCategoryCollection();
-	?>
-	
-	<?php 
-	foreach($categories as $category) {
-		if($category->getId() != 2) {
-			$currentcatid = $category->getId();
-			break;
-		} 
-	}
-	?>
-    <span class="logotitle">
-    <?php if($currentcatid == 3 /* T-SHIRTS */) {
-	    echo '<img src="/images/headers/shirts.png" width="425" height="218" border="0" usemap="#Map2" />';
-    } else {
-	    echo '<img src="/images/headers/caps.png" width="425" height="218" border="0" usemap="#Map2" />';
-    } ?>
- 
-      <map name="Map2" id="Map2">
-         <area shape="rect" coords="280,2,430,210" href="/homepage" />
-      </map>
-     </span>
-    </div>
-    <div style="padding-right:26px;"> <?php echo $this->getChildHtml('global_notices') ?> <?php echo $this->getChildHtml('global_messages') ?> <?php echo $this->getChildHtml('content') ?>
-      <p align="justify" class="style1"><br />
-      </p>
-      <p class="style1"></p>
-    </div>
-  
-</div>
+			</aside> 
+		
+		</div><!-- close page wrap -->
+		<div class="inner">
+		<div class="page-wrap">
+		<div class="footer"><a href="t&c.html">Copyright VOS 2014 - All Rights Reserved</a></div>
+		</div>
+		</div>
+		</div>	
+		</div>
+</body>
 
-   
-    </div>
-  </div>
-</div>
-
-
-	</div>
-<div class="vosfooter">
-<?php include_once('images/footer.php'); ?>	
-</div>
-</div>
-
-
-    
-
-<!-- <img id="larget" src="/images/bg/bg-xxl.jpg"  class="source-image"/> -->
-
-</body></html>
+</html>
