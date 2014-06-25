@@ -51,7 +51,7 @@
     <?php if($product >= 1800 /* Kids T-SHIRTS */) {
     	
     	echo '<p> KIDS </p><div class="kids-tee-colour">
-<table width="188" style="clear:both;">
+<table width="168" style="clear:both;">
 <tr><td width="70" class="style5">COLOUR</td><td>
 <div id="select_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
 </tr>
@@ -75,28 +75,35 @@
     } 
     
     else if($currentcatid == 3 /* T-SHIRTS */) {
-    	
- 
-    	
-    	
-    	echo '<div class="adult-tee-colour">
-<table width="188" style="clear:both;">
-<tr><td width="70" class="style5">COLOUR</td><td>
-<div id="select_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
-</tr>
-<tr><td width="70" class="style5">SIZE</td><td>
-<div id="radio_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
-</tr>
-</table>
-<style> .sizegi:hover{ color:#000;} .sizegi { font-size:11px;}</style>
- <div class="style5" style="text-align:left; margin-bottom:7px; clear:both; height:15px; width:100%; overflow:hidden;">
- 
- 	<a href="#" class="sizegi" rel="magnify[sg]">SIZE GUIDE</a>
- 		<img style=" display:none;cursor:help;z-index:-1;" class="magnify" src="/images/sg.jpg" id="sg" height="0" width="0">
- 		<img style="cursor:help;z-index:-1; display:none;" class="magnify" src="/images/careinstructions.jpg" id="carei" height="0" width="0">
- 	<a href="#" class="sizegi" rel="magnify[carei]" style="float:right; padding:0;">CARE INSTRUCTIONS</a>
+    
+    	echo '<div id="colour-size-block"><div class="adult-tee-colour">
+    <table width="168" style="clear:both;">
+        <tr>
+            <td width="50" class="style5">COLOUR
+            </td>
+            <td>
+                <div id="select_replace" style="clear:both; padding:2px 0; float:right; "></div>
+            </td>
+        </tr>
+        </table>
 </div>
-</div>';
+<div class="adult-tee-size">  
+<table width="168" style="clear:both;">
+    <tr>
+        <td width="50" class="style5">SIZE</td>
+        <td><div id="radio_replace" style="clear:both; padding:2px 0; float:right; "></div>     </td>
+    </tr>
+</table>
+</div>
+<div class="size-care">
+        <style> .sizegi:hover{ color:#000;} .sizegi { font-size:15px;}</style>
+        <div class="style5" style="text-align:left; margin-bottom:7px; clear:both; height:15px; width:100%; overflow:hidden;">
+          <a href="#" class="sizegi" rel="magnify[sg]">SIZE GUIDE</a>
+          <img style=" display:none;cursor:help;z-index:-1;" class="magnify" src="/images/sg.jpg" id="sg" height="0" width="0">
+          <img style="cursor:help;z-index:-1; display:none;" class="magnify" src="/images/careinstructions.jpg" id="carei" height="0" width="0">
+          <a href="#" class="sizegi" rel="magnify[carei]" style="float:right; padding:0;">CARE INSTRUCTIONS</a>
+    </div>
+</div></div>';
 	    
 	    
 	    
@@ -108,7 +115,7 @@
          else if($currentcatid == 6 /* CAPS */) {
     	
     	echo '<div class="caps-colour">
-<table width="188" style="clear:both;">
+<table width="168" style="clear:both;">
 <tr><td width="70" class="style5">COLOUR</td><td>
 <div id="select_replace" style="clear:both; padding:2px 0; float:right; "></div></td>
 </tr>
