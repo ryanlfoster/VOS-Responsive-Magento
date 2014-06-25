@@ -160,6 +160,72 @@
                     <layout_handle>vert_tee_tpl</layout_handle>
                 </vert_tee>
                 
+                <broken_tee module="page" translate="label">
+                    <label>Broken Tee</label>
+                    <template>page/broken-tee.phtml</template>
+                    <layout_handle>broken_tee_tpl</layout_handle>
+                </broken_tee>
+                
+                <code_tee module="page" translate="label">
+                    <label>Code Tee</label>
+                    <template>page/code-tee.phtml</template>
+                    <layout_handle>code_tee_tpl</layout_handle>
+                </code_tee>
+                
+                <crime_tee module="page" translate="label">
+                    <label>Crime Tee</label>
+                    <template>page/crime-tee.phtml</template>
+                    <layout_handle>crime_tee_tpl</layout_handle>
+                </crime_tee>
+                
+                <fade_tee module="page" translate="label">
+                    <label>Fade Tee</label>
+                    <template>page/fade-tee.phtml</template>
+                    <layout_handle>fade_tee_tpl</layout_handle>
+                </fade_tee>
+                
+                <happy_tee module="page" translate="label">
+                    <label>Happy Tee</label>
+                    <template>page/happy-tee.phtml</template>
+                    <layout_handle>happy_tee_tpl</layout_handle>
+                </happy_tee>
+                
+                <horns_tee module="page" translate="label">
+                    <label>Horns Tee</label>
+                    <template>page/horns-tee.phtml</template>
+                    <layout_handle>horns_tee_tpl</layout_handle>
+                </horns_tee>
+                
+                <kids_tee module="page" translate="label">
+                    <label>Kids Tee</label>
+                    <template>page/kids-tee.phtml</template>
+                    <layout_handle>kids_tee_tpl</layout_handle>
+                </kids_tee>
+                
+                <ollie_tee module="page" translate="label">
+                    <label>Ollie Tee</label>
+                    <template>page/ollie-tee.phtml</template>
+                    <layout_handle>ollie_tee_tpl</layout_handle>
+                </ollie_tee>
+                
+                <raglan_tee module="page" translate="label">
+                    <label>Raglan Tee</label>
+                    <template>page/raglan-tee.phtml</template>
+                    <layout_handle>raglan_tee_tpl</layout_handle>
+                </raglan_tee>
+                
+                <rip_tee module="page" translate="label">
+                    <label>RIP Tee</label>
+                    <template>page/rip-tee.phtml</template>
+                    <layout_handle>rip_tee_tpl</layout_handle>
+                </rip_tee>
+                
+                <spine_tee module="page" translate="label">
+                    <label>Spine Tee</label>
+                    <template>page/spine-tee.phtml</template>
+                    <layout_handle>spine_tee_tpl</layout_handle>
+                </spine_tee>
+                
 				<one_column module="page" translate="label">
                     <label>1 column</label>
                     <template>page/1column.phtml</template>
