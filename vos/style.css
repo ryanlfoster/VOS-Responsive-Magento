@@ -540,9 +540,11 @@ input#qty {text-align:center; float:right;}
     .secondary-text-caps {margin-left:0.5em;font-size: 1.4em;width: 96%;font-size: 1.6em; padding-bottom: 0.5em; padding-top:0em;}
     .secondary-text-caps .text-right {margin-top: -1.25em}
     .secondary-text-caps #more-views {margin-top: 2em;}
-    #colour-size-block {float:left; margin-top: -4em;margin-right: 0em;}
+    #colour-size-block {float:left; margin-top: 0em;margin-right: 0em;}
     .caps-colour {margin-top: 0;margin-right: 0;}
    .adult-tee-size table {width:100%}
+    .opbox-size {margin-left: 4px;margin-bottom: 4px;height: 30px;width: 30px;}
+    .style5 {font-size: 1.2em;width:60%}
     
     .page-wrap {
         display: -webkit-box;
@@ -626,7 +628,7 @@ img#larget {width: 98%;padding-left: 0;}
 .highslide img {margin-left: auto; margin-right: auto; width: 24%;}
 .product-img-box {width: 100%}		
 .product-price-cart {margin:0; padding-top:5px; width:85px;float: right}
-.product-qty-cart {margin:0;padding-right: 2px;float: none; text-align: right;}
+.product-qty-cart {margin:0;padding-right: 2px;float: left; text-align: right;}
 input#qty {text-align:center; float:none;}
 #btn_buynow {height: 30px;width: 112px;}
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
