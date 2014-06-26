@@ -219,7 +219,8 @@ display: -webkit-box;
 
 .secondary-text-shirts {display: block; margin-left:10px; font-family: "VOS";color: white;font-size: 1.65em; line-height: 0.9em; margin-top: -5px;width:90%;}
 .secondary-text-shirts a{text-decoration:none;}
- 
+.product-image-thumb {display:none}
+
 .secondary-text-caps {display: block; margin-left:10px; font-family: "VOS";color: white;font-size: 1.65em; line-height: 0.9em; margin-top: -5px;width:90%;}
 .secondary-text-caps a{text-decoration:none;}
 
@@ -526,16 +527,23 @@ input#qty {text-align:center; float:right;}
 
 	/*end media queries for team*/
 @media screen and (max-width: 65em) { /* point at which hamburger menu comes in*/
+    
+    
 	.inner {width: 100%; }
 	.secondary-logo {position: absolute;top: 0;padding-left: 10px;padding-top:12px; display: block;}
 	.secondary-logo img {width: inherit;}
 	.secondary-text {font-size: 1.4em;width: 90%;font-size: 1.6em;margin: 0 auto; padding-bottom: 0.5em; padding-top:0em;}
-    .secondary-text-shirts {position: absolute;bottom: 0;margin-left:0.5em;font-size: 1.4em;width: 96%;font-size: 1.6em; padding-bottom: 0.5em; padding-top:0em;}
+    .secondary-text-shirts {margin-left:0.5em;font-size: 1.4em;width: 96%;font-size: 1.6em; padding-bottom: 0.5em; padding-top:0em;}
+    .secondary-text-shirts #more-views {display:none}
+    .product-image-thumb {display: inline}
+    .product-image-thumb img {width:43%}               
     .secondary-text-caps {margin-left:0.5em;font-size: 1.4em;width: 96%;font-size: 1.6em; padding-bottom: 0.5em; padding-top:0em;}
     .secondary-text-caps .text-right {margin-top: -1.25em}
     .secondary-text-caps #more-views {margin-top: 2em;}
-    #colour-size-block {float: right;margin-top: -4em;margin-right: 0em;}
+    #colour-size-block {float:left; margin-top: -4em;margin-right: 0em;}
     .caps-colour {margin-top: 0;margin-right: 0;}
+   .adult-tee-size table {width:100%}
+    
     .page-wrap {
         display: -webkit-box;
         display: -webkit-flex;
@@ -604,13 +612,13 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 #textleft {width: 100%;}
 #textright {margin-right: -0.6em;}
 .lrbox {margin-top: 0em;width:100%!important;}
-.footer {width:100%; padding: 0;}
+.footer {width:95%; padding: 0;} /*aligns footer with image*/
 
 .add-to-cart {position: static; margin-left: 0;}
 #img_nxt {top: 363px!important;width: 8em}
 .product-btn-wrapper {width: 98%}    
 .text-next {display: inline-block}    /* next product*/
-.text-right {display: inline-block; float: right}    
+.text-right {display: block; float: none}    
 .box-description {width: 100%;height: 72px;}
 img#larget {width: 98%;padding-left: 0;}
 .sendtofriend {margin-top: -3.5em;}
@@ -624,7 +632,7 @@ input#qty {text-align:center; float:none;}
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
 #btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:-17px -52px;background-size:144% }
 .main-sidebar-products {height: 29em}
-.text-next {padding-top: 40px;padding-left: 2px;}
+.text-next {display: inline; }
 }
 
 @media screen and (max-width: 65em) {

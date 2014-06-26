@@ -1,37 +1,37 @@
-<?php
-/**
- CN */
-
-/**
- * Product media data template
- *
- * @see Mage_Catalog_Block_Product_View_Media
- */
- 
- 
-?>
-<?php
-    $_product = $this->getProduct();
-    $_helper = $this->helper('catalog/output');
-?>
-<?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
- 
-<script type="text/javascript">
-function bgimg()
-{  document.getElementById("larget").src="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>"; }
-onload=bgimg; 
-</script>
-
-<div id="more-views">
-     
-     
-    <?php foreach ($this->getGalleryImages() as $_image): ?>
-         <?php //echo $this->getGalleryUrl($_image); ?>
-         <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(365); ?>" class="highslide" onclick="return hs.expand(this,{ targetX: 'more-views -2px', targetY: 'more-views -142px' })">
-        				<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(88); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>"  alt="" /> 
-</a>
-    <?php endforeach; ?>
-     
-</div>
-<?php endif; ?>
-
+<?php
+/**
+ CN */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+ 
+ 
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+ 
+<script type="text/javascript">
+function bgimg()
+{  document.getElementById("larget").src="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>"; }
+onload=bgimg; 
+</script>
+
+<div id="more-views">
+     
+     
+    <?php foreach ($this->getGalleryImages() as $_image): ?>
+         <?php //echo $this->getGalleryUrl($_image); ?>
+         <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(365); ?>" class="highslide" onclick="return hs.expand(this,{ targetX: 'more-views -2px', targetY: 'more-views -142px' })">
+        				<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(88); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>"  alt="" /> 
+</a>
+    <?php endforeach; ?>
+     
+</div>
+<?php endif; ?>
+
