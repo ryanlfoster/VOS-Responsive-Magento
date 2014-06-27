@@ -535,8 +535,8 @@ input#qty {text-align:center; float:right;}
 	.secondary-text {font-size: 1.4em;width: 90%;font-size: 1.6em;margin: 0 auto; padding-bottom: 0.5em; padding-top:0em;}
     .secondary-text-shirts {margin-left:0.5em;font-size: 1.4em;width: 96%;font-size: 1.6em; padding-bottom: 0.5em; padding-top:0em;}
     .secondary-text-shirts #more-views {display:none}
-    .product-image-thumb {display: inline}
-    .product-image-thumb img {width:50%}               
+    .product-image-thumb {display: block}
+    .product-image-thumb img {width:49%}               
     .secondary-text-caps {margin-left:0.5em;font-size: 1.4em;width: 96%;font-size: 1.6em; padding-bottom: 0.5em; padding-top:0em;}
     .secondary-text-caps .text-right {margin-top: -1.25em}
     .secondary-text-caps #more-views {margin-top: 2em;}
@@ -544,7 +544,7 @@ input#qty {text-align:center; float:right;}
     .caps-colour {margin-top: 0;margin-right: 0;}
    .adult-tee-size table {width:100%}
     .opbox-size {margin-left: 4px;margin-bottom: 4px;height: 30px;width: 30px;}
-    .style5 {font-size: 1.2em;width:60%}
+    .style5 {font-size: 1.2em;width:50%}
     
     .page-wrap {
         display: -webkit-box;
@@ -614,10 +614,10 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 #textleft {width: 100%;}
 #textright {margin-right: -0.6em;}
 .lrbox {margin-top: 0em;width:100%!important;}
-.footer {width:95%; padding: 0;} /*aligns footer with image*/
+.footer {width:95%; padding: 0;position:absolute;bottom: 0;} /*aligns footer with image*/
 
 .add-to-cart {position: static; margin-left: 0;}
-#img_nxt {top: 363px!important;width: 8em}
+#img_nxt {position: absolute; top: 468px!important;width: 8em}
 .product-btn-wrapper {width: 98%}    
 .text-next {display: inline-block}    /* next product*/
 .text-right {display: block; float: none}    
