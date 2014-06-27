@@ -526,7 +526,7 @@ height: 14px;
 input#qty {text-align:center; float:right;}
 
 	/*end media queries for team*/
-@media screen and (max-width: 65em) { /* point at which hamburger menu comes in*/
+@media screen and (max-width:1023px) { /* point at which hamburger menu comes in*/
     
     
 	.inner {width: 100%; }
@@ -637,7 +637,7 @@ input#qty {text-align:center; float:none;}
 .text-next {display: inline; }
 }
 
-@media screen and (max-width: 65em) {
+@media screen and (max-width: 1023px) {
 .inner {width:100%; margin-left:auto;
 margin-right:auto;}
 }
@@ -684,7 +684,7 @@ margin-right:auto;}
 
 
 /* wide menu*/
-@media all and (min-width: 65em){
+@media all and (min-width: 1024px){
 
 nav{
  max-height: 100%;
@@ -742,4 +742,11 @@ left:100%;
 
  left: 0;
 }
+}
+/* iPad in landscape----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* YOUR STYLE GOES HERE */
 }
