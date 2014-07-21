@@ -535,7 +535,7 @@ input#qty {text-align:center; float:right;}
 	.secondary-text {font-size: 1.4em;width: 90%;font-size: 1.6em;margin: 0 auto; padding-bottom: 0.5em; padding-top:0em;}
     .secondary-text-shirts {margin-left:0.5em;font-size: 1.4em;width: 96%;font-size: 1.6em; padding-bottom: 0.5em; padding-top:0em;}
     .secondary-text-shirts #more-views {display:none}
-    .product-image-thumb {display: block}
+    .product-image-thumb {display: block; padding-top: 0.8em}
     .product-image-thumb img {width:49%}               
     .secondary-text-caps {margin-left:0.5em;font-size: 1.4em;width: 96%;font-size: 1.6em; padding-bottom: 0.5em; padding-top:0em;}
     .secondary-text-caps .text-right {margin-top: -1.25em}
