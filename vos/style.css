@@ -628,11 +628,11 @@ img#larget {width: 98%;padding-left: 0;}
 .highslide img {margin-left: auto; margin-right: auto; width: 24%;}
 .product-img-box {width: 100%}		
 .product-price-cart {margin:0; padding-top:5px; width:85px;float: right}
-.product-qty-cart {margin:0;padding-right: 2px;float: left; text-align: right;}
+.product-qty-cart {margin:0;padding-right: 2px;float: none; text-align: right;}
 input#qty {text-align:center; float:none;}
-#btn_buynow {height: 30px;width: 112px;}
+#btn_buynow {/*height: 30px;width: 112px;*/}
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
-#btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:-17px -52px;background-size:144% }
+#btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:-0px -51px;background-size:100% }
 .main-sidebar-products {height: 29em}
 .text-next {display: inline; }
 }
