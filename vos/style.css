@@ -443,7 +443,7 @@ margin-top: -18px;
 margin-left: 5px;
 height: 14px;
 }
-#img_nxt {top: 595px!important;width: 180px;}
+
 .data-table .odd  {background:white; } /*background of cart table*/
 .data-table thead th {  color:black;} /*background of table heading and text colour of header*/
 	
@@ -455,6 +455,8 @@ height: 14px;
   height: auto; }	
 	
 	@media (min-width: 1024px) {
+#img_nxt {top: 595px!important;width: 180px;}		
+		
   .container {
     width: 980px;
     margin: 0 auto;
