@@ -177,7 +177,7 @@ margin-right:auto;}
 .primary-content {display:block;margin: 0 auto;}
 .primary-content img {width:100%;}
 .prints {width:98%;   margin: 0 auto;
-display: -webkit-box;
+display: -webkit-box;b
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -280,7 +280,7 @@ display: -webkit-box;
 .product-options-bottom {background: transparent; border:none;}
 .add-to-cart label {color:#fff; font-weight:normal;}
 
-
+/*buy now button- no media query*/
 #preload{ display:none;width:1px; height:1px; background:url('/images/buynow_over.png');}
 #btn_buynow  {height:43px ;width:175px ;float:right}
 #btn_buynow:hover, #btn_buynow:focus {background:url('/images/buynowx.png') no-repeat; background-position:0px -56px;  }
