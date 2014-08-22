@@ -561,7 +561,7 @@ input#qty {text-align:center; float:right;}
         flex-direction: column;
 		/*padding-top: 1em*/
 		width:100%;
-		
+		min-height: 6em;
     }
 	
     .main-content {
