@@ -293,7 +293,7 @@ xmlhttp.send();
     ?>
 
             <?php if ($url <> $prev_url):?>
-
+            <div class="page-nav-buttons">
             <a class="next-product" href="<?php echo $prev_url; ?>"><img onmouseout="this.src='/images/next.png'" onmouseover="this.src='/images/nxt_over.png'" id="img_nxt" src="<?php echo $this->getUrl(); ?>/images/next.png" /></a>
 
             <?php else: 
@@ -309,7 +309,7 @@ xmlhttp.send();
             		 <a class="next-product" href="<?php echo $first_product_link; ?>"><img onmouseout="this.src='/images/next.png'" onmouseover="this.src='/images/nxt_over.png'" id="img_nxt" src="<?php echo $this->getUrl(); ?>/images/next.png" /></a>
 
 			<?php endif; ?>
-
+</div>
           </div>
 
           <div class="text-right"> <?php echo $this->getChildHtml('other');?>
