@@ -618,7 +618,7 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 #textright {margin-right: -0.6em;}
 .lrbox {margin-top: 0em;width:100%!important;}
 .footer {width:95%; padding: 0;position:absolute;bottom: 0;} /*aligns footer with image*/
-.page-nav-buttons {position:absolute; top:500px;}
+.page-nav-buttons {}
 .add-to-cart {position: static; margin-left: 0;}
 #img_nxt {position: absolute;bottom: 1.1em; top: ignore ;width: 8em}
 .product-btn-wrapper {width: 98%}    
