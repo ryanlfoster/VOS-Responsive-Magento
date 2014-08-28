@@ -701,7 +701,7 @@ nav{
 .cart-button  a {text-align:right;}
 .social {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
 .more img {display:none}
-.box-description {width: 100%;height: 72px;}
+.box-description {width: 100%;height: 100px;}
 .menu-btn{
  display: none;
 }
