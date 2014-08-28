@@ -425,9 +425,7 @@ padding-right: 0px;
 	top: 200px;
 	
 }
-.box-description{ /*HEIGHT OF DESCRIPTION BOX*/
-		height:100px;
-		width: 110%;
+
 	
 	
 }
@@ -546,7 +544,7 @@ input#qty {text-align:center; float:right;}
     #colour-size-block {float:left; margin-top: 0em;margin-right: 0em;}
     .caps-colour {margin-top: 0;margin-right: 0;}
    .adult-tee-size table {width:100%}
-    .opbox-size {margin-left: 4px;margin-bottom: 4px;height: 30px;width: 30px;}
+    .opbox-size {margin-left: 4px;margin-bottom: 4px;height: 23px;width: 23px;}
     .style5 {font-size: 1.2em;width:50%}
     
     .page-wrap {
@@ -624,7 +622,7 @@ li.vos-social-buttons {display:inline-block;padding-left:0.75em}
 .product-btn-wrapper {width: 98%}    
 .text-next {display: inline-block}    /* next product*/
 .text-right {display: block; float: none}    
-.box-description {width: 100%;height: 72px;}
+
 img#larget {width: 98%;padding-left: 0;}
 .sendtofriend {margin-top: -3.5em;}
 .highslide {display: inline}
@@ -703,7 +701,7 @@ nav{
 .cart-button  a {text-align:right;}
 .social {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
 .more img {display:none}
-
+.box-description {width: 100%;height: 72px;}
 .menu-btn{
  display: none;
 }
